@@ -19,52 +19,68 @@ public class PersonalRecords
         this.time = time;
         this.distance = distance;
     }
+    /*
+    ALL SETTERS RETURN OLD VALUE
+    */
     int getWeight() 
     {
         return weight;
     }
     int setWeight(int weight) 
     {
+        int w = this.weight;
         this.weight = weight;
+        return w;
     }
     string getExercise()
     {
         return exercise;
     }
-    string setExercise(string e) 
+    string setExercise(string exercise) 
     {
-        exercise = e;
+        string e = this.exercise;
+        this.exercise = exercise;
+        return e;
     }
     int getType()
     {
         return type;
     }
-    int setType(int t)
+    int setType(int type)
     {
-        type = t;
+        int t = this.type;
+        this.type = type;
+        return t;
     }
     int getReps()
     {
         return reps;
     }
-    int setReps(int r)
+    int setReps(int reps)
     { 
-        reps = r;
+        int r = this.reps;
+        this.reps = reps;
+        return r;
     }
     DateTime getTime()
     {
         return time;
     }
-    DateTime setTime(DateTime t) 
+    DateTime setTime(DateTime time) 
     {
-        time = t;
+        DateTime t = this.time;
+        this.time = t;
+        return t;
     }
     float getDistance()
     {
         return distance;
+        
     }
-    float setDistance(float d)
+    float setDistance(float distance)
     {
-        distance = d;
+        float d = this.distance;
+        this.distance = distance;
+        return d;
     }
 }
