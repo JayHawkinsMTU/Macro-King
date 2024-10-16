@@ -10,7 +10,6 @@ public class TestAddPR : MonoBehaviour
     {
         var newPR = Instantiate<PersonalRecords>(reference);
         newPersonalRecord = newPR;
-
     }
 
 

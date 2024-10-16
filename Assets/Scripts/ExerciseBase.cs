@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ExerciseBase : ScriptableObject
+public class ExerciseBase : ScriptableObject
 {
     string exerciseName = "";
 
