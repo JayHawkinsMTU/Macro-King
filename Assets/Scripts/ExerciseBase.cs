@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class ExerciseBase : ScriptableObject
 {
-    string exerciseName = "";
-
+    protected string exerciseName = "";
 }
