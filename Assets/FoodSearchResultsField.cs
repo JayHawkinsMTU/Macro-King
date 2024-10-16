@@ -17,12 +17,8 @@ public class FoodSearchResultsField : MonoBehaviour
     public void UpdateResults()
     {
         JObject json = searchResults.CurrentResults.JObject;
-        //JArray foods = (JArray) currentResults["foods"];
         List<JToken> foods = ((JArray)json["foods"]).ToList();
 
-        Debug.Log("Length of FoodsL " + foods.Count);
-
-        Debug.Log("foods");
         string s = "";
 
         if (foods != null)
