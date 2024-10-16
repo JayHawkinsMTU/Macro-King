@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
+//using Newtonsoft.Json.Linq;  // For parsing JSON (Install Newtonsoft.Json via NuGet or Unity Package Manager)
+
 
 public class FoodDataRequest : MonoBehaviour
 {
@@ -13,13 +15,15 @@ public class FoodDataRequest : MonoBehaviour
     void Start()
     {
         // Start the coroutine to make the API request
-        StartCoroutine(GetFoodData("apple"));
+        StartCoroutine(GetFoodData("apple", pageNumber:"1", pageSize:10));
     }
 
-    IEnumerator GetFoodData(string query)
+    IEnumerator GetFoodData(string query, string pageNumber = "", int pageSize = 10 )
     {
         // Build the complete URL with query parameters
-        string url = $"{baseUrl}?query={query}&pageSize=10&api_key={apiKey}";
+        var pg_num = "";
+        if(pageNumber != "") { pg_num = "&pageNumber=" + pageNumber; }
+        string url = $"{baseUrl}?query={query}{pg_num}&pageSize={pageSize}&api_key={apiKey}";
 
         // Make the request
         using (UnityWebRequest request = UnityWebRequest.Get(url))
@@ -36,10 +40,10 @@ public class FoodDataRequest : MonoBehaviour
             {
                 // Successful response
                 string jsonResponse = request.downloadHandler.text;
-                Debug.Log(jsonResponse);
+                //DisplayFoodNamesAndCalories(jsonResponse);
 
                 // Save JSON to a file
-                SaveJsonToFile(jsonResponse, "API_CALL.json");
+                SaveJsonToFile(jsonResponse, "Page1Test.json");
             }
         }
     }
@@ -54,4 +58,7 @@ public class FoodDataRequest : MonoBehaviour
 
         Debug.Log($"JSON data saved to {path}");
     }
+
+
+
 }
