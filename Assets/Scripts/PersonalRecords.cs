@@ -1,16 +1,16 @@
 using System;
-
-
-public class PersonalRecords 
+using UnityEngine;
+[CreateAssetMenu(fileName = "Personal Record", menuName = "Personal Records")]
+public class PersonalRecords : ScriptableObject
 {
-    int weight;
-    string exercise;
-    int reps;
-    int type;
-    DateTime time;
-    float distance;
+    [SerializeField] int weight;
+    [SerializeField] string exercise;
+    [SerializeField] int reps;
+    [SerializeField] int type;
+    [SerializeField] DateTime time;
+    [SerializeField] float distance;
     
-    void NewExercise(int weight, string exercise, int type, int reps, DateTime time, float distance) 
+    void NewExercise(int weight, string exercise, DateTime time, float distance, int type, int reps) 
     {
         this.weight = weight;
         this.exercise = exercise;
