@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Personal Record", menuName = "Personal Records")]
-public class PersonalRecords : ScriptableObject
+public class PersonalRecords : PRBase
 {
     [SerializeField] int weight;
     [SerializeField] Exercise exercise;
