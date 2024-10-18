@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb197c660998ed4da19d7f5802c0132, type: 3}
   m_Name: testPR
   m_EditorClassIdentifier: 
-  weight: 0
-  exercise: {fileID: 0}
-  reps: 0
+  weight: 80
+  exercise: {fileID: 11400000, guid: eaedf6108b101e34d80b298816b91120, type: 2}
+  reps: 1
   type: 0
   distance: 0
