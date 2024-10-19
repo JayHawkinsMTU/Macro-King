@@ -5,6 +5,14 @@ using UnityEngine;
 public class PRHolder : ScriptableObject
 {
     [SerializeField] List<PersonalRecords> PRList = new List<PersonalRecords>();
-    
+    public void OnPressed() 
+    {
+        
+    }
+   
+    public void addExercise(PersonalRecords PR) 
+    {
+        PRList.Add(PR);
+    }
 
 }
