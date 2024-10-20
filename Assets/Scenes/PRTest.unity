@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 240432009}
   - component: {fileID: 240432008}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: typeInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,7 +439,7 @@ GameObject:
   - component: {fileID: 270428860}
   - component: {fileID: 270428859}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: repsInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 690530932}
   - component: {fileID: 690530931}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: distanceInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,7 +1224,7 @@ GameObject:
   - component: {fileID: 914262728}
   - component: {fileID: 914262727}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: exerciseInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,7 +1528,7 @@ GameObject:
   - component: {fileID: 1175777652}
   - component: {fileID: 1175777651}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: weightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 1340320853}
   - component: {fileID: 1340320852}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: timeInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2242,18 +2242,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ed3c8bea64a7746b720b943cf965ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputWeight: {fileID: 0}
-  inputExercise: {fileID: 0}
-  inputTime: {fileID: 0}
-  inputDistance: {fileID: 0}
-  inputType: {fileID: 0}
-  inputReps: {fileID: 0}
-  resultWeight: {fileID: 0}
-  resultExercise: {fileID: 0}
-  resultTime: {fileID: 0}
-  resultDistance: {fileID: 0}
-  resultType: {fileID: 0}
-  resultReps: {fileID: 0}
+  inputWeight: {fileID: 1175777651}
+  inputExercise: {fileID: 914262727}
+  inputTime: {fileID: 1340320852}
+  inputDistance: {fileID: 690530931}
+  inputType: {fileID: 240432008}
+  inputReps: {fileID: 270428859}
+  resultWeight: {fileID: 1309719484}
+  resultExercise: {fileID: 1309719484}
+  resultTime: {fileID: 1309719484}
+  resultDistance: {fileID: 1309719484}
+  resultType: {fileID: 1309719484}
+  resultReps: {fileID: 1309719484}
 --- !u!114 &1452747635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2298,13 +2298,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1452747632}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1452747634}
+        m_TargetAssemblyTypeName: NewExerciseEntry, Assembly-CSharp
+        m_MethodName: ValidateInput
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

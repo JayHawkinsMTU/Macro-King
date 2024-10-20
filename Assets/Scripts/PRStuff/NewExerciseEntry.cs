@@ -26,19 +26,19 @@ public class NewExerciseEntry : MonoBehaviour
     
     
     public void ValidateInput()
-    {   
+    {   //convert all data to its respective type
         int weight = Int32.Parse((string) inputWeight.text);
         Exercise exercise = new Exercise();
         exercise.newExercise((string)inputExercise.text);
-        DateTime time = DateTime.Parse(inputTime.text);
+        DateTime time = DateTime.ParseExact(inputTime.text, "dd/MM/yyyy", null);
         float distance = (float) Convert.ToDouble(inputTime.text);
         int type = Int32.Parse((string) inputType.text);
         int reps = Int32.Parse((string) inputReps.text);
 
         PersonalRecords PR = new PersonalRecords();
-        PR.NewExercise(weight, exercise, time, distance, type, reps);
-        PRHolder prlist = new PRHolder();
-        prlist.AddExercise(PR);
+        PR.NewExercise(weight, exercise, time, distance, type, reps); // create a new exercise
+        PRHolder prlist = new PRHolder(); //I'm not sure if this line works for storing a list
+        prlist.AddExercise(PR); //store the exercise in the PR List
         
     }
    
