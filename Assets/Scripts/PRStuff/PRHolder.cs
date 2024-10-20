@@ -10,7 +10,7 @@ public class PRHolder : ScriptableObject
         
     }
    
-    public void addExercise(PersonalRecords PR) 
+    public void AddExercise(PersonalRecords PR) 
     {
         PRList.Add(PR);
     }

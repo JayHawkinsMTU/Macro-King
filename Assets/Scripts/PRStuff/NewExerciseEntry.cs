@@ -1,7 +1,9 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class NewExerciseEntry : MonoBehaviour
 {
@@ -23,20 +25,22 @@ public class NewExerciseEntry : MonoBehaviour
     [SerializeField] Text resultReps;
     
     
-//     public void ValidateInput()
-//     {
-//         int weight = Int32.Parse(inputWeight.text);
-//         Exercise exercise = inputExercise.text;
-//         DateTime time = DateTime.Parse(inputTime.text);
-//         float distance = (float) Convert.ToDouble(inputTime.text);
-//         int type = Int32.Parse(inputType.text);
-//         int reps = Int32.Parse(inputReps.text);
+    public void ValidateInput()
+    {   
+        int weight = Int32.Parse((string) inputWeight.text);
+        Exercise exercise = new Exercise();
+        exercise.newExercise((string)inputExercise.text);
+        DateTime time = DateTime.Parse(inputTime.text);
+        float distance = (float) Convert.ToDouble(inputTime.text);
+        int type = Int32.Parse((string) inputType.text);
+        int reps = Int32.Parse((string) inputReps.text);
 
-//         PersonalRecords PR = new PersonalRecords();
-//         PR.newExercise(weight, exercise, time, distance, type, reps);
-//         PRHolder.addExercise(PR);
+        PersonalRecords PR = new PersonalRecords();
+        PR.NewExercise(weight, exercise, time, distance, type, reps);
+        PRHolder prlist = new PRHolder();
+        prlist.AddExercise(PR);
         
-//     }
+    }
    
 
 }

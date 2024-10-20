@@ -17,7 +17,7 @@ public class PersonalRecords : PRBase
     public DateTime Time { get => time; set => time = value; }
     public float Distance { get => distance; set => distance = value; }
 
-    void NewExercise(int weight, Exercise exercise, DateTime time, float distance, int type, int reps) 
+    public void NewExercise(int weight, Exercise exercise, DateTime time, float distance, int type, int reps) 
     {
         this.weight = weight;
         this.Exercise = exercise;
