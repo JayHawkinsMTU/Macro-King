@@ -61,7 +61,6 @@ public class FoodDataRequest : MonoBehaviour
                 saveToJSON: false,
                 triggerGameEvent: true
             ) );
-        QueryComplete.Raise();
     }
 
     IEnumerator GetFoodData(string query, string pageNumber = "", int pageSize = 10, bool saveToJSON = false, bool triggerGameEvent = false)
