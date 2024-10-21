@@ -14,5 +14,9 @@ public class PRHolder : ScriptableObject
     {
         PRList.Add(PR);
     }
+    public List<PersonalRecords> GetList() 
+    {
+        return PRList;
+    }
 
 }
