@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nutrition Label.unity
     guid: cafc6d910f4b30a4f882fc8c8f0e47ac
+  - enabled: 1
+    path: Assets/Scenes/Nutrition Goals.unity
+    guid: 56c46f1fb6cc3e34fad0ac214a34034a
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8a165a21b180a0845856653ea1e390ad, type: 2}

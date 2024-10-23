@@ -3,21 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FoodItem : MonoBehaviour
+public class FoodItem
 {
+    public enum Allergens {
+        Peanut,
+        Soy,
+        Gluten,
+        Dairy,
+        Shellfish,
+        Treenuts
+    };
     //food item data
     private int foodID;
-    private List<string> allergens = new List<string>();
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        //does nothing rn
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //does nothing rn
-    }
+    private List<Allergens> allergens = new List<Allergens>();
 }
