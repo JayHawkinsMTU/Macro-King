@@ -23,7 +23,7 @@ public class SearchFoodResults : ScriptableObject
 
     public void OnNewResults()
     {
-        Debug.Log("New Result Added!");
+
     }
 
 
