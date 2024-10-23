@@ -8,6 +8,4 @@ public class MuscleGroups : ScriptableObject
     [SerializeField] string name = "";
     [SerializeField] Sprite image = null;
     [SerializeField] List<Muscle> MusclesInGroup = new List<Muscle>();
-
-
 }

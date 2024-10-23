@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: {fileID: 792263053862217145}
   calCount: {fileID: 1917549155112899221}
+  testFoodNutrient: {fileID: 11400000, guid: 3cbeabbd2c3f16d4f9bb4ec568458df2, type: 2}
 --- !u!114 &7549690870578471668
 MonoBehaviour:
   m_ObjectHideFlags: 0
