@@ -20,6 +20,8 @@ public class FoodDataRequest : MonoBehaviour
     private string apiKey = "kt3fDVCgfMw7LSQfAdxF898dDjuQhsj4q2Q1eiXM";
     // Base URL for FoodData Central API
     private string baseUrl = "https://api.nal.usda.gov/fdc/v1/foods/search";
+    private string lastSearch = "";
+    private int lastPG = 0;
 
     int CurrentPage {
         get => currentPage;
@@ -50,9 +52,24 @@ public class FoodDataRequest : MonoBehaviour
     }
     public void UpdateSearch()
     {
+        // Get the search result
         var query = searchBar.text;
+
+        // Only send new request if search has changed
+        if (string.Equals(query, lastSearch) && CurrentPage == lastPG)
+        {
+            QueryComplete.Raise();
+            lastSearch = query;
+            lastPG = CurrentPage;
+            return;
+        }
+
+        lastSearch = query;
+        lastPG = CurrentPage;
         queries.Add(query);
         Debug.Log("Starting coroutine");
+
+        // Call the API
         StartCoroutine(
             GetFoodData(
                 query, 
@@ -93,6 +110,7 @@ public class FoodDataRequest : MonoBehaviour
                 //DisplayFoodNamesAndCalories(jsonResponse);
 
                 SearchResultsScriptableObject.AddResult(jsonResponse);
+
                 // Trigger Game Event
                 if (triggerGameEvent) { QueryComplete.Raise(); }
 
@@ -117,6 +135,7 @@ public class FoodDataRequest : MonoBehaviour
         JObject parsedData = JObject.Parse(json);
         DisplayFoodNamesAndCalories(parsedData);
     }
+    
     void DisplayFoodNamesAndCalories(JObject json)
     {
         // Extract the "foods" array from the JSON
