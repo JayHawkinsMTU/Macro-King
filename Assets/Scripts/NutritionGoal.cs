@@ -21,8 +21,9 @@ public class NutritionGoal
     macro = CALORIES
     condition = LESS_THAN
     value = 3000
+    Default goal basically means eat something today.
     */
-    public Macros macro;
-    public Condition condition;
-    public float value;
+    public Macros macro = Macros.CALORIES;
+    public Condition condition = Condition.GREATER_THAN;
+    public float value = 0;
 }
