@@ -39,13 +39,8 @@ public class FoodNutrients : ScriptableObject
         );
     }
 
-    [ContextMenu("Create MyScriptableObject")]
     public void CreateFoodNutrients(MonoBehaviour mono, JToken nutrient = null, bool saveAssets = true)
        
-    {
-        mono.StartCoroutine(CreateFoodNutrientCoroutine(nutrient, true));
-    }
-    IEnumerator CreateFoodNutrientCoroutine(JToken nutrient = null, bool saveAssets = true)
     {
         JToken t = nutrient?["nutrientId"];
         int id = -1;
@@ -53,35 +48,41 @@ public class FoodNutrients : ScriptableObject
         {
             id = (int)t;
         }
-        if (!nutrientDict.containsFood(id))
+        if (!nutrientDict.ContainsFood(id))
         {
-            // Create an instance of the ScriptableObject
-            FoodNutrients newData = ScriptableObject.CreateInstance<FoodNutrients>();
-            // Set the object's data (optional)
-            newData.SetValues(nutrient);
-            newData.nutrientDict = nutrientDict;
-            nutrientDict.addFood(newData);
-            // Save the object as an asset file
-            // Define the asset path
-            string directoryPath = "Assets/Scripts/Food-Food Nutrients/FoodNutrients";
-            string assetPath = $"{directoryPath}/{newData.nutrientName}.asset";
-            // Ensure the directory exists
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-                Debug.Log("Directory created at: " + directoryPath);
-            }
+            mono.StartCoroutine(CreateFoodNutrientCoroutine(nutrient, true));
 
-            // Save the object as an asset file
-            AssetDatabase.CreateAsset(newData, assetPath); // Save asset to disk
-            Debug.Log("Creating asset at: " + assetPath);
-
-            if (saveAssets)
-            {
-                AssetDatabase.SaveAssetIfDirty(newData); // Ensure the asset database is updated
-                AssetDatabase.SaveAssetIfDirty(nutrientDict);
-            }
         }
+    }
+    IEnumerator CreateFoodNutrientCoroutine(JToken nutrient = null, bool saveAssets = true)
+    {
+
+        // Create an instance of the ScriptableObject
+        FoodNutrients newData = ScriptableObject.CreateInstance<FoodNutrients>();
+        // Set the object's data (optional)
+        newData.SetValues(nutrient);
+        newData.nutrientDict = nutrientDict;
+        nutrientDict.AddFood(newData);
+        yield return null;
+        // Save the object as an asset file
+        // Define the asset path
+        string directoryPath = "Assets/Scripts/Food-Food Nutrients/FoodNutrients";
+        string assetPath = $"{directoryPath}/{DirectoryUtils.SanitizeToValidName(newData.nutrientName)}.asset";
+        // Ensure the directory exists
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        // Save the object as an asset file
+        AssetDatabase.CreateAsset(newData, assetPath); // Save asset to disk
+        Debug.Log("Creating asset at: " + assetPath);
+
+        if (saveAssets)
+        {
+            AssetDatabase.SaveAssetIfDirty(newData); // Ensure the asset database is updated
+            AssetDatabase.SaveAssetIfDirty(nutrientDict);
+        }        
         yield break;
     }
 }

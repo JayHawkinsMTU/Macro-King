@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6856873cc48ca4d9b14e883d90cc0c, type: 3}
+  m_Name: SFA 80
+  m_EditorClassIdentifier: 
+  nutrientDict: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
+  nutrientID: 1261
+  nutrientName: SFA 8:0
+  indentLevel: 2

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6856873cc48ca4d9b14e883d90cc0c, type: 3}
   m_Name: Fatty acids, total saturated
   m_EditorClassIdentifier: 
-  nutrientDict: {fileID: 11400000, guid: b962d2e858f397f48ae963b030f85056, type: 2}
+  nutrientDict: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
   nutrientID: 1258
   nutrientName: Fatty acids, total saturated
   indentLevel: 1

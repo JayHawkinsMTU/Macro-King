@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd6cbc2e9a32ef74f9c80524f18aaf52, type: 3}
-  m_Name: FoodNutrientDict
+  m_Script: {fileID: 11500000, guid: 2c6856873cc48ca4d9b14e883d90cc0c, type: 3}
+  m_Name: Vitamin E (alpha-tocopherol)
   m_EditorClassIdentifier: 
+  nutrientDict: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
+  nutrientID: 1109
+  nutrientName: Vitamin E (alpha-tocopherol)
+  indentLevel: 1

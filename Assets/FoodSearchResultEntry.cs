@@ -53,18 +53,14 @@ public class FoodSearchResultEntry : MonoBehaviour
     public FoodNutrients testFoodNutrient;
     public void OnButtonPress()
     {
-        Debug.Log(foodData.ToString());
         List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
 
-/*        var x = foodNutrients[0];
-        Debug.Log("Spot 1:" + x);
-        testFoodNutrient.SetValues(x);*/
         foreach (JToken nutrient in foodNutrients)
         {
-            testFoodNutrient.CreateFoodNutrients(this, nutrient, saveAssets: true);
+            testFoodNutrient.CreateFoodNutrients(
+                mono:this, 
+                nutrient:nutrient, 
+                saveAssets:true);
         }
-        Debug.Log("Saving Assets");
-        testFoodNutrient.CreateFoodNutrients(this, null, saveAssets: true);
-        
     }
 }

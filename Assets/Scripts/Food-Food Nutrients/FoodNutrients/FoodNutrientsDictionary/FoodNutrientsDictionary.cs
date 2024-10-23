@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 [CreateAssetMenu(fileName = "New Food Nutrient Dictionary", menuName = "Food/Food Nutrient/Food Nutrient Dictionary")]
 public class FoodNutrientsDictionary : ScriptableObject
@@ -7,22 +8,37 @@ public class FoodNutrientsDictionary : ScriptableObject
     [SerializeField] Dictionary<int, FoodNutrients> dict = new Dictionary<int, FoodNutrients>();
     [SerializeField] List<FoodNutrients> foods = new List<FoodNutrients>();
 
-
-    public bool addFood(FoodNutrients food)
+    private void OnEnable()
     {
-        if (containsFood(food))
+        RebuildDictionary();
+    }
+
+    private void RebuildDictionary()
+    {
+        dict.Clear();
+        foreach (var food in foods)
         {
-            return false;
+            if (food != null && food.NutrientID != -1)
+            {
+                dict[food.NutrientID] = food;
+            }
         }
-        dict[food.NutrientID] = food;
+    }
+
+    public bool AddFood(FoodNutrients food)
+    {
+        if (ContainsFood(food.NutrientID)) return false;
+
         foods.Add(food);
+        dict[food.NutrientID] = food;
         return true;
     }
-    public bool containsFood(FoodNutrients food)
+
+    public bool ContainsFood(FoodNutrients food)
     {
-        return containsFood(food.NutrientID);
+        return ContainsFood(food.NutrientID);
     }
-    public bool containsFood(int nutrientID)
+    public bool ContainsFood(int nutrientID)
     {
         if(nutrientID == -1) { return false; }
         return dict.ContainsKey(nutrientID);
