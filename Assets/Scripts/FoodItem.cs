@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FoodItem
+public class FoodItem : ScriptableObject
 {
     public enum Allergens {
         Peanut,

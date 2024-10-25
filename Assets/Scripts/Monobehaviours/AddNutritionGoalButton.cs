@@ -5,11 +5,12 @@ using TMPro;
 
 public class AddNutritionGoalButton : MonoBehaviour
 {
+    [SerializeField] User user;
     public TMP_Text textInput;
     public void AddGoal()
     {
         NutritionGoal goal = NutritionGoalContainer.goal;
         goal.value = int.Parse(textInput.text);
-        User.instance.nutritionGoals.Add(goal);
+        user.NutritionGoals.Add(goal);
     }
 }

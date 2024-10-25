@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class User
+[CreateAssetMenu(fileName ="New User", menuName ="User")]
+public class User : ScriptableObject
 {
-    public static User instance;
-    public string name = "NO_NAME";
-    public List<FoodItem.Allergens> allergens = new();
-    public List<FoodItem> nutrition = new();
-    public List<NutritionGoal> nutritionGoals = new();
-    public List<PersonalRecords> prs = new();
+
+    // User fields
+    [SerializeField] public string Name { get; set; } = "NO_NAME";
+    [SerializeField] public List<FoodItem.Allergens> Allergens { get; private set; } = new();
+    [SerializeField] public List<FoodItem> Nutrition { get; private set; } = new();
+    [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
+    [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
+
 }
+
