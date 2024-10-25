@@ -11,38 +11,52 @@ using UnityEngine;
 public class FoodItem : ScriptableObject
 {
     // Key = FoodNutrientID, Value is a Unit Quantity
-    [SerializeReference] public Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
+    [SerializeReference] private Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
     [SerializeField] int foodID = -1;
     [SerializeField] string foodName = "New Food Item";
     UnitValue servingSize;
-    [SerializeField] string foodCategory;
-
-    public UnitValue Energy { get => foodNutrientQuantities[GameManager.energyNutrient.NutrientID]; }
-        
-    
-    public enum Allergens {
-        Peanut,
-        Soy,
-        Gluten,
-        Dairy,
-        Shellfish,
-        Treenuts
-    };
-
-    private List<Allergens> allergens = new List<Allergens>();
+    private List<Allergen> allergens = new List<Allergen>();
 
 
+    #region Getters
+    #region Nutrient Getters
+    public UnitValue Energy { get => SafeGetValue(GameManager.energyNutrient.NutrientID); }
+    public UnitValue Protien { get => SafeGetValue(GameManager.protienNutrient.NutrientID); }
+    public UnitValue Fat { get => SafeGetValue(GameManager.fatNutrient.NutrientID); }
+    public UnitValue Carbs { get => SafeGetValue(GameManager.carbsNutrient.NutrientID); }
+    #endregion
+    #region Food Specific Getters
+    public int FoodID { get => foodID;  }
+    public string FoodName { get => foodName;  }
+    public UnitValue ServingSize { get => servingSize;  }
+    public Dictionary<int, UnitValue> FoodNutrientQuantities { get => foodNutrientQuantities; }
+    #endregion
+    #endregion
+
+    private UnitValue SafeGetValue(int NutrientID)
+    {
+        if (foodNutrientQuantities.ContainsKey(NutrientID))
+        {
+            return foodNutrientQuantities[NutrientID];
+        }
+        return UnitValue.NullUnitValue;
+    }
     public static FoodItem CreateFoodItem(JToken foodData, MonoBehaviour mono = null, bool saveAssets = true)
     {
         // Create new food item
         FoodItem newFood = CreateInstance<FoodItem>();
+        newFood.foodNutrientQuantities = new Dictionary<int, UnitValue>();
+        newFood.foodNutrientQuantities.Add(
+            key : GameManager.energyNutrient.NutrientID,
+            value : new UnitValue(0, UnitManager.UnitParse("kcal"))
+        );
+
         // Set Data
         newFood.foodName = (string)foodData["description"];
         newFood.foodID = (int)foodData["fdcId"];
         float servingSize = (float)(foodData["servingSize"] ?? 0);
         string ServingSizeunit = (string)(foodData["servingSizeUnit"] ?? "g");
         newFood.servingSize = new UnitValue(servingSize, ServingSizeunit);
-        newFood.foodCategory = (string)(foodData["foodCategory"] ?? "");
 
 #if UNITY_EDITOR
         bool _saveAssets = saveAssets;

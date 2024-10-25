@@ -19,8 +19,14 @@ public class UnitManager : ScriptableObject
     /// <summary>
     /// Parses a string and returns the matching BaseUnit.
     /// </summary>
-    public BaseUnit UnitParse(string unitName)
+    public static BaseUnit UnitParse(string unitName, UnitManager um = null)
     {
+        // Get an instance of a unit manager if one does not exist
+        if(um == null)
+        {
+            um = GameManager.unitManager;
+        }
+
         if (string.IsNullOrEmpty(unitName))
         {
             Debug.LogError("Unit name cannot be null or empty.");
@@ -28,7 +34,7 @@ public class UnitManager : ScriptableObject
         }
 
         // Perform case-insensitive lookup.
-        if (unitLookup.TryGetValue(unitName.ToLower(), out BaseUnit unit))
+        if (um.unitLookup.TryGetValue(unitName.ToLower(), out BaseUnit unit))
         {
             return unit;
         }

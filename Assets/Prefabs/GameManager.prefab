@@ -48,3 +48,7 @@ MonoBehaviour:
   mainFoodNutrientsDictionary: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
   mainSearchFoodResults: {fileID: 11400000, guid: 53246dc42089f2a46aa99514dffea86b, type: 2}
   mainUnitManager: {fileID: 11400000, guid: 825d6d158452f3740aae578a2f67f338, type: 2}
+  mainEnergyNutrient: {fileID: 11400000, guid: d7d85aa0458801a4899b7b424b86751c, type: 2}
+  mainProtienNutrient: {fileID: 11400000, guid: 29808d50d9b120947b0e8158ae9923e8, type: 2}
+  mainFatNutrient: {fileID: 11400000, guid: a07c1d1db8643d646a91f038ac14a2d4, type: 2}
+  mainCarbsNutrient: {fileID: 11400000, guid: b0f23b9ea95152a4195783ded55b3793, type: 2}

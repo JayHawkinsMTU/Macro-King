@@ -53,9 +53,9 @@ public class FoodSearchResultEntry : MonoBehaviour
     [ContextMenu("Run OnButtonPress()")]
     public void OnButtonPress()
     {
-        List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
+        /* List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
 
-        /*        foreach (JToken nutrient in foodNutrients)
+                foreach (JToken nutrient in foodNutrients)
                 {
                     FoodNutrients.CreateFoodNutrients(
                         mono:this, 

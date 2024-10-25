@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056d54e71ea5e0a45ae9250a4aacfba4, type: 3}
-  m_Name: APPLE_2124902
+  m_Script: {fileID: 11500000, guid: 3a5ce41c7a5b9794a9f4e0af1b63ce3b, type: 3}
+  m_Name: Shellfish Allergen
   m_EditorClassIdentifier: 
-  foodID: 2124902
-  foodName: APPLE
+  allergen: Shellfish

@@ -79,4 +79,9 @@ public class BaseUnit : ScriptableObject, iUnit
     {
         dict = null;
     }
+
+    public static BaseUnit NullUnit
+    {
+        get => null;
+    }
 }

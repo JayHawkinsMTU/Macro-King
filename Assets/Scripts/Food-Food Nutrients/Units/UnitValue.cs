@@ -5,6 +5,7 @@ public class UnitValue
 {
     private iUnit unit;
     private float value;
+    static UnitValue nullUnitValue;
     public UnitValue(float value, iUnit unit)
     {
         this.value = value;
@@ -13,11 +14,22 @@ public class UnitValue
     public UnitValue(float value, string unit)
     {
         this.value = value;
-        this.unit = GameManager.unitManager.UnitParse(unit);
+        this.unit = UnitManager.UnitParse(unit);
     }
 
     public override string ToString()
     {
-        return $"{value:.1} {unit}";
+        string Unit = (unit == null) ? "-" : unit.Name();
+        return $"{value:.1} {Unit}";
+    }
+
+    public static UnitValue NullUnitValue
+    {
+        get
+        {
+            if (nullUnitValue != null) { return nullUnitValue; }
+            nullUnitValue = new UnitValue(0, BaseUnit.NullUnit);
+            return nullUnitValue;
+        }   
     }
 }

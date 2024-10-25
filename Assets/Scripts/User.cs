@@ -9,7 +9,7 @@ public class User : ScriptableObject
 
     // User fields
     [SerializeField] public string Name { get; set; } = "NO_NAME";
-    [SerializeField] public List<FoodItem.Allergens> Allergens { get; private set; } = new();
+    [SerializeField] public List<Allergen> Allergens { get; private set; } = new();
     [SerializeField] public List<FoodItem> Nutrition { get; private set; } = new();
     [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();

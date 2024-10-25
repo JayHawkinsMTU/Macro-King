@@ -103,5 +103,10 @@ public class FoodNutrients : ScriptableObject
     {
         return nutrient.nutrientID;
     }
+
+    public override string ToString()
+    {
+        return nutrientName;
+    }
 }
 

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;
 
+    [Header("References")]
     [SerializeField] User mainUser;
     public static User user;
 
@@ -20,10 +21,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] UnitManager mainUnitManager;
     public static UnitManager unitManager;
 
+    [Header("Nutrients")]
+    #region Nutrients
     [SerializeField] FoodNutrients mainEnergyNutrient;
     public static FoodNutrients energyNutrient;
 
+    [SerializeField] FoodNutrients mainProtienNutrient;
+    public static FoodNutrients protienNutrient;
 
+    [SerializeField] FoodNutrients mainFatNutrient;
+    public static FoodNutrients fatNutrient;
+
+    [SerializeField] FoodNutrients mainCarbsNutrient;
+    public static FoodNutrients carbsNutrient;
+    #endregion
     void Awake()
     {
         if (instance == null)
@@ -44,6 +55,10 @@ public class GameManager : MonoBehaviour
         if (foodNutrientsDictionary == null || forceUpdate) { foodNutrientsDictionary = mainFoodNutrientsDictionary; }
         if (searchFoodResults == null || forceUpdate) { searchFoodResults = mainSearchFoodResults; }
         if (unitManager == null || forceUpdate) { unitManager = mainUnitManager; }
+
         if (energyNutrient == null || forceUpdate) { energyNutrient = mainEnergyNutrient; }
+        if (protienNutrient == null || forceUpdate) { protienNutrient = mainProtienNutrient; }
+        if (fatNutrient == null || forceUpdate) { fatNutrient = mainFatNutrient; }
+        if (carbsNutrient == null || forceUpdate) { carbsNutrient = mainCarbsNutrient; }
     }
 }
