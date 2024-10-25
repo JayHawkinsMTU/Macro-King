@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public static FoodNutrientsDictionary foodNutrientsDictionary;
 
     [SerializeField] SearchFoodResults searchFood;
-    [SerializeField] ObjectPool resultObjectPool;
+  
     [SerializeField] PRHolder holder;
     void Awake()
     {
