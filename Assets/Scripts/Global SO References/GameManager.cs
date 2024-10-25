@@ -13,8 +13,22 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] SearchFoodResults mainSearchFoodResults;
     public static SearchFoodResults searchFoodResults;
+
+    [SerializeField] UnitManager mainUnitManager;
+    public static UnitManager unitManager;
+
+    public static GameManager instance = null;
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            GameObject.Destroy(this);
+            return;
+        }
         UpdateInstances(forceUpdate:false);
     }
 
@@ -23,5 +37,6 @@ public class GameManager : MonoBehaviour
         if (user == null || forceUpdate) { user = mainUser; }
         if (foodNutrientsDictionary == null || forceUpdate) { foodNutrientsDictionary = mainFoodNutrientsDictionary; }
         if (searchFoodResults == null || forceUpdate) { searchFoodResults = mainSearchFoodResults; }
+        if (unitManager == null || forceUpdate) { unitManager = mainUnitManager; }
     }
 }

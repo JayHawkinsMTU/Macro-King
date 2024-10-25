@@ -50,14 +50,14 @@ public class FoodSearchResultEntry : MonoBehaviour
         }
     }
 
-    public FoodNutrients testFoodNutrient;
+
     public void OnButtonPress()
     {
         List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
 
         foreach (JToken nutrient in foodNutrients)
         {
-            testFoodNutrient.CreateFoodNutrients(
+            FoodNutrients.CreateFoodNutrients(
                 mono:this, 
                 nutrient:nutrient, 
                 saveAssets:true);

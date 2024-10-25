@@ -47,3 +47,4 @@ MonoBehaviour:
   mainUser: {fileID: 11400000, guid: 963f81e08c3aa574091371b79a07ecce, type: 2}
   mainFoodNutrientsDictionary: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
   mainSearchFoodResults: {fileID: 11400000, guid: 53246dc42089f2a46aa99514dffea86b, type: 2}
+  mainUnitManager: {fileID: 11400000, guid: 825d6d158452f3740aae578a2f67f338, type: 2}

@@ -43,4 +43,9 @@ public class FoodNutrientsDictionary : ScriptableObject
         if(nutrientID == -1) { return false; }
         return dict.ContainsKey(nutrientID);
     }
+    public FoodNutrients GetFood(int nutrientID)
+    {
+        if (nutrientID == -1) { return null; }
+        return dict[nutrientID];
+    }
 }
