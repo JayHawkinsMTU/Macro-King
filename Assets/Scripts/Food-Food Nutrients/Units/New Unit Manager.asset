@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bfb082dc3a4364c8e653c0cf1e0822, type: 3}
   m_Name: New Unit Manager
   m_EditorClassIdentifier: 
-  units: []
+  units:
+  - {fileID: 11400000, guid: d585fddc1e9d2ba4f87c5a172b62a96c, type: 2}
+  - {fileID: 11400000, guid: 833438e9c44f4bc4f8421236f148a761, type: 2}
+  - {fileID: 11400000, guid: 24591c0563abf6645a48d88e87db65df, type: 2}
+  - {fileID: 11400000, guid: 67c1619ecc6234440a0528e6ca959a48, type: 2}
+  - {fileID: 11400000, guid: f957eeafaaf715b41b98a5731a961e25, type: 2}
+  - {fileID: 11400000, guid: dc7cfedc780537b4cbdc5f1de139c4e3, type: 2}
+  - {fileID: 11400000, guid: a01e17415ec611a4cb915f61b6a09245, type: 2}

@@ -16,4 +16,4 @@ MonoBehaviour:
   useUnitPowerinName: 0
   unitPower: {fileID: 11400000, guid: dd0c772405c0348418d4c10030577687, type: 2}
   useUnitFurtherDown: 0
-  smallestUnit: {fileID: 0}
+  smallestUnit: {fileID: 11400000, guid: d585fddc1e9d2ba4f87c5a172b62a96c, type: 2}
