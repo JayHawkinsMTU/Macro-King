@@ -45,9 +45,11 @@ public class NewExerciseEntry : MonoBehaviour
     
         PR.NewExercise(weight, exercise, time, distance, type, reps);
         AssetDatabase.CreateAsset(PR, "Assets/Scripts/PRStuff/NewPr.so");
-        string[] list = AssetDatabase.FindAssets("PRList", null);
-        PRHolder prlist = AssetDatabase.ImportAsset("Assets/Scripts/PRStuff/PRList.so");
-        prlist.AddExercise(PR);
+        GameManager.user.PRlist.AddExercise(PR);
+
+        //string[] list = AssetDatabase.FindAssets("PRList", null);
+        //PRHolder prlist = AssetDatabase.ImportAsset("Assets/Scripts/PRStuff/PRList.so");
+        //prlist.AddExercise(PR);
         // PRHolder prlist = Resources.Load("PRList/PRList") as PRHolder;
         // prlist.AddExercise(PR);
         AssetDatabase.SaveAssets();

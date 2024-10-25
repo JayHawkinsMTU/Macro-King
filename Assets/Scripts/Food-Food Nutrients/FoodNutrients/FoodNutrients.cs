@@ -31,7 +31,13 @@ public class FoodNutrients : ScriptableObject
             (int)nutrient["indentLevel"]
         );
     }
-
+    /// <summary>
+    /// Creates a new Food Nutrient 
+    /// </summary>
+    /// <param name="mono"> Mono behavior to run coroutine</param>
+    /// <param name="nutrient"> JToken from API request to turn into nutrient</param>
+    /// <param name="saveAssets"> Will run save asset database, only works in editor mode</param>
+    /// <returns></returns>
     public static FoodNutrients CreateFoodNutrients(MonoBehaviour mono, JToken nutrient = null, bool saveAssets = true)
        
     {
@@ -43,8 +49,6 @@ public class FoodNutrients : ScriptableObject
         }
         FoodNutrientsDictionary nutrientDict = GameManager.foodNutrientsDictionary;
 
-
-
         if (!nutrientDict.ContainsFood(id))
         {
             // Create an instance of the ScriptableObject
@@ -53,7 +57,12 @@ public class FoodNutrients : ScriptableObject
             newData.SetValues(nutrient);
             nutrientDict.AddFood(newData);
 
-            mono.StartCoroutine(CreateFoodNutrientCoroutine(newData, true));
+#if UNITY_EDITOR
+            bool _saveAssets = saveAssets;
+#else
+            bool _saveAssets = false;
+#endif
+            mono.StartCoroutine(CreateFoodNutrientCoroutine(newData, saveAssets:_saveAssets));
 
             return newData;
         }
@@ -65,16 +74,15 @@ public class FoodNutrients : ScriptableObject
     static IEnumerator CreateFoodNutrientCoroutine(FoodNutrients newData, bool saveAssets = true)
     {
         yield return null;
+#if UNITY_EDITOR 
         FoodNutrientsDictionary nutrientDict = GameManager.foodNutrientsDictionary;
         // Save the object as an asset file
         // Define the asset path
         string directoryPath = "Assets/Scripts/Food-Food Nutrients/FoodNutrients";
         string assetPath = $"{directoryPath}/{DirectoryUtils.SanitizeToValidName(newData.nutrientName)}.asset";
         // Ensure the directory exists
-        if (!Directory.Exists(directoryPath))
-        {
-            Directory.CreateDirectory(directoryPath);
-        }
+        if (!Directory.Exists(directoryPath)) { Directory.CreateDirectory(directoryPath); }
+
 
         // Save the object as an asset file
         AssetDatabase.CreateAsset(newData, assetPath); // Save asset to disk
@@ -84,8 +92,10 @@ public class FoodNutrients : ScriptableObject
         {
             AssetDatabase.SaveAssetIfDirty(newData); // Ensure the asset database is updated
             AssetDatabase.SaveAssetIfDirty(nutrientDict);
-        }        
+        }
+#endif 
         yield break;
+
     }
 
     // Explicit cast operator to convert FoodNutrients to int using nutrientID

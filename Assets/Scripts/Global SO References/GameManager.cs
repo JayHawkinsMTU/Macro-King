@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static GameManager instance = null;
+
     [SerializeField] User mainUser;
     public static User user;
 
@@ -17,7 +20,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] UnitManager mainUnitManager;
     public static UnitManager unitManager;
 
-    public static GameManager instance = null;
+    [SerializeField] FoodNutrients mainEnergyNutrient;
+    public static FoodNutrients energyNutrient;
+
+
     void Awake()
     {
         if (instance == null)
@@ -26,7 +32,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            GameObject.Destroy(this);
+            Destroy(this);
             return;
         }
         UpdateInstances(forceUpdate:false);
@@ -38,5 +44,6 @@ public class GameManager : MonoBehaviour
         if (foodNutrientsDictionary == null || forceUpdate) { foodNutrientsDictionary = mainFoodNutrientsDictionary; }
         if (searchFoodResults == null || forceUpdate) { searchFoodResults = mainSearchFoodResults; }
         if (unitManager == null || forceUpdate) { unitManager = mainUnitManager; }
+        if (energyNutrient == null || forceUpdate) { energyNutrient = mainEnergyNutrient; }
     }
 }

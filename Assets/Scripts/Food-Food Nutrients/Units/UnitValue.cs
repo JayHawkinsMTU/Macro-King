@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class UnitValue 
+public class UnitValue
 {
     private iUnit unit;
     private float value;
@@ -15,5 +14,10 @@ public class UnitValue
     {
         this.value = value;
         this.unit = GameManager.unitManager.UnitParse(unit);
+    }
+
+    public override string ToString()
+    {
+        return $"{value:.1} {unit}";
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb71476a88e8802429f9db6c919bbe09, type: 3}
   m_Name: kJ
   m_EditorClassIdentifier: 
-  name: 
+  name: kJ
   useUnitPowerinName: 0
   unitPower: {fileID: 0}
   useUnitFurtherDown: 0

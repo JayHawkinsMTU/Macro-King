@@ -18,8 +18,7 @@ public class FoodDataRequest : MonoBehaviour
     [SerializeField] GameEvent QueryComplete;
     // Your API key
     private string apiKey = "kt3fDVCgfMw7LSQfAdxF898dDjuQhsj4q2Q1eiXM";
-    // Base URL for FoodData Central API
-    private string baseUrl = "https://api.nal.usda.gov/fdc/v1/foods/search";
+
     private string lastSearch = "";
     private int lastPG = 0;
 
@@ -36,7 +35,6 @@ public class FoodDataRequest : MonoBehaviour
     void Start()
     {
         // Start the coroutine to make the API request
-        //StartCoroutine(GetFoodData("apple", pageNumber:"1", pageSize:resultsPerPage.Value, saveToJSON:true));
         searchBar = GetComponent<TMP_InputField>();
     }
 
@@ -72,20 +70,38 @@ public class FoodDataRequest : MonoBehaviour
         // Call the API
         StartCoroutine(
             GetFoodData(
-                query, 
+                query:query, 
+                apiKey:apiKey,
                 pageNumber: CurrentPage.ToString(), 
                 pageSize: resultsPerPage.Value,
                 saveToJSON: false,
-                triggerGameEvent: true
-            ) );
+                triggerGameEvent: true,
+                queryComplete_Event:QueryComplete,
+                optionalResultsObject: GameManager.searchFoodResults
+            ) );;
     }
 
-    IEnumerator GetFoodData(string query, string pageNumber = "", int pageSize = 10, bool saveToJSON = false, bool triggerGameEvent = false)
+    public static IEnumerator GetFoodData(
+        string query, 
+        string apiKey, 
+        string pageNumber = "", 
+        int pageSize = 10, 
+        bool saveToJSON = false, 
+        bool triggerGameEvent = false, 
+        GameEvent queryComplete_Event = null,
+        SearchFoodResults optionalResultsObject = null
+        )
     {
+
+        // Base URL for FoodData Central API
+        string baseUrl = "https://api.nal.usda.gov/fdc/v1/foods/search";
+
         // Build the complete URL with query parameters
         var pg_num = "";
         if(pageNumber != "") { pg_num = "&pageNumber=" + pageNumber; }
         string url = $"{baseUrl}?query={query}{pg_num}&pageSize={pageSize}&api_key={apiKey}";
+
+
 
         // Make the request
         using (UnityWebRequest request = UnityWebRequest.Get(url))
@@ -107,17 +123,24 @@ public class FoodDataRequest : MonoBehaviour
 
                 // Convert to JObject
                 JObject jsonResponse = JObject.Parse(jsonResponse_str);
-                //DisplayFoodNamesAndCalories(jsonResponse);
 
-                SearchResultsScriptableObject.AddResult(jsonResponse);
+                // Save the results to a SearchFoodResults Scriptable Object
+                if (optionalResultsObject == null)
+                {
+                    GameManager.searchFoodResults.AddResult(jsonResponse);
+                }
+                else
+                {
+                    optionalResultsObject.AddResult(jsonResponse);
+                }
 
                 // Trigger Game Event
-                if (triggerGameEvent) { QueryComplete.Raise(); }
+                if (triggerGameEvent) { queryComplete_Event?.Raise(); }
 
             }
         }
     }
-    void SaveJsonToFile(string jsonData, string fileName)
+    public static void SaveJsonToFile(string jsonData, string fileName)
     {
         // Path to save the file in the Unity project directory
         string path = Path.Combine(Application.dataPath, fileName);

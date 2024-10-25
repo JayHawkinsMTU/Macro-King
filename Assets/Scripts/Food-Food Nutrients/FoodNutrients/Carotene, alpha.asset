@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6856873cc48ca4d9b14e883d90cc0c, type: 3}
   m_Name: Carotene, alpha
   m_EditorClassIdentifier: 
-  nutrientDict: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
   nutrientID: 1108
   nutrientName: Carotene, alpha
   indentLevel: 2
