@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453ac799715cf9d49a3d102312220dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainUser: {fileID: 0}
-  mainFoodNutrientsDictionary: {fileID: 0}
+  mainUser: {fileID: 11400000, guid: 963f81e08c3aa574091371b79a07ecce, type: 2}
+  mainFoodNutrientsDictionary: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
+  mainSearchFoodResults: {fileID: 11400000, guid: 53246dc42089f2a46aa99514dffea86b, type: 2}

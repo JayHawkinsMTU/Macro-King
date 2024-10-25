@@ -11,9 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] FoodNutrientsDictionary mainFoodNutrientsDictionary;
     public static FoodNutrientsDictionary foodNutrientsDictionary;
 
-    [SerializeField] SearchFoodResults searchFood;
-  
-    [SerializeField] PRHolder holder;
+    [SerializeField] SearchFoodResults mainSearchFoodResults;
+    public static SearchFoodResults searchFoodResults;
     void Awake()
     {
         UpdateInstances(forceUpdate:false);
@@ -23,5 +22,6 @@ public class GameManager : MonoBehaviour
     {
         if (user == null || forceUpdate) { user = mainUser; }
         if (foodNutrientsDictionary == null || forceUpdate) { foodNutrientsDictionary = mainFoodNutrientsDictionary; }
+        if (searchFoodResults == null || forceUpdate) { searchFoodResults = mainSearchFoodResults; }
     }
 }

@@ -2418,14 +2418,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
-      propertyPath: mainUser
-      value: 
-      objectReference: {fileID: 11400000, guid: 963f81e08c3aa574091371b79a07ecce, type: 2}
-    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
-      propertyPath: mainFoodNutrientsDictionary
-      value: 
-      objectReference: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
