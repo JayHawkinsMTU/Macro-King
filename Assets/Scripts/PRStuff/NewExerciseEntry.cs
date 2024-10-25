@@ -3,6 +3,7 @@ using System;
 using System.Globalization;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
 
@@ -41,11 +42,16 @@ public class NewExerciseEntry : MonoBehaviour
 
         //Add to list
         PersonalRecords PR = ScriptableObject.CreateInstance<PersonalRecords>();
-        // createAsset, saveAsset
+    
         PR.NewExercise(weight, exercise, time, distance, type, reps);
-        PRHolder prlist = ScriptableObject.CreateInstance<PRHolder>();
+        AssetDatabase.CreateAsset(PR, "Assets/Scripts/PRStuff/NewPr.so");
+        string[] list = AssetDatabase.FindAssets("PRList", null);
+        PRHolder prlist = AssetDatabase.ImportAsset("Assets/Scripts/PRStuff/PRList.so");
         prlist.AddExercise(PR);
-        // CreateAsset(PR.NewExercise(weight, exercise, time, distance, type, reps), Assets/Scripts/PRStuff);
+        // PRHolder prlist = Resources.Load("PRList/PRList") as PRHolder;
+        // prlist.AddExercise(PR);
+        AssetDatabase.SaveAssets();
+
 
         
     }
