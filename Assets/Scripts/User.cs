@@ -14,5 +14,7 @@ public class User : ScriptableObject
     [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
 
+    [SerializeField] public PRHolder PRlist;
+
 }
 
