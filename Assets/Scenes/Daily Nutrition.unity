@@ -1312,6 +1312,7 @@ GameObject:
   - component: {fileID: 1195310165}
   - component: {fileID: 1195310164}
   - component: {fileID: 1195310163}
+  - component: {fileID: 1195310166}
   m_Layer: 5
   m_Name: Goal List
   m_TagString: Untagged
@@ -1408,6 +1409,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195310161}
   m_CullTransparentMesh: 1
+--- !u!114 &1195310166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195310161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a977ea6e246dc94aa3b7328d1a55e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalDisplay: {fileID: 8329764300755489303, guid: 2e88cc08c54d7614085b2e05e2851c82, type: 3}
+  content: {fileID: 79486389}
+  verticalPadding: 10
 --- !u!1001 &1313816826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1788,8 +1804,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349701349}
   m_HandleRect: {fileID: 349701348}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.77777785
+  m_Value: 1
+  m_Size: 0.7777778
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2293,7 +2309,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457099466}
   m_HandleRect: {fileID: 1457099465}
   m_Direction: 2
-  m_Value: 1.0000004
+  m_Value: 1
   m_Size: 0.6
   m_NumberOfSteps: 0
   m_OnValueChanged:

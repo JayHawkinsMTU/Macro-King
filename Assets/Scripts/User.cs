@@ -7,7 +7,6 @@ using UnityEngine;
 public class User : ScriptableObject
 {
     public static User instance;
-
     // User fields
     [SerializeField] public string Name { get; set; } = "NO_NAME";
     [SerializeField] public List<Allergen> Allergens { get; private set; } = new();
@@ -16,6 +15,24 @@ public class User : ScriptableObject
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
 
     [SerializeField] public PRHolder PRlist;
+
+    // Loads user data from disk
+    public static User LoadUser()
+    {
+        // User has already been loaded, return instance.
+        if(instance != null)
+        {
+            return instance;
+        }
+        // FOR NOW THIS WILL JUST LOAD EXAMPLE DATA FOR TESTING
+        // LOAD ACTUAL DATA LATER
+        instance = new();
+        for(int i = 0; i < 10; i++) 
+        {
+            instance.NutritionGoals.Add(new NutritionGoal(NutritionGoal.Macro.CALORIES, NutritionGoal.Condition.CLOSE_TO, 2000 + i));
+        }
+        return instance;
+    }
 
 }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectMacroButton : SelectEnumButton
 {
     public static SelectMacroButton selected;
-    public NutritionGoal.Macros macro;
+    public NutritionGoal.Macro macro;
     public override void SetSelected()
     {
         backdrop.color = selectedColor;

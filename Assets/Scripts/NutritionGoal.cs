@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NutritionGoal
 {
     public static NutritionGoal instance;
-    public enum Macros { 
+    public enum Macro { 
         CALORIES, 
         CARBS, 
         PROTEIN,
@@ -18,12 +19,12 @@ public class NutritionGoal
         CLOSE_TO
     }
 
-    public static Dictionary<Macros, string> macroToString {get; private set;} = new()
+    public static Dictionary<Macro, string> macroToString {get; private set;} = new()
     {
-        {Macros.CALORIES, "Calories"},
-        {Macros.CARBS, "Carbs"},
-        {Macros.PROTEIN, "Protein"},
-        {Macros.FAT, "Fat"}
+        {Macro.CALORIES, "Calories"},
+        {Macro.CARBS, "Carbs"},
+        {Macro.PROTEIN, "Protein"},
+        {Macro.FAT, "Fat"}
     };
 
     public static Dictionary<Condition, char> conditionToString {get; private set;} = new()
@@ -39,11 +40,20 @@ public class NutritionGoal
     value = 3000
     Default goal basically means eat something today.
     */
-    public Macros macro = Macros.CALORIES;
+    public Macro macro = Macro.CALORIES;
     public Condition condition = Condition.GREATER_THAN;
     public float value = 0;
     // The percantage difference for CLOSE_TO condition. Default 5%
     public float leeway = .05f;
+
+    public NutritionGoal() {}
+
+    public NutritionGoal(Macro m, Condition c, float v)
+    {
+        macro = m;
+        condition = c;
+        value = v;
+    }
 
     // Determines if goal has been accomplished
     public bool IsAccomplished(float logged)
