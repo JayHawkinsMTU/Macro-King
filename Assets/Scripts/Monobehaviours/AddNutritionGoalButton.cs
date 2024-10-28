@@ -6,10 +6,18 @@ using TMPro;
 public class AddNutritionGoalButton : MonoBehaviour
 {
     public TMP_Text textInput;
+    public ChangeSceneButton changeSceneButton;
     public void AddGoal()
     {
-        NutritionGoal goal = NutritionGoalContainer.goal;
+        NutritionGoal goal = NutritionGoal.instance;
         goal.value = int.Parse(textInput.text);
-        GameManager.user.NutritionGoals.Add(goal);
+        NutritionGoal.instance.AddGoal();
+        changeSceneButton.ChangeScene();
+    }
+
+    public void RemoveGoal()
+    {
+        NutritionGoal.instance.RemoveGoal();
+        changeSceneButton.ChangeScene();
     }
 }
