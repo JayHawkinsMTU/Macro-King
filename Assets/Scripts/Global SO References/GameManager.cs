@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public static UnitManager unitManager;
     [SerializeField] PRHolder mainPRList;
     public static PRHolder PRList;
+   
 
     [Header("Nutrients")]
     #region Nutrients
@@ -62,5 +63,6 @@ public class GameManager : MonoBehaviour
         if (protienNutrient == null || forceUpdate) { protienNutrient = mainProtienNutrient; }
         if (fatNutrient == null || forceUpdate) { fatNutrient = mainFatNutrient; }
         if (carbsNutrient == null || forceUpdate) { carbsNutrient = mainCarbsNutrient; }
+        if (PRList == null || forceUpdate) {PRList = mainPRList; }
     }
 }

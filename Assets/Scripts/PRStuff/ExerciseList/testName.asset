@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 400
   exercise: {fileID: 0}
-  reps: 5
-  type: 1
-  distance: 400
+  reps: 0
+  type: 0
+  distance: 0
   exerciseName: testName

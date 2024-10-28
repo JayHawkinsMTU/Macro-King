@@ -56,8 +56,8 @@ public class FoodItem : ScriptableObject
         newFood.foodID = (int)foodData["fdcId"];
         float servingSize = (float)(foodData["servingSize"] ?? 0);
         string ServingSizeunit = (string)(foodData["servingSizeUnit"] ?? "g");
-        string ingredients = (string)(foodData["ingredients"]);
-        //newFood.ingredients = ingredients.Split(',',System.StringSplitOptions.)
+        string ingredients = (string)(foodData["ingredients"] ?? "");
+        newFood.ingredients = ingredients.Split(',').ToList();
         newFood.servingSize = new UnitValue(servingSize, ServingSizeunit);
 
 #if UNITY_EDITOR
@@ -85,7 +85,6 @@ public class FoodItem : ScriptableObject
             {
                 newFood.foodNutrientQuantities[n.NutrientID] = unitValue;
             }
-  
 
         }
 

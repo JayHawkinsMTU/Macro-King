@@ -54,16 +54,10 @@ public class FoodSearchResultEntry : MonoBehaviour
     [ContextMenu("Run OnButtonPress()")]
     public void OnButtonPress()
     {
-        /* List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
-
-                foreach (JToken nutrient in foodNutrients)
-                {
-                    FoodNutrients.CreateFoodNutrients(
-                        mono:this, 
-                        nutrient:nutrient, 
-                        saveAssets:true);
-                }*/
+        // Print the food string out
         Debug.Log(foodData.ToString());
+
+        // Create new food item and save it as the current item
         currentFoodItem.currentItem = FoodItem.CreateFoodItem(foodData, mono: this, true);
         
     }
