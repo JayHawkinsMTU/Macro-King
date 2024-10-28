@@ -62,7 +62,7 @@ public class FoodSearchResultEntry : MonoBehaviour
                         nutrient:nutrient, 
                         saveAssets:true);
                 }*/
-
+        Debug.Log(foodData.ToString());
         FoodItem.CreateFoodItem(foodData, mono: this, true);
     }
 }
