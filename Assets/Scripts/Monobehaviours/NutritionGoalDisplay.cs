@@ -12,39 +12,8 @@ public class NutritionGoalDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string macro;
-        switch (goal.macro) {
-            case NutritionGoal.Macros.CALORIES:
-                macro = "Calories";
-                break;
-            case NutritionGoal.Macros.CARBS:
-                macro = "Carbs";
-                break;
-            case NutritionGoal.Macros.PROTEIN:
-                macro = "Protein";
-                break;
-            case NutritionGoal.Macros.FAT:
-                macro = "Fat";
-                break;
-            default:
-                Debug.LogError("NULL macro assigned to goal");
-                return;
-        }
-        char cond;
-        switch (goal.condition) {
-            case NutritionGoal.Condition.GREATER_THAN:
-                cond = '>';
-                break;
-            case NutritionGoal.Condition.LESS_THAN:
-                cond = '<';
-                break;
-            case NutritionGoal.Condition.CLOSE_TO:
-                cond = '=';
-                break;
-            default:
-                Debug.LogError("NULL condition assigned to goal");
-                return;
-        }
+        string macro = NutritionGoal.macroToString[goal.macro];
+        char cond = NutritionGoal.conditionToString[goal.condition];
         goalTitle.text = $"{macro}{cond}{goal.value}";
         // TODO: replace "0f" with today's amount of that macro.
         goalProgress.text = $"{0f}/{goal.value}";

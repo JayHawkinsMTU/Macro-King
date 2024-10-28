@@ -16,7 +16,7 @@ public class FoodItem : ScriptableObject
     [SerializeField] string foodName = "New Food Item";
     UnitValue servingSize;
     private List<Allergen> allergens = new List<Allergen>();
-
+    private List<string> ingredients = new List<string>();
 
     #region Getters
     #region Nutrient Getters
@@ -56,6 +56,8 @@ public class FoodItem : ScriptableObject
         newFood.foodID = (int)foodData["fdcId"];
         float servingSize = (float)(foodData["servingSize"] ?? 0);
         string ServingSizeunit = (string)(foodData["servingSizeUnit"] ?? "g");
+        string ingredients = (string)(foodData["ingredients"] ?? "");
+        newFood.ingredients = ingredients.Split(',').ToList();
         newFood.servingSize = new UnitValue(servingSize, ServingSizeunit);
 
 #if UNITY_EDITOR
@@ -79,7 +81,10 @@ public class FoodItem : ScriptableObject
             string unit = (string)nutrient["unitName"];
 
             UnitValue unitValue = new UnitValue(value, unit);
-            newFood.foodNutrientQuantities.Add(n.NutrientID, unitValue);
+            if(newFood.foodNutrientQuantities.TryAdd(n.NutrientID, unitValue))
+            {
+                newFood.foodNutrientQuantities[n.NutrientID] = unitValue;
+            }
 
         }
 

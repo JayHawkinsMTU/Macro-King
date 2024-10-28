@@ -18,6 +18,6 @@ public class SelectConditionButton : SelectEnumButton
     }
     public override void SetEnum()
     {
-        NutritionGoalContainer.goal.condition = this.cond;
+        NutritionGoal.instance.condition = this.cond;
     }
 }

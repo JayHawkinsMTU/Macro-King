@@ -10,6 +10,7 @@ public class FoodSearchResultEntry : MonoBehaviour
     [SerializeField] private TMP_Text name;
     [SerializeField] private TMP_Text calCount;
     private JToken foodData;
+    [SerializeField] CurrentFoodItem currentFoodItem;
     public void Awake()
     {
         clearData();
@@ -53,16 +54,11 @@ public class FoodSearchResultEntry : MonoBehaviour
     [ContextMenu("Run OnButtonPress()")]
     public void OnButtonPress()
     {
-        /* List<JToken> foodNutrients = foodData["foodNutrients"].ToList();
+        // Print the food string out
+        Debug.Log(foodData.ToString());
 
-                foreach (JToken nutrient in foodNutrients)
-                {
-                    FoodNutrients.CreateFoodNutrients(
-                        mono:this, 
-                        nutrient:nutrient, 
-                        saveAssets:true);
-                }*/
-
-        FoodItem.CreateFoodItem(foodData, mono: this, true);
+        // Create new food item and save it as the current item
+        currentFoodItem.currentItem = FoodItem.CreateFoodItem(foodData, mono: this, true);
+        
     }
 }

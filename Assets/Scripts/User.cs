@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="New User", menuName ="User")]
 public class User : ScriptableObject
 {
+    public static User instance;
 
     // User fields
     [SerializeField] public string Name { get; set; } = "NO_NAME";
