@@ -10,6 +10,7 @@ public class FoodSearchResultEntry : MonoBehaviour
     [SerializeField] private TMP_Text name;
     [SerializeField] private TMP_Text calCount;
     private JToken foodData;
+    [SerializeField] CurrentFoodItem currentFoodItem;
     public void Awake()
     {
         clearData();
@@ -63,6 +64,7 @@ public class FoodSearchResultEntry : MonoBehaviour
                         saveAssets:true);
                 }*/
         Debug.Log(foodData.ToString());
-        FoodItem.CreateFoodItem(foodData, mono: this, true);
+        currentFoodItem.currentItem = FoodItem.CreateFoodItem(foodData, mono: this, true);
+        
     }
 }
