@@ -1203,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845623166507090384, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: sceneName
+      value: Add Nutrition Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_text
       value: ADD ITEM
@@ -1218,8 +1222,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1976840580}
   m_SourcePrefab: {fileID: 100100000, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+--- !u!1 &991643043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+  m_PrefabInstance: {fileID: 991643042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047382842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,8 +1788,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349701349}
   m_HandleRect: {fileID: 349701348}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.7777778
+  m_Value: 1.0000004
+  m_Size: 0.77777785
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2281,7 +2293,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457099466}
   m_HandleRect: {fileID: 1457099465}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 1.0000004
   m_Size: 0.6
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2330,6 +2342,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
   m_PrefabInstance: {fileID: 991643042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1976840580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991643043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa6353fa2576cc4e9dc4ed7daafb612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSceneButton: {fileID: 0}
+  goalTitle: {fileID: 0}
+  goalProgress: {fileID: 0}
 --- !u!1001 &1997299268
 PrefabInstance:
   m_ObjectHideFlags: 0
