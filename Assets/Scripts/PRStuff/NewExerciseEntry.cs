@@ -46,10 +46,20 @@ public class NewExerciseEntry : MonoBehaviour
         //this doesn't work and I have no clue why!!
         // PRHolder prlist = ScriptableObject.CreateInstance<GameManager.PRList>(); 
         //This works for right now but it doesn't update to the list or take in the exercise so data
-        PRHolder prlist = ScriptableObject.CreateInstance<PRHolder>(); 
+
+        // PRHolder prlist = ScriptableObject.CreateInstance<PRHolder>(); 
+        // PRHolder prlist = GameManager.PRList;
+        
         PersonalRecords PR = ScriptableObject.CreateInstance<PersonalRecords>(); //create instance
         PR.NewExercise(weight, exercise, time, distance, type, reps); //add values
-        prlist.AddExercise(PR); //add to list
+        // prlist.AddExercise(PR); //add to list
+        GameManager.PRList.AddExercise(PR);
+
+        // for(PersonalRecords pr : GameManager.PRList) 
+        // {
+
+        // }
+        
 
         string directoryPathPR = "Assets/Scripts/PRStuff/ExerciseList";
         string assetPathPR = $"{directoryPathPR}/{DirectoryUtils.SanitizeToValidName(PR.exerciseName)}.asset";
@@ -62,7 +72,7 @@ public class NewExerciseEntry : MonoBehaviour
         Debug.Log("Creating Asset at" + assetPathPR);
 
         AssetDatabase.SaveAssetIfDirty(PR);
-        AssetDatabase.SaveAssetIfDirty(prlist);
+        // AssetDatabase.SaveAssetIfDirty(prlist);
 
 
 
