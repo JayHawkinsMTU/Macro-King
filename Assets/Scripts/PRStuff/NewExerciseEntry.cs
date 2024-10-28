@@ -1,5 +1,6 @@
 using System.Collections;
 using System;
+using System.IO;
 using System.Globalization;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 
 public class NewExerciseEntry : MonoBehaviour
 {
-   
+   public string exerciseName = "testName";
     [SerializeField] InputField inputWeight;
     [SerializeField] InputField inputExercise;
     [SerializeField] InputField inputTime;
@@ -41,18 +42,44 @@ public class NewExerciseEntry : MonoBehaviour
         int reps = Int32.Parse((string) inputReps.text);
 
         //Add to list
-        PersonalRecords PR = ScriptableObject.CreateInstance<PersonalRecords>();
-    
-        PR.NewExercise(weight, exercise, time, distance, type, reps);
-        AssetDatabase.CreateAsset(PR, "Assets/Scripts/PRStuff/NewPr.so");
-        GameManager.user.PRlist.AddExercise(PR);
+        // PRHolder prlist = GameManager.PRList; //get list from user
+        //this doesn't work and I have no clue why!!
+        // PRHolder prlist = ScriptableObject.CreateInstance<GameManager.PRList>(); 
+        //This works for right now but it doesn't update to the list or take in the exercise so data
+        PRHolder prlist = ScriptableObject.CreateInstance<PRHolder>(); 
+        PersonalRecords PR = ScriptableObject.CreateInstance<PersonalRecords>(); //create instance
+        PR.NewExercise(weight, exercise, time, distance, type, reps); //add values
+        prlist.AddExercise(PR); //add to list
 
-        //string[] list = AssetDatabase.FindAssets("PRList", null);
-        //PRHolder prlist = AssetDatabase.ImportAsset("Assets/Scripts/PRStuff/PRList.so");
-        //prlist.AddExercise(PR);
-        // PRHolder prlist = Resources.Load("PRList/PRList") as PRHolder;
-        // prlist.AddExercise(PR);
-        AssetDatabase.SaveAssets();
+        string directoryPathPR = "Assets/Scripts/PRStuff/ExerciseList";
+        string assetPathPR = $"{directoryPathPR}/{DirectoryUtils.SanitizeToValidName(PR.exerciseName)}.asset";
+
+        if(!Directory.Exists(directoryPathPR)) 
+        {
+            Directory.CreateDirectory(directoryPathPR); 
+        }
+        AssetDatabase.CreateAsset(PR, assetPathPR);
+        Debug.Log("Creating Asset at" + assetPathPR);
+
+        AssetDatabase.SaveAssetIfDirty(PR);
+        AssetDatabase.SaveAssetIfDirty(prlist);
+
+
+
+
+
+
+
+
+    
+        // AssetDatabase.CreateAsset(PR, "Assets/Scripts/PRStuff/NewPr.so");
+        // string[] list = AssetDatabase.FindAssets("PRList", null);
+        // // PRHolder prlist = AssetDatabase.ImportAsset("Assets/Scripts/PRStuff/PRList.so");
+        // PRHolder prlist = GameManager.PRList;
+        // // PRHolder prlist = Resources.Load("PRList/PRList") as PRHolder;
+        // // prlist.AddExercise(PR);
+        // AssetDatabase.SaveAssets();
+       
 
 
         

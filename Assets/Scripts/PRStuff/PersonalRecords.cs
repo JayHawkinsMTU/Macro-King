@@ -9,6 +9,7 @@ public class PersonalRecords : PRBase
     [SerializeField] int type;
     [SerializeField] DateTime time;
     [SerializeField] float distance;
+    public string exerciseName = "testName";
     
     public int Weight { get => weight; set => weight = value; }
     public Exercise Exercise { get => exercise; set => exercise = value; }

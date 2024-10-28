@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] UnitManager mainUnitManager;
     public static UnitManager unitManager;
+    [SerializeField] PRHolder mainPRList;
+    public static PRHolder PRList;
 
     [Header("Nutrients")]
     #region Nutrients
