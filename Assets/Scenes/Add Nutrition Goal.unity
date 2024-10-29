@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d0b750db945924a8e50be6e6126fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textInput: {fileID: 1548918027}
+  textInput: {fileID: 932787558}
   changeSceneButton: {fileID: 148773850}
 --- !u!1001 &836540440
 PrefabInstance:
@@ -2561,7 +2561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d0b750db945924a8e50be6e6126fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textInput: {fileID: 1548918027}
+  textInput: {fileID: 932787558}
   changeSceneButton: {fileID: 1755209271}
 --- !u!1 &1866343581
 GameObject:

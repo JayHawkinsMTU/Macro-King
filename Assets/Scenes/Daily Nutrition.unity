@@ -1203,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845623166507090384, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: sceneName
+      value: Add Nutrition Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_text
       value: ADD ITEM
@@ -1218,8 +1222,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1976840580}
   m_SourcePrefab: {fileID: 100100000, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+--- !u!1 &991643043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+  m_PrefabInstance: {fileID: 991643042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1047382842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1312,7 @@ GameObject:
   - component: {fileID: 1195310165}
   - component: {fileID: 1195310164}
   - component: {fileID: 1195310163}
+  - component: {fileID: 1195310166}
   m_Layer: 5
   m_Name: Goal List
   m_TagString: Untagged
@@ -1396,6 +1409,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195310161}
   m_CullTransparentMesh: 1
+--- !u!114 &1195310166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195310161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a977ea6e246dc94aa3b7328d1a55e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalDisplay: {fileID: 8329764300755489303, guid: 2e88cc08c54d7614085b2e05e2851c82, type: 3}
+  content: {fileID: 79486389}
+  verticalPadding: 10
 --- !u!1001 &1313816826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2330,6 +2358,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
   m_PrefabInstance: {fileID: 991643042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1976840580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991643043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa6353fa2576cc4e9dc4ed7daafb612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSceneButton: {fileID: 0}
+  goalTitle: {fileID: 0}
+  goalProgress: {fileID: 0}
 --- !u!1001 &1997299268
 PrefabInstance:
   m_ObjectHideFlags: 0
