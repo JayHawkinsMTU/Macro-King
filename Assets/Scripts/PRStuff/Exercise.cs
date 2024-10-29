@@ -9,4 +9,8 @@ public class Exercise : ExerciseBase
     {
         name = s;
     }
+    public string getName()
+    {
+        return name;
+    }
 }
