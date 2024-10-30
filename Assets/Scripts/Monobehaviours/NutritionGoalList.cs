@@ -30,7 +30,7 @@ public class NutritionGoalList : MonoBehaviour
             RectTransform rect = Instantiate(goalDisplay, content.transform);
             NutritionGoalDisplay ngd = rect.GetComponent<NutritionGoalDisplay>();
             ngd.goal = User.instance.NutritionGoals[i];
-            rect.position = new Vector2(content.position.x, (i + 1) * (-goalDisplay.rect.height - verticalPadding) + content.rect.height);
+            rect.anchoredPosition = new Vector2(0, i * -(rect.rect.height + verticalPadding));
         }
 
     }
