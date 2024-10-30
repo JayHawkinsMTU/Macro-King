@@ -14,12 +14,12 @@ public class NutritionGoalDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(goal == null) 
+        if(goal == null)
         {
             return;
         }
         string macro = NutritionGoal.macroToString[goal.macro];
-        char cond = NutritionGoal.conditionToString[goal.condition];
+        char cond = NutritionGoal.conditionToChar[goal.condition];
         goalTitle.text = $"{macro}{cond}{goal.value}";
         // TODO: replace "0f" with today's amount of that macro.
         goalProgress.text = $"{0f}/{goal.value}";

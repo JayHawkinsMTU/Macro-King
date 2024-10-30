@@ -27,7 +27,7 @@ public class NutritionGoal
         {Macro.FAT, "Fat"}
     };
 
-    public static Dictionary<Condition, char> conditionToString {get; private set;} = new()
+    public static Dictionary<Condition, char> conditionToChar {get; private set;} = new()
     {
         {Condition.GREATER_THAN, '>'},
         {Condition.LESS_THAN, '<'},
