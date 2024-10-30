@@ -16,13 +16,13 @@ public class NewFoodItem : MonoBehaviour
 
 
     //check to see if the food item already exists in the fooditem folder
-    // FoodItem food;
+    FoodItem food;
     // string newName = "";
     // bool exists = false;
     // DirectoryInfo dir = new DirectoryInfo("Assets/Scripts/Food-Food Nutrients/FoodItems");
     // FileInfo[] info = dir.GetFiles("*.prefab");
     // var foodNames = info.Select(f => f).ToArray();
-    // foreach (string f in foodNames) 
+    // foreach (FoodItem f in foodNames) 
     // {
     //     if(newName = f.foodName)
     //     {
@@ -35,6 +35,10 @@ public class NewFoodItem : MonoBehaviour
     //     food = ScriptableObject.CreateInstance<NewFoodItem>();
     //     food.createFoodItem(newName);
     // }
+
+    //add the food item to the list
+    GameManager.DietList.addFoodItem(food);
+    AssetDatabase.SaveAssetIfDirty(Gamemanager.DietList);
 
 
 
