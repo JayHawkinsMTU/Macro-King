@@ -1,4 +1,5 @@
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,7 @@ public class FoodItem : ScriptableObject
     public int FoodID { get => foodID;  }
     public string FoodName { get => foodName;  }
     public UnitValue ServingSize { get => servingSize;  }
+    public DateTime whenLogged = DateTime.Now;
     public Dictionary<int, UnitValue> FoodNutrientQuantities { get => foodNutrientQuantities; }
     #endregion
     #endregion

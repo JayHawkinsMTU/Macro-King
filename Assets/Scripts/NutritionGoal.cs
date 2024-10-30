@@ -72,6 +72,18 @@ public class NutritionGoal
         }
     }
 
+    public static string UnitsOf(Macro m)
+    {
+        if(m == Macro.CALORIES)
+        {
+            return "cals";
+        }
+        else
+        {
+            return "g";
+        }
+    }
+
     public void AddGoal()
     {
         User.instance.NutritionGoals.Add(this);

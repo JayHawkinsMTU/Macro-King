@@ -20,9 +20,10 @@ public class NutritionGoalDisplay : MonoBehaviour
         }
         string macro = NutritionGoal.macroToString[goal.macro];
         char cond = NutritionGoal.conditionToChar[goal.condition];
-        goalTitle.text = $"{macro}{cond}{goal.value}";
+        string units = NutritionGoal.UnitsOf(goal.macro);
+        goalTitle.text = $"{macro}{cond}{goal.value}{units}";
         // TODO: replace "0f" with today's amount of that macro.
-        goalProgress.text = $"{0f}/{goal.value}";
+        goalProgress.text = $"{0f}{units}/{goal.value}{units}";
     }
 
     public void Edit()
