@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public static PRHolder PRList;
     [SerializeField] ExerciseHolder mainExerciseList;
     public static ExerciseHolder exerciseList;
+    [SerializeField] DietLog mainDietList;
+    public static DietLog DietList;
    
 
     [Header("Nutrients")]
@@ -67,5 +69,6 @@ public class GameManager : MonoBehaviour
         if (carbsNutrient == null || forceUpdate) { carbsNutrient = mainCarbsNutrient; }
         if (PRList == null || forceUpdate) {PRList = mainPRList; }
         if (exerciseList == null || forceUpdate) {exerciseList = mainExerciseList; }
+        if (DietList == null || forceUpdate) {DietList = mainDietList; }
     }
 }
