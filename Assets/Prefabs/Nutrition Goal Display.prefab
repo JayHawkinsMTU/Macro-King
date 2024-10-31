@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -492,11 +492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_text
-      value: EDIT
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_fontSize
-      value: 66.15
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_Name
-      value: Change Scene Button
+      value: Edit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,7 +11,7 @@ public class NutritionGoalList : MonoBehaviour
     // Minimum height of content object in scroll view
     private float minContentHeight = 300;
     // Distance between each goal display
-    public float verticalPadding = 10;
+    public float verticalPadding = 50;
 
     // Load list immediately
     void Awake()
@@ -27,10 +27,10 @@ public class NutritionGoalList : MonoBehaviour
         // Display all goals
         for(int i = 0; i < n; i++)
         {
-            RectTransform rect = Instantiate(goalDisplay, this.gameObject.transform);
+            RectTransform rect = Instantiate(goalDisplay, content.transform);
             NutritionGoalDisplay ngd = rect.GetComponent<NutritionGoalDisplay>();
             ngd.goal = User.instance.NutritionGoals[i];
-            rect.position = new Vector2(rect.position.x, i * (-rect.rect.height + verticalPadding));
+            rect.anchoredPosition = new Vector2(0, i * -(rect.rect.height + verticalPadding));
         }
 
     }

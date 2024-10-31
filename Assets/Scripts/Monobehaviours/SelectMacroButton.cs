@@ -18,6 +18,7 @@ public class SelectMacroButton : SelectEnumButton
     }
     public override void SetEnum()
     {
+        if(NutritionGoal.instance == null) return;
         NutritionGoal.instance.macro = this.macro;
     }
 }

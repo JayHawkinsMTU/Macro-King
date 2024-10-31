@@ -100,9 +100,21 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 64ecaeb743c01ca40aee7c4d76fabab1, type: 2}
+    - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6024294326444833612, guid: 64ecaeb743c01ca40aee7c4d76fabab1, type: 2}
+    - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_Name
-      value: Back Variant
+      value: Back Button (Change Scene Button Variant)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

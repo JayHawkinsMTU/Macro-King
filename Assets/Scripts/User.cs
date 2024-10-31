@@ -10,7 +10,7 @@ public class User : ScriptableObject
     // User fields
     [SerializeField] public string Name { get; set; } = "NO_NAME";
     [SerializeField] public List<Allergen> Allergens { get; private set; } = new();
-    [SerializeField] public List<FoodItem> Nutrition { get; private set; } = new();
+    [SerializeField] public List<FoodEntry> Nutrition { get; private set; } = new();
     [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
 
@@ -30,6 +30,8 @@ public class User : ScriptableObject
         for(int i = 0; i < 10; i++) 
         {
             instance.NutritionGoals.Add(new NutritionGoal(NutritionGoal.Macro.CALORIES, NutritionGoal.Condition.CLOSE_TO, 2000 + i));
+            // Add multiple instances of default food item
+            instance.Nutrition.Add(new FoodEntry());
         }
         return instance;
     }

@@ -27,7 +27,7 @@ public class NutritionGoal
         {Macro.FAT, "Fat"}
     };
 
-    public static Dictionary<Condition, char> conditionToString {get; private set;} = new()
+    public static Dictionary<Condition, char> conditionToChar {get; private set;} = new()
     {
         {Condition.GREATER_THAN, '>'},
         {Condition.LESS_THAN, '<'},
@@ -69,6 +69,18 @@ public class NutritionGoal
             default:
                 Debug.LogError("NULL condition assigned to a goal");
                 return false;
+        }
+    }
+
+    public static string UnitsOf(Macro m)
+    {
+        if(m == Macro.CALORIES)
+        {
+            return "cals";
+        }
+        else
+        {
+            return "g";
         }
     }
 

@@ -37,8 +37,9 @@ public class NewFoodItem : MonoBehaviour
     // }
 
     //add the food item to the list
-    GameManager.DietList.addFoodItem(food);
-    AssetDatabase.SaveAssetIfDirty(Gamemanager.DietList);
+    // Commented out bc errors so I can work on other things. -Jay
+    //GameManager.DietList.addFoodItem(food);
+    //AssetDatabase.SaveAssetIfDirty(Gamemanager.DietList);
 
 
 
