@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class NewFoodItem : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class NewFoodItem : MonoBehaviour
 
 
     //check to see if the food item already exists in the fooditem folder
-    FoodItem food;
+    
     // string newName = "";
     // bool exists = false;
     // DirectoryInfo dir = new DirectoryInfo("Assets/Scripts/Food-Food Nutrients/FoodItems");
@@ -37,9 +38,12 @@ public class NewFoodItem : MonoBehaviour
     // }
 
     //add the food item to the list
-    // Commented out bc errors so I can work on other things. -Jay
-    //GameManager.DietList.addFoodItem(food);
-    //AssetDatabase.SaveAssetIfDirty(Gamemanager.DietList);
+    // FoodItem food2 = FoodItem.CreateFoodItem("apple");
+    // FoodItem food = ScriptableObject.CreateInstance<FoodItem>();
+    // DietLog dl = GameManager.DietList;
+   
+    // GameManager.DietList.addFoodItem(food2);
+    // AssetDatabase.SaveAssetIfDirty(GameManager.DietList);
 
 
 
