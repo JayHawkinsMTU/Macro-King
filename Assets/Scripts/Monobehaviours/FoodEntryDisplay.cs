@@ -10,6 +10,7 @@ public class FoodEntryDisplay : MonoBehaviour
     public TMP_Text quantity;
     void Awake()
     {
+        if(entry == null) return;
         string foodName = entry.item.FoodName;
         string qty = entry.quantity.ToString("0.##");
         title.text = foodName;

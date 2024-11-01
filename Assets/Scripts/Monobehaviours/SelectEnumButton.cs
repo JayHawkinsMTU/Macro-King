@@ -11,7 +11,7 @@ public class SelectEnumButton : MonoBehaviour
     // Whether or not this is the first assumed enum
     public bool defaultEnum = false;
 
-    private void Start()
+    private void Awake()
     {
         backdrop = GetComponent<Image>();
         if(defaultEnum) Select();
