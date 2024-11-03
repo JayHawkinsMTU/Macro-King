@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.5, y: 0}
+  m_AnchoredPosition: {x: -7.5, y: 661.4908}
   m_SizeDelta: {x: -15, y: 1321.4907}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &151378620
@@ -890,6 +890,7 @@ GameObject:
   - component: {fileID: 787120193}
   - component: {fileID: 787120192}
   - component: {fileID: 787120191}
+  - component: {fileID: 787120194}
   m_Layer: 5
   m_Name: Search btn
   m_TagString: Untagged
@@ -1011,6 +1012,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787120189}
   m_CullTransparentMesh: 1
+--- !u!114 &787120194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787120189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d6b4f3ca0cfab42bb9b59dce8acb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &859149121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1718,22 @@ PrefabInstance:
       propertyPath: mainDietList
       value: 
       objectReference: {fileID: 11400000, guid: 1e0f3e18d7a7dfe4fa1d8091bbecb9f7, type: 2}
+    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
+      propertyPath: mainFatNutrient
+      value: 
+      objectReference: {fileID: 11400000, guid: a07c1d1db8643d646a91f038ac14a2d4, type: 2}
+    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
+      propertyPath: mainCarbsNutrient
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f23b9ea95152a4195783ded55b3793, type: 2}
+    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
+      propertyPath: mainEnergyNutrient
+      value: 
+      objectReference: {fileID: 11400000, guid: d7d85aa0458801a4899b7b424b86751c, type: 2}
+    - target: {fileID: 5103497424514562540, guid: ad0ca3dc0d08ba54390ffeaaa3044d5e, type: 3}
+      propertyPath: mainProtienNutrient
+      value: 
+      objectReference: {fileID: 11400000, guid: 29808d50d9b120947b0e8158ae9923e8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2771,8 +2801,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1043114230}
   m_HandleRect: {fileID: 1043114228}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.7718556
+  m_Value: 0
+  m_Size: 0.49943596
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

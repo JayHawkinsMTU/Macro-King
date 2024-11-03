@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa6353fa2576cc4e9dc4ed7daafb612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSceneButton: {fileID: 0}
+  changeSceneButton: {fileID: 7244305526219703385}
   goalTitle: {fileID: 493309543066227353}
   goalProgress: {fileID: 1075021269676793587}
 --- !u!1 &7629178064925889683
@@ -501,10 +501,14 @@ PrefabInstance:
     - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5092011293731753253}
+      objectReference: {fileID: 4022014290219332862}
     - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: Edit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NutritionGoalDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_Name
@@ -520,3 +524,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1023197738370211886, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
   m_PrefabInstance: {fileID: 3861592803986015625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7244305526219703385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5845623166507090384, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+  m_PrefabInstance: {fileID: 3861592803986015625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d6b4f3ca0cfab42bb9b59dce8acb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

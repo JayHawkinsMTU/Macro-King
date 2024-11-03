@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Diet Log", menuName = "DietLog")]
 public class DietLog : ScriptableObject
 {
-    [SerializeField] List<FoodItem> dietList = new List<FoodItem>();
+    [SerializeField]  List<FoodItem> dietList = new List<FoodItem>();
     public void addFoodItem(FoodItem f)
     {
         dietList.Add(f);
