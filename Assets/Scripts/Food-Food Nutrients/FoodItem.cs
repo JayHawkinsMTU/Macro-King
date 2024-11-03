@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New Food Item", menuName ="Food/Food Item")]
+[CreateAssetMenu(fileName = "New Food Item", menuName = "Food/Food Item")]
 public class FoodItem : ScriptableObject
 {
     // Key = FoodNutrientID, Value is a Unit Quantity
@@ -48,6 +48,7 @@ public class FoodItem : ScriptableObject
         // Create new food item
         FoodItem newFood = CreateInstance<FoodItem>();
         newFood.foodNutrientQuantities = new Dictionary<int, UnitValue>();
+        
         newFood.foodNutrientQuantities.Add(
             key : GameManager.energyNutrient.NutrientID,
             value : new UnitValue(0, UnitManager.UnitParse("kcal"))

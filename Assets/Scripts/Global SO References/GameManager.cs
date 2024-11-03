@@ -41,15 +41,34 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] FoodNutrients mainCarbsNutrient;
     public static FoodNutrients carbsNutrient;
+
+    [Header("Picking Search Results")]
+    [SerializeField] FoodItem mainCurrentFoodItem;
+    private static FoodItem _currentFoodItem;
+    public static FoodItem CurrentFoodItem
+    {
+        get => _currentFoodItem;
+        set
+        {
+            _currentFoodItem = value;
+            if (instance != null)
+            {
+                instance.mainCurrentFoodItem = value;
+            }
+        }
+    }
+
     #endregion
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); //GameManager will persist throughout Scene Changes
         }
         else
         {
+            gameObject.name = "GameManager (destroyed at runtime)";  // Leaving this here to help with any confusion about duplicate GameManagers
             Destroy(this);
             return;
         }
@@ -70,5 +89,9 @@ public class GameManager : MonoBehaviour
         if (PRList == null || forceUpdate) {PRList = mainPRList; }
         if (exerciseList == null || forceUpdate) {exerciseList = mainExerciseList; }
         if (DietList == null || forceUpdate) {DietList = mainDietList; }
+        if (_currentFoodItem == null || forceUpdate)
+        {
+            _currentFoodItem = mainCurrentFoodItem;
+        }
     }
 }

@@ -4,16 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement; //to change the scene when an entry is selected
 
 public class FoodSearchResultEntry : MonoBehaviour
 {
+
+    [SerializeField] private static GameManager gameManager;
     [SerializeField] private TMP_Text name;
     [SerializeField] private TMP_Text calCount;
     private JToken foodData;
-    [SerializeField] CurrentFoodItem currentFoodItem;
+    [SerializeField] FoodItem currentFoodItem;
+    
     public void Awake()
     {
         clearData();
+
+        if (gameManager == null)
+        {
+            gameManager = GameManager.instance;
+            if (gameManager == null)
+            {
+                Debug.LogError("GameManager instance not found.");
+            }
+        }
     }
 
     public void setData(JToken foodItem)
@@ -58,7 +71,12 @@ public class FoodSearchResultEntry : MonoBehaviour
         Debug.Log(foodData.ToString());
 
         // Create new food item and save it as the current item
-        currentFoodItem.currentItem = FoodItem.CreateFoodItem(foodData, mono: this, true);
-        
+        this.currentFoodItem = FoodItem.CreateFoodItem(foodData, mono: this, true);
+
+        // Set the game manager's current chosen food result as this food result
+        GameManager.CurrentFoodItem = currentFoodItem;
+
+        //Scene changes into another window
+        SceneManager.LoadScene("Food Selection Info Menu");
     }
 }
