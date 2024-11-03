@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Add Nutrition Goal.unity
     guid: fd1ad2795cdf3de4f916ac540695d536
+  - enabled: 1
+    path: Assets/Scenes/Calendar.unity
+    guid: bcdeecf9757eefa4b86472af4d6cfc91
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 02254570109aa174b8038179523c4830
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c8fa306846378dc459dd753072e7f438, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8a165a21b180a0845856653ea1e390ad, type: 2}

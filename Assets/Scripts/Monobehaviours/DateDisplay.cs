@@ -12,6 +12,11 @@ public class DateDisplay : MonoBehaviour
     void Awake()
     {
         display = GetComponent<TMP_Text>();
-        display.text = $"{curDate.DayOfWeek}\n{curDate.Month}/{curDate.Day}/{curDate.Year}";
+        int day = curDate.Day;
+        if(calChangeScene.dayToSave != null && calChangeScene.dayToSave != 0)
+        {
+            day = calChangeScene.dayToSave;
+        }
+        display.text = $"{curDate.DayOfWeek}\n{curDate.Month}/{day}/{curDate.Year}";
     } 
 }
