@@ -10,11 +10,6 @@ public class populateCalendar : MonoBehaviour
     public Transform[] dayCols;
     private List<GameObject> days = new List<GameObject>();
 
-    void Start()
-    {
-
-    }
-
     public void printDates(int startDayOfWeek, int monthSize)
     {
         foreach(GameObject day in days)
