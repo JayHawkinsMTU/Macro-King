@@ -2566,14 +2566,14 @@ PrefabInstance:
     - target: {fileID: 6995390489767056741, guid: ffa829907b10ee649938b61acabf35da, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1755209271}
+      objectReference: {fileID: 1755209272}
     - target: {fileID: 6995390489767056741, guid: ffa829907b10ee649938b61acabf35da, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: RemoveGoal
       objectReference: {fileID: 0}
     - target: {fileID: 6995390489767056741, guid: ffa829907b10ee649938b61acabf35da, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChangeSceneButton, Assembly-CSharp
+      value: AddNutritionGoalButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7504743673992244105, guid: ffa829907b10ee649938b61acabf35da, type: 3}
       propertyPath: m_text
