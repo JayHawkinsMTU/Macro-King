@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,4 +21,5 @@ public class FoodEntry
     public FoodItem item = new();
     public Units unit = Units.SERVINGS;
     public float quantity = 1;
+    public DateTime recorded = DateTime.Now;
 }
