@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
     public static ExerciseHolder exerciseList;
     [SerializeField] DietLog mainDietList;
     public static DietLog DietList;
-   
+
+    [Header("Units")]
+    [SerializeField] BaseUnit mainCalUnit;
+    public static BaseUnit CalUnit;
 
     [Header("Nutrients")]
     #region Nutrients
@@ -89,9 +92,7 @@ public class GameManager : MonoBehaviour
         if (PRList == null || forceUpdate) {PRList = mainPRList; }
         if (exerciseList == null || forceUpdate) {exerciseList = mainExerciseList; }
         if (DietList == null || forceUpdate) {DietList = mainDietList; }
-        if (_currentFoodItem == null || forceUpdate)
-        {
-            _currentFoodItem = mainCurrentFoodItem;
-        }
+        if (_currentFoodItem == null || forceUpdate){_currentFoodItem = mainCurrentFoodItem;}
+        if (CalUnit == null || forceUpdate) { CalUnit = mainCalUnit; }
     }
 }

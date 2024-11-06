@@ -6,6 +6,7 @@ using UnityEngine;
 public class BaseUnit : ScriptableObject, iUnit
 {
     [SerializeField] string name;
+    [SerializeField] string printName = "";
     [SerializeField] bool useUnitPowerinName;
     [SerializeField] UnitPower unitPower;
 
@@ -27,6 +28,10 @@ public class BaseUnit : ScriptableObject, iUnit
 
     public override string ToString()
     {
+        if (printName != "")
+        {
+            return printName;
+        }
         return name;
     }
 

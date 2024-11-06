@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: kJ
   m_EditorClassIdentifier: 
   name: kJ
+  printName: 
   useUnitPowerinName: 0
   unitPower: {fileID: 0}
   useUnitFurtherDown: 0

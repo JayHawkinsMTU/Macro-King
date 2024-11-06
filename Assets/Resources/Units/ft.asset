@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb71476a88e8802429f9db6c919bbe09, type: 3}
-  m_Name: mg
+  m_Name: ft
   m_EditorClassIdentifier: 
-  name: mg
+  name: ft
   useUnitPowerinName: 0
   unitPower: {fileID: 0}
   useUnitFurtherDown: 0
   smallestUnit: {fileID: 0}
   baseUnits:
-  - {fileID: 11400000, guid: d585fddc1e9d2ba4f87c5a172b62a96c, type: 2}
+  - {fileID: 11400000, guid: dc7cfedc780537b4cbdc5f1de139c4e3, type: 2}
   multiplicities: 01000000
-  conversionToBase: 0.001
+  conversionToBase: 0.3048

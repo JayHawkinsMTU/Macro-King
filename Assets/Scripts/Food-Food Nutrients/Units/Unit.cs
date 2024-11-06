@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New Unit", menuName ="Food/Unit/Unit")]
+[CreateAssetMenu(fileName = "New Unit", menuName = "Food/Unit/Unit")]
 public class Unit : BaseUnit
 {
     [SerializeField] List<BaseUnit> baseUnits;
@@ -70,7 +70,8 @@ public class Unit : BaseUnit
                     if (multiplicity > 0)
                     {
                         ctb *= currentUnit.ConversionToBase();
-                    }else if( multiplicity == 0)
+                    }
+                    else if (multiplicity == 0)
                     {
                         // ctb *=1
                     }
@@ -82,5 +83,15 @@ public class Unit : BaseUnit
             }
             return ctb;
         }
+    }
+
+    [ContextMenu("Convert To Base")]
+    public void ConversionToBaseTest()
+    {
+        string s = $"Converting {this} to base Units: \n";
+        float v = ConversionToBase();
+        s += $"{this} Conversion factor = {v}\n";
+        s += $"1 {this}  : {v} {DictString()}";
+        Debug.Log(s);
     }
 }
