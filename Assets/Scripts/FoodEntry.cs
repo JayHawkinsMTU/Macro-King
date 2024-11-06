@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class FoodEntry
 {
-    public FoodItem food;
-    public UnitValue qty;
+    public FoodItem food; // SO food item that has been consumed
+    public UnitValue qty; // consumed quantity with units
     public DateTime recorded = DateTime.Now;
 
     public FoodEntry(FoodItem food, UnitValue qty, DateTime recorded)
@@ -14,8 +14,8 @@ public class FoodEntry
         this.food = food;
         this.qty = qty;
         this.recorded = recorded;
-
     }
+
     public FoodEntry()
     {
         this.food = null;
@@ -23,11 +23,21 @@ public class FoodEntry
         this.recorded = DateTime.Now;
     }
 
-    public UnitValue Calories()
+    public UnitValue Energy
     {
-        UnitValue oneServingCals = food.Energy;
-        float servings =  (food.ServingSize / qty).Value;
-        return servings * oneServingCals;
+        get => Servings * food.Energy;
+    }
+    public UnitValue Protien
+    {
+        get => Servings * food.Protien;
+    }
+    public UnitValue Carbs
+    {
+        get => Servings * food.Carbs;
+    }
+    public UnitValue Fat
+    {
+        get => Servings * food.Fat;
     }
 
     public float Servings
