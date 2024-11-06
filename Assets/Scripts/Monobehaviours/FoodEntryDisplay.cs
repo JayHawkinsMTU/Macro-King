@@ -11,9 +11,9 @@ public class FoodEntryDisplay : MonoBehaviour
     void Awake()
     {
         if(entry == null) return;
-        string foodName = entry.item.FoodName;
-        string qty = entry.quantity.ToString("0.##");
+        string foodName = entry.food.FoodName;
+        string qty = entry.qty.ToString();
         title.text = foodName;
-        quantity.text = $"Qty: {qty} {FoodEntry.unitsToString[entry.unit]}";
+        quantity.text = qty;
     }
 }

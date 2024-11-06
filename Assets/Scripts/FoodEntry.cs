@@ -26,8 +26,8 @@ public class FoodEntry
     public UnitValue Calories()
     {
         UnitValue oneServingCals = food.Energy;
-        float servings =  food.ServingSize / qty;
-        return servings * oneServingCals;
+        //float servings =  food.ServingSize / qty;
+        //return servings * oneServingCals;
         return null;
     }
 }

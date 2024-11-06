@@ -54,6 +54,33 @@ public class Unit : BaseUnit
 
     public override float ConversionToBase()
     {
-        return conversionToBase;
+        float ctb = conversionToBase;
+        if (isBaseUnit())
+        {
+            return ctb;
+        }
+        else
+        {
+            for (int i = 0; i < baseUnits.Count; i++)
+            {
+                iUnit currentUnit = baseUnits[i];
+                int multiplicity = multiplicities[i];
+                for (int j = 0; j < Mathf.Abs(multiplicity); j++)
+                {
+                    if (multiplicity > 0)
+                    {
+                        ctb *= currentUnit.ConversionToBase();
+                    }else if( multiplicity == 0)
+                    {
+                        // ctb *=1
+                    }
+                    else // multiplicity < 1
+                    {
+                        ctb /= currentUnit.ConversionToBase();
+                    }
+                }
+            }
+            return ctb;
+        }
     }
 }
