@@ -5,21 +5,29 @@ using UnityEngine;
 
 public class FoodEntry
 {
-    public enum Units
+    public FoodItem food;
+    public UnitValue qty;
+    public DateTime recorded = DateTime.Now;
+
+    public FoodEntry(FoodItem food, UnitValue qty, DateTime recorded)
     {
-        GRAMS,
-        MILLIGRAMS,
-        SERVINGS
+        this.food = food;
+        this.qty = qty;
+        this.recorded = recorded;
+
+    }
+    public FoodEntry()
+    {
+        this.food = null;
+        this.qty = null;
+        this.recorded = DateTime.Now;
     }
 
-    public static Dictionary<Units, string> unitsToString = new()
+    public UnitValue Calories()
     {
-        {Units.GRAMS, "g"},
-        {Units.MILLIGRAMS, "mg"},
-        {Units.SERVINGS, "servings"},
-    };
-    public FoodItem item = new();
-    public Units unit = Units.SERVINGS;
-    public float quantity = 1;
-    public DateTime recorded = DateTime.Now;
+        UnitValue oneServingCals = food.Energy;
+        float servings =  food.ServingSize / qty;
+        return servings * oneServingCals;
+        return null;
+    }
 }

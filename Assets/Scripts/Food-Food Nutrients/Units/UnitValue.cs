@@ -30,6 +30,34 @@ public class UnitValue
             if (nullUnitValue != null) { return nullUnitValue; }
             nullUnitValue = new UnitValue(0, BaseUnit.NullUnit);
             return nullUnitValue;
-        }   
+        }
     }
+
+    public static UnitValue operator *(float a, UnitValue b) => new UnitValue(a * b.value, b.unit);
+
+    // TODO: Implement
+    public static UnitValue operator *(UnitValue a, UnitValue b)
+    {
+        float newVal = a.value * b.value;
+        iUnit newUnit = a.unit;
+        iUnit unitA = a.unit;
+        iUnit unitB = b.unit;
+
+        float conversionofAtoBase = 1;
+        float conversionofBtoBase = 1;
+
+        return null;
+    }
+
+
+    // TODO: Implement
+    public static UnitValue operator /(UnitValue a, UnitValue b)
+    {
+
+        return null;
+    }
+
+
+
+
 }

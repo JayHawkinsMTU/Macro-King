@@ -11,6 +11,8 @@ public class User : ScriptableObject
     [SerializeField] public string Name { get; set; } = "NO_NAME";
     [SerializeField] public List<Allergen> Allergens { get; private set; } = new();
     [SerializeField] public List<FoodEntry> Nutrition { get; private set; } = new();
+
+    [SerializeField] public List<FoodItem> FavoriteFoods { get; private set; } = new();
     [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
 
@@ -36,5 +38,9 @@ public class User : ScriptableObject
         return instance;
     }
 
+    public void AddFavoriteFood(FoodItem food)
+    {
+        FavoriteFoods.Add(food);
+    }
 }
 

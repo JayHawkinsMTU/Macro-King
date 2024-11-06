@@ -123,5 +123,4 @@ public class FoodItem : ScriptableObject
     {
         Debug.Log(ToString());
     }
-
 }

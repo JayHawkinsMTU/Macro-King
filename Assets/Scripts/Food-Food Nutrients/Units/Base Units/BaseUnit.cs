@@ -9,6 +9,7 @@ public class BaseUnit : ScriptableObject, iUnit
     [SerializeField] bool useUnitPowerinName;
     [SerializeField] UnitPower unitPower;
 
+
     [Tooltip("Only enter if smaller units exist example kg is base, but g exists")]
     [SerializeField] private bool useUnitFurtherDown = false;
     [SerializeField] private BaseUnit smallestUnit = null;
@@ -83,5 +84,10 @@ public class BaseUnit : ScriptableObject, iUnit
     public static BaseUnit NullUnit
     {
         get => null;
+    }
+
+    public virtual float ConversionToBase()
+    {
+        return 1;
     }
 }

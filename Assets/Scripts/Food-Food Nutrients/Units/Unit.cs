@@ -7,7 +7,7 @@ public class Unit : BaseUnit
 {
     [SerializeField] List<BaseUnit> baseUnits;
     [SerializeField] List<int> multiplicities;
-    [SerializeField] double conversionToBase;
+    [SerializeField] protected float conversionToBase;
     public override Dictionary<iUnit, int> BaseUnits()
     {
         if (dict != null)
@@ -52,4 +52,8 @@ public class Unit : BaseUnit
         return false;
     }
 
+    public override float ConversionToBase()
+    {
+        return conversionToBase;
+    }
 }
