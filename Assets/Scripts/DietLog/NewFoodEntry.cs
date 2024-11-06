@@ -13,8 +13,10 @@ public class NewFoodEntry : MonoBehaviour
     [SerializeField] InputField inputFood;
     [SerializeField] Text resultFood;
     
-
-    FoodEntry food;
-    // GameManager.DietList.add(food);
+    public void ValidateInput() 
+    {
+    FoodEntry food = new FoodEntry();
+    GameManager.DietList.addFoodItem(food);
+    }
 
 }
