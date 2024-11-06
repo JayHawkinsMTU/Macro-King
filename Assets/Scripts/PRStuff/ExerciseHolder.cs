@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Exercise List", menuName = "Exercise List")]
+/*
+Class to hold a list of exercise TYPES, not the entire workout
+*/
 public class ExerciseHolder : ScriptableObject 
 {
     [SerializeField] List<Exercise> eList = new List<Exercise>();

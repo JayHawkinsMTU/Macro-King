@@ -8,13 +8,13 @@ using UnityEditor;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 
-public class NewFoodItem : MonoBehaviour
+public class NewFoodEntry : MonoBehaviour
 {
     [SerializeField] InputField inputFood;
     [SerializeField] Text resultFood;
     
 
     FoodEntry food;
-    GameManager.DietList.add(food);
+    // GameManager.DietList.add(food);
 
 }

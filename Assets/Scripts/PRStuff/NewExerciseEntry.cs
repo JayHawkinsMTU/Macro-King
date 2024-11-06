@@ -31,25 +31,27 @@ public class NewExerciseEntry : MonoBehaviour
     
     public void ValidateInput()
     {   //convert all data to its respective type
-        int weight = Int32.Parse((string) inputWeight.text);
+        int weight = Int32.Parse(inputWeight.text);
         DateTime time = new DateTime(0, 0);
         double seconds = Convert.ToDouble(inputTime.text);
         time.AddSeconds(seconds);
         float distance = (float) Convert.ToDouble(inputTime.text);
-        int type = Int32.Parse((string) inputType.text);
-        int reps = Int32.Parse((string) inputReps.text);
+        int type = Int32.Parse(inputType.text);
+        int reps = Int32.Parse(inputReps.text);
         
         //find the exercise SO, if it exists
         Exercise exercise;
-        string newName = (string) inputExercise.text;
+        string newName = inputExercise.text;
         exercise = ScriptableObject.CreateInstance<Exercise>();
         exercise.newExercise(newName);
+        //if the exercise is found
         if(GameManager.exerciseList.ExerciseSearch(exercise) != null) 
         {
-            exercise = GameManager.exerciseList.ExerciseSearch(exercise); 
+            exercise = GameManager.exerciseList.ExerciseSearch(exercise); //Add the exercise to exercise list
         }
         else 
-        {
+        { 
+            //else create a new one
             exercise = ScriptableObject.CreateInstance<Exercise>();
             exercise.newExercise(newName);
         }

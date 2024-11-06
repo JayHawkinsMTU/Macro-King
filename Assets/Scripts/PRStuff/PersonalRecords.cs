@@ -1,6 +1,10 @@
 using System;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Personal Record", menuName = "Personal Records")]
+
+/*
+Constructor to make a new workout
+*/
 public class PersonalRecords : PRBase
 {
     [SerializeField] int weight;
