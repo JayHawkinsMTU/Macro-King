@@ -957,6 +957,34 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1976840581}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ValidateInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NewFoodEntry, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744856859712018356, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_Name
       value: Add Item
@@ -968,6 +996,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1976840580}
+    - targetCorrespondingSourceObject: {fileID: 8417622673827004476, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1976840581}
   m_SourcePrefab: {fileID: 100100000, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
 --- !u!1 &991643043 stripped
 GameObject:
@@ -1743,6 +1774,20 @@ MonoBehaviour:
   changeSceneButton: {fileID: 0}
   goalTitle: {fileID: 0}
   goalProgress: {fileID: 0}
+--- !u!114 &1976840581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991643043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b4f19c667c141439d8557009a929fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputFood: {fileID: 0}
+  resultFood: {fileID: 0}
 --- !u!1001 &1997299268
 PrefabInstance:
   m_ObjectHideFlags: 0
