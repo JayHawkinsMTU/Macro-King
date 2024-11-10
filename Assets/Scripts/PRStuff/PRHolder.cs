@@ -26,4 +26,11 @@ public class PRHolder : ScriptableObject
         return PRList;
     }
 
+    public PersonalRecords PRSearch(PersonalRecords PR)
+    {
+        int i = PRList.IndexOf(PR);
+        if (i<0) {return null; }
+        return PRList[i];
+    }
+
 }
