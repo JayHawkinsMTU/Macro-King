@@ -25,11 +25,11 @@ public class manageCalendar : MonoBehaviour
 
     public void getDays()
     {
-        DateTime fDay = new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1); //First day of the moneth
+        DateTime fDay = new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1); //First day of the month
         int monthSize = DateTime.DaysInMonth(CalendarDate.curYear, CalendarDate.curMonth); //Gets the number of days in the month
         int startDayOfWeek = (int) fDay.DayOfWeek; //Gets the day of the week the month starts on
 
-        calendar.printDates(startDayOfWeek, monthSize);
+        calendar.PrintDates(startDayOfWeek, monthSize);
     }
 
     //Method to increase month when forwards arrow is clicked

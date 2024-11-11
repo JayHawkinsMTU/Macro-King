@@ -10,8 +10,8 @@ using UnityEngine.UI;
 //Specific change scene script for calendar day buttons
 public class calChangeScene : MonoBehaviour 
 {
-    public static DateTime dateToSave; //Creates the date time that will be exported
-    public DateTime thisDate;
+    //public static DateTime dateToSave; //Creates the date time that will be exported
+    private DateTime date;
     public Image img;
     public static Color 
     accomplished = new Color(0.25f, 1, 0.75f, 0.25f),
@@ -26,20 +26,19 @@ public class calChangeScene : MonoBehaviour
     // GREY - not in calendar, likely was before user installed app or forgot to log data
     public void SetDate(DateTime dateTime)
     {
-        thisDate = dateTime;
-        Debug.Log(thisDate + " " + DateTime.Today);
-        if(thisDate == DateTime.Today)
+        date = dateTime;
+        GetComponentInChildren<TMP_Text>().text = date.Day.ToString();
+        if(date == DateTime.Today)
         {
             img.color = current;
-            Debug.Log("Current");
             return;
         }
-        if(!DailyNutrition.calendar.ContainsKey(thisDate))
+        if(!User.nutritionCalendar.ContainsKey(date))
         {
             img.color = noData;
             return;
         }
-        DailyNutrition day = DailyNutrition.calendar[thisDate];
+        DailyNutrition day = User.nutritionCalendar[date];
         if(day.goalsAccomplished)
         {
             img.color = accomplished;
@@ -53,10 +52,7 @@ public class calChangeScene : MonoBehaviour
         TMP_Text display = GetComponentInChildren<TMP_Text>(); //Gets the text object from the clicked button
         if (display != null && display.text != "")
         {
-            int year = manageCalendar.CalendarDate.curYear; //Gets the current year the calendar is on 
-            int month = manageCalendar.CalendarDate.curMonth; //Gets the current month the calendar is on 
-            int day = int.Parse(display.text); //Gets the date displayed on the clicked button
-            dateToSave = new DateTime(year, month, day); //This is the date time which is exported
+            DailyNutrition.selectedDate = date; //This is the date time which is exported
             SceneManager.LoadScene("Daily Nutrition");
         }
         else

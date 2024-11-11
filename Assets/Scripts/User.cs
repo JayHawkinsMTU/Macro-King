@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -15,6 +16,11 @@ public class User : ScriptableObject
     [SerializeField] public List<FoodItem> FavoriteFoods { get; private set; } = new();
     [SerializeField] public List<NutritionGoal> NutritionGoals { get; private set; } = new();
     [SerializeField] public List<PersonalRecords> PRs { get; private set; } = new();
+    /// <summary>
+    /// A mapping from day to data for that day. Should only use date, not time in key.
+    /// </summary>
+    public static Dictionary<DateTime, DailyNutrition> nutritionCalendar = new();
+
 
     [SerializeField] public PRHolder PRlist;
 

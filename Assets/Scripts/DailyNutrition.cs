@@ -1,3 +1,5 @@
+// Jay Hawkins
+// A class to store the nutritional data in a given day
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,7 +7,10 @@ using UnityEngine;
 
 public class DailyNutrition : MonoBehaviour
 {
-    public static Dictionary<DateTime, DailyNutrition> calendar = new();
+    /// <summary>
+    /// The current date that has been selected via UI
+    /// </summary>
+    public static DateTime selectedDate = DateTime.Today;
     public bool goalsAccomplished = false;
     public List<FoodEntry> foodEntries;
 

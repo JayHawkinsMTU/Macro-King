@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -10,7 +11,7 @@ public class populateCalendar : MonoBehaviour
     public Transform[] dayCols;
     private List<GameObject> days = new List<GameObject>();
 
-    public void printDates(int startDayOfWeek, int monthSize)
+    public void PrintDates(int startDayOfWeek, int monthSize)
     {
         foreach(GameObject day in days) //Clears previous day prefabs
         {
@@ -29,13 +30,13 @@ public class populateCalendar : MonoBehaviour
         {
             Transform dayCol = dayCols[i % 7]; //Calculates what day-column each dat should be at
             GameObject dayObject = Instantiate(dayPrf, dayCol); //Creates the day prefab at calculated day-columns
-            calChangeScene calChangeScene = dayPrf.GetComponent<calChangeScene>();
+            calChangeScene calChangeScene = dayObject.GetComponent<calChangeScene>();
             dayText = dayObject.GetComponentInChildren<TMP_Text>();
 
             if(i >= startDayOfWeek && curDay <= monthSize) //Runs for all days in the month
             {
-                calChangeScene.SetDate(new System.DateTime(manageCalendar.CalendarDate.curYear, manageCalendar.CalendarDate.curMonth, curDay));
-                dayText.text = curDay.ToString(); //Sets the day in the prefab and increments
+                //dayText.text = curDay.ToString(); //Sets the day in the prefab and increments
+                calChangeScene.SetDate(new DateTime(manageCalendar.CalendarDate.curYear, manageCalendar.CalendarDate.curMonth, curDay));
                 curDay++;
             }
             else
