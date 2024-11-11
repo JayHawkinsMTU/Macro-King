@@ -29,10 +29,12 @@ public class populateCalendar : MonoBehaviour
         {
             Transform dayCol = dayCols[i % 7]; //Calculates what day-column each dat should be at
             GameObject dayObject = Instantiate(dayPrf, dayCol); //Creates the day prefab at calculated day-columns
+            calChangeScene calChangeScene = dayPrf.GetComponent<calChangeScene>();
             dayText = dayObject.GetComponentInChildren<TMP_Text>();
 
             if(i >= startDayOfWeek && curDay <= monthSize) //Runs for all days in the month
             {
+                calChangeScene.SetDate(new System.DateTime(manageCalendar.CalendarDate.curYear, manageCalendar.CalendarDate.curMonth, curDay));
                 dayText.text = curDay.ToString(); //Sets the day in the prefab and increments
                 curDay++;
             }
