@@ -6,17 +6,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
+using TMPro; //allows the use of TextMesh Input Fields 
 
 
 public class NewExerciseEntry : MonoBehaviour
 {
    public string exerciseName = "testName";
-    [SerializeField] InputField inputWeight;
-    [SerializeField] InputField inputExercise;
-    [SerializeField] InputField inputTime;
-    [SerializeField] InputField inputDistance;
-    [SerializeField] InputField inputType;
-    [SerializeField] InputField inputReps;
+    [SerializeField] TMP_InputField inputWeight;
+    [SerializeField] TMP_InputField inputExercise;
+    [SerializeField] TMP_InputField inputTime;
+    [SerializeField] TMP_InputField inputDistance;
+    [SerializeField] TMP_InputField inputType;
+    [SerializeField] TMP_InputField inputReps;
 
     /*
     Need more input fields for the exercise data
