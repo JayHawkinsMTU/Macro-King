@@ -13,10 +13,17 @@ public class DateDisplay : MonoBehaviour
     {
         display = GetComponent<TMP_Text>();
         int day = curDate.Day;
-        if(calChangeScene.dayToSave != null && calChangeScene.dayToSave != 0)
+        DateTime importedDate;
+
+        if (calChangeScene.dateToSave != DateTime.MinValue) //Don't think this is needed, might remove later
         {
-            day = calChangeScene.dayToSave;
+            importedDate = calChangeScene.dateToSave; //Changes date to be displayed to the imported DateTime
+
         }
-        display.text = $"{curDate.DayOfWeek}\n{curDate.Month}/{day}/{curDate.Year}";
+        else
+        {
+            importedDate = curDate; //Defaults to current date if something's wrong
+        }
+        display.text = $"{importedDate.DayOfWeek}\n{importedDate.Month}/{importedDate.Day}/{importedDate.Year}"; //Displays the chosen DateTime
     } 
 }

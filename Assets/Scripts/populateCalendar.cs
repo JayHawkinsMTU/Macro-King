@@ -12,44 +12,35 @@ public class populateCalendar : MonoBehaviour
 
     public void printDates(int startDayOfWeek, int monthSize)
     {
-        foreach(GameObject day in days)
+        foreach(GameObject day in days) //Clears previous day prefabs
         {
             Destroy(day);
         }
         days.Clear();
 
-        int curDay = 1;
-
-        for(int day = 0; day < 7; day++)
+        int curDay = 1; //Starts at day 1 by default
+        int numBoxes = 35; //35 boxes by default since that's what 99% of months use
+        if(startDayOfWeek + monthSize > 35) //If more than 35 boxes are needed, adds another row
         {
-            Transform dayCol = dayCols[day];
+            numBoxes = 42;
+        }
 
-            if(day < startDayOfWeek)
+        for(int i = 0; i < numBoxes; i++)
+        {
+            Transform dayCol = dayCols[i % 7]; //Calculates what day-column each dat should be at
+            GameObject dayObject = Instantiate(dayPrf, dayCol); //Creates the day prefab at calculated day-columns
+            dayText = dayObject.GetComponentInChildren<TMP_Text>();
+
+            if(i >= startDayOfWeek && curDay <= monthSize) //Runs for all days in the month
             {
-                makeEmptyDay(dayCol);
+                dayText.text = curDay.ToString(); //Sets the day in the prefab and increments
+                curDay++;
             }
             else
             {
-                while (curDay <= monthSize)
-                {
-                    GameObject dayObject = Instantiate(dayPrf, dayCol);
-                    dayObject.GetComponentInChildren<TextMeshProUGUI>().text = curDay.ToString();
-                    days.Add(dayObject);
-                    curDay++;
-
-                    day = (day + 1) % 7;
-                    dayCol = dayCols[day];
-                }
-                break;
+                dayText.text = ""; //Fills out the blank days
             }
+            days.Add(dayObject);
         }
     }
-
-    private void makeEmptyDay(Transform parent)
-    {
-        GameObject empty = Instantiate(dayPrf, parent);
-        empty.GetComponentInChildren<TextMeshProUGUI>().text = ""; 
-        days.Add(empty);
-    }
-
 }

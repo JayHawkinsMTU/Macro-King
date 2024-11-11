@@ -18,4 +18,14 @@ public class closeMenu : MonoBehaviour
         canvasGroup.alpha = alpha;
 
     }
+
+    public void showNutritionDir()
+    {
+
+    }
+
+    public void showFitnessnDir()
+    {
+
+    }
 }
