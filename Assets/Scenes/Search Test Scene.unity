@@ -303,7 +303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.5, y: -0.000061035156}
+  m_AnchoredPosition: {x: -7.5, y: 0.000061035156}
   m_SizeDelta: {x: -15, y: 1321.4907}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &151378620
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c279dfc3878a4774b8a93a9d51d3f26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1286353960192458384, guid: a40c360dd25ec364d9bf05685c707aeb, type: 3}
+  prefab: {fileID: 1286353960192458384, guid: 6b628ff96a4e1a34e857a634ff5884fa, type: 3}
   initialSize: {fileID: 11400000, guid: 074133fade4f01e4ebc52eb4addc4741, type: 2}
 --- !u!1 &317155145
 GameObject:
@@ -886,7 +886,6 @@ GameObject:
   - component: {fileID: 787120193}
   - component: {fileID: 787120192}
   - component: {fileID: 787120191}
-  - component: {fileID: 787120194}
   m_Layer: 5
   m_Name: Search btn
   m_TagString: Untagged
@@ -1008,19 +1007,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787120189}
   m_CullTransparentMesh: 1
---- !u!114 &787120194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787120189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d6b4f3ca0cfab42bb9b59dce8acb06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!1 &859149121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitA: {fileID: 11400000, guid: f957eeafaaf715b41b98a5731a961e25, type: 2}
   UnitB: {fileID: 11400000, guid: 787b96dd9dbc5bf419627c6d62b89cd4, type: 2}
+  foodA: {fileID: 0}
+  qty: 0
 --- !u!4 &1696795839
 Transform:
   m_ObjectHideFlags: 0

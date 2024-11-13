@@ -14,10 +14,10 @@ public class calChangeScene : MonoBehaviour
     private DateTime date;
     public Image img;
     public static Color 
-    accomplished = new Color(0.25f, 1, 0.75f, 0.25f),
-    current = new Color(0.6f, 0.6f, 0.2f, 0.25f),
-    unaccomplished = new Color(.8f, 0.2f, 0.2f, 0.25f),
-    noData = new Color(0.3f, 0.3f, 0.3f, 0.25f);
+    accomplished = new Color(0.25f, 1, 0.75f, 0.5f),
+    current = new Color(0.75f, 0.75f, 0.2f, 0.5f),
+    unaccomplished = new Color(.8f, 0.2f, 0.2f, 0.5f),
+    noData = new Color(0.3f, 0.3f, 0.3f, 0.5f);
 
     // Update proper color on awake
     // GREEN - goals accomplished

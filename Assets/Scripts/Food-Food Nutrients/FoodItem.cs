@@ -14,7 +14,7 @@ public class FoodItem : ScriptableObject
     // Key = FoodNutrientID, Value is a Unit Quantity
     [SerializeReference] private Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
     [SerializeField] int foodID = -1;
-    [SerializeField] string foodName = "New Food Item";
+    [SerializeField] public string foodName = "New Food Item";
     UnitValue servingSize;
     private List<Allergen> allergens = new List<Allergen>();
     private List<string> ingredients = new List<string>();
