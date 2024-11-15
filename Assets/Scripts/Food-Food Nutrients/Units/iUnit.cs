@@ -8,6 +8,7 @@ public interface iUnit
     public Dictionary<iUnit, int> BaseUnits();
     public Dictionary<iUnit, int> BaseUnits(Dictionary<iUnit, int> dict, int multiplicity);
     public bool isBaseUnit();
-
     public float ConversionToBase();
+
+    public bool isOfType(iUnit u);
 }

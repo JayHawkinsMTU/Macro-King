@@ -56,4 +56,19 @@ public class UnitManager : ScriptableObject
     {
         UnitParse("kJ")?.PrintDictString();
     }
+
+    public List<iUnit> GetUnitsOfType(iUnit unitType)
+    {
+        List<iUnit> unitsoftype = new();
+
+        foreach (iUnit u in units)
+        {
+            // TODO: add condition to check if the units are the same type
+            if (unitType.isOfType(u))
+            {
+                unitsoftype.Add(u);
+            }
+        }
+        return unitsoftype;
+    }
 }

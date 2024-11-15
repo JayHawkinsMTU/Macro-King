@@ -95,4 +95,24 @@ public class BaseUnit : ScriptableObject, iUnit
     {
         return 1;
     }
+
+    public bool isOfType(iUnit u)
+    {
+        Dictionary<iUnit, int> baseUnitsOf1 = BaseUnits();
+        Dictionary<iUnit, int> baseUnitsOf2 = u.BaseUnits();
+
+        foreach (KeyValuePair<iUnit,int> unit_multiplicity in baseUnitsOf1)
+        {
+            if (!baseUnitsOf2.ContainsKey(unit_multiplicity.Key)){
+                return false;
+            }
+            int mult1 = unit_multiplicity.Value;
+            int mult2 = baseUnitsOf2[unit_multiplicity.Key];
+            if( mult1 != mult2)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
