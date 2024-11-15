@@ -19,7 +19,7 @@ public class User : ScriptableObject
     /// <summary>
     /// A mapping from day to data for that day. Should only use date, not time in key.
     /// </summary>
-    public static Dictionary<DateTime, DailyNutrition> nutritionCalendar = new();
+    public Dictionary<DateTime, DailyNutrition> nutritionCalendar = new();
 
 
     [SerializeField] public PRHolder PRlist;
@@ -32,14 +32,19 @@ public class User : ScriptableObject
         {
             return instance;
         }
+        // TODO: LOAD DATA FROM DISK
         // FOR NOW THIS WILL JUST LOAD EXAMPLE DATA FOR TESTING
         // LOAD ACTUAL DATA LATER
         instance = new();
+        instance.nutritionCalendar.Add(DateTime.Today, new DailyNutrition());
+        List<FoodEntry> todaysFoods = instance.nutritionCalendar[DateTime.Today].foodEntries;
+
         for(int i = 0; i < 10; i++) 
         {
             instance.NutritionGoals.Add(new NutritionGoal(NutritionGoal.Macro.CALORIES, NutritionGoal.Condition.CLOSE_TO, 2000 + i));
-            // Add multiple instances of default food item
+            // Add multiple instances of default food item to today
             instance.Nutrition.Add(new FoodEntry());
+            todaysFoods.Add(new FoodEntry());
         }
         return instance;
     }
