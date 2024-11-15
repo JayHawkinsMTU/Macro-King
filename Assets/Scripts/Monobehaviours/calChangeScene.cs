@@ -33,12 +33,12 @@ public class calChangeScene : MonoBehaviour
             img.color = current;
             return;
         }
-        if(!User.nutritionCalendar.ContainsKey(date))
+        if(!User.instance.nutritionCalendar.ContainsKey(date))
         {
             img.color = noData;
             return;
         }
-        DailyNutrition day = User.nutritionCalendar[date];
+        DailyNutrition day = User.instance.nutritionCalendar[date];
         if(day.goalsAccomplished)
         {
             img.color = accomplished;
