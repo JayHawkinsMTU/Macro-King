@@ -7,6 +7,7 @@ public class openMenu : MonoBehaviour
 {
     public GameObject canvas;
     public CanvasGroup canvasGroup;
+
     public void showMenu()
     {
         canvas.SetActive(true);
