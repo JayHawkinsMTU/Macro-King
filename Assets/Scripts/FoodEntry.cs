@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FoodEntry
 {
-    public FoodItem food; // SO food item that has been consumed
+    public FoodItem food = new(); // SO food item that has been consumed
     public UnitValue qty; // consumed quantity with units
     public DateTime recorded = DateTime.Now;
 

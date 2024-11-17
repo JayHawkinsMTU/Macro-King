@@ -44,7 +44,7 @@ public class User : ScriptableObject
             instance.NutritionGoals.Add(new NutritionGoal(NutritionGoal.Macro.CALORIES, NutritionGoal.Condition.CLOSE_TO, 2000 + i));
             // Add multiple instances of default food item to today
             instance.Nutrition.Add(new FoodEntry());
-            todaysFoods.Add(new FoodEntry());
+            //todaysFoods.Add(new FoodEntry());
         }
         return instance;
     }

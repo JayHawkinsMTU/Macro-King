@@ -25,7 +25,7 @@ public class FoodEntryDisplayList : MonoBehaviour
         // Automatically adjust minimum based no what's in the editor
         minContentHeight = content.rect.height;
         // Number of elements to display
-        int n = User.instance.NutritionGoals.Count;
+        int n = thisDay.foodEntries.Count;
         // Desired height of "content" object in scroll view
         float contentHeight = Mathf.Clamp(n * (entryDisplay.rect.height + verticalPadding), minContentHeight, float.MaxValue);
         content.sizeDelta = new Vector2(content.rect.width, contentHeight);

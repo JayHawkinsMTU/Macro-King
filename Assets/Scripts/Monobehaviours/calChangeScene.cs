@@ -24,9 +24,10 @@ public class calChangeScene : MonoBehaviour
     // YELLOW - current day
     // RED - goals not accomplished
     // GREY - not in calendar, likely was before user installed app or forgot to log data
-    public void SetDate(DateTime dateTime)
+    public void SetDate(DateTime date)
     {
-        date = dateTime;
+        this.date = date;
+        User.LoadUser();
         GetComponentInChildren<TMP_Text>().text = date.Day.ToString();
         if(date == DateTime.Today)
         {
@@ -50,6 +51,11 @@ public class calChangeScene : MonoBehaviour
     public void ChangeScene()
     {
         TMP_Text display = GetComponentInChildren<TMP_Text>(); //Gets the text object from the clicked button
+        // Add new day to user calendar data
+        if(!User.instance.nutritionCalendar.ContainsKey(date))
+        {
+            User.instance.nutritionCalendar.Add(date, new DailyNutrition());
+        }
         if (display != null && display.text != "")
         {
             DailyNutrition.selectedDate = date; //This is the date time which is exported
