@@ -11,11 +11,11 @@ public class DirectoryScenesHandler : MonoBehaviour
 {
     public string nutritionSceneName;
     public string fitnessSceneName;
-    public static bool onNutrition; //flag to trtack whther to display nutrition or fitness pages
 
     public void changeScene()
     {
-        if (onNutrition)
+        
+        if (DirectoryPageHandler.onNutrition)
         {
             SceneManager.LoadScene(nutritionSceneName);
         }
