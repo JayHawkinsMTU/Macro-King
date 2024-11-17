@@ -21,7 +21,7 @@ public class FoodEntryDisplayList : MonoBehaviour
     void Awake()
     {
         User.LoadUser();
-        DailyNutrition thisDay = User.instance.nutritionCalendar[DailyNutrition.selectedDate];
+        DailyNutrition thisDay = User.GetDay(DailyNutrition.selectedDate);
         // Automatically adjust minimum based no what's in the editor
         minContentHeight = content.rect.height;
         // Number of elements to display

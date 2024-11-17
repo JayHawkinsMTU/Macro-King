@@ -16,6 +16,7 @@ public class FoodEntryDisplay : MonoBehaviour
         }
         string foodName = entry.food.FoodName;
         string qty = entry.qty.ToString();
+        Debug.Log(qty);
         title.text = foodName;
         quantity.text = qty;
     }

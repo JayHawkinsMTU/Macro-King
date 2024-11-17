@@ -64,11 +64,12 @@ public class NewExerciseEntry : MonoBehaviour
         {
             Directory.CreateDirectory(directoryPathExercise);
         }
-        AssetDatabase.CreateAsset(exercise, assetPathExercise);
+        // AssetDatabase causes compiler errors when building.
+        //AssetDatabase.CreateAsset(exercise, assetPathExercise);
         Debug.Log("Creating Asset as" + assetPathExercise);
         //save to directory
-        AssetDatabase.SaveAssetIfDirty(exercise);
-        AssetDatabase.SaveAssetIfDirty(GameManager.exerciseList);
+        //AssetDatabase.SaveAssetIfDirty(exercise);
+        //AssetDatabase.SaveAssetIfDirty(GameManager.exerciseList);
 
 
         //create the asset
@@ -82,11 +83,11 @@ public class NewExerciseEntry : MonoBehaviour
         {
             Directory.CreateDirectory(directoryPathPR); 
         }
-        AssetDatabase.CreateAsset(PR, assetPathPR);
+        //AssetDatabase.CreateAsset(PR, assetPathPR);
         Debug.Log("Creating Asset at" + assetPathPR);
         //save to directory
-        AssetDatabase.SaveAssetIfDirty(PR);
-        AssetDatabase.SaveAssetIfDirty(GameManager.PRList);
+        //AssetDatabase.SaveAssetIfDirty(PR);
+        //AssetDatabase.SaveAssetIfDirty(GameManager.PRList);
 
        
 
