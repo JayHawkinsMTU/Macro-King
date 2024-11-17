@@ -96,8 +96,8 @@ public class FoodItem : ScriptableObject
             string directoryPath = "Assets/Scripts/Food-Food Nutrients/FoodItems";
             string assetPath = $"{directoryPath}/{DirectoryUtils.SanitizeToValidName(newFood.foodName + "_" + newFood.foodID)}.asset";
             if (!Directory.Exists(directoryPath)) { Directory.CreateDirectory(directoryPath); }
-            AssetDatabase.CreateAsset(newFood, assetPath);
-            AssetDatabase.SaveAssetIfDirty(newFood);
+            //AssetDatabase.CreateAsset(newFood, assetPath);
+            //AssetDatabase.SaveAssetIfDirty(newFood);
         }
 
         return newFood;

@@ -95,4 +95,9 @@ public class GameManager : MonoBehaviour
         if (_currentFoodItem == null || forceUpdate){_currentFoodItem = mainCurrentFoodItem;}
         if (CalUnit == null || forceUpdate) { CalUnit = mainCalUnit; }
     }
+
+    void OnApplicationQuit()
+    {
+        User.SaveUser();
+    }
 }
