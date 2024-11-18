@@ -5,16 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-DateTime timeRecorded;
-public class Pr_Logging 
-{
-    
-public void RemoveItem(){
 
-}
+public class Pr_Logging {
+    DateTime timeRecorded;
 
-public void EditItem(){
+    public void RemoveItem() {
 
-}
+    }
+
+    public void EditItem() {
+
+    }
 
 }

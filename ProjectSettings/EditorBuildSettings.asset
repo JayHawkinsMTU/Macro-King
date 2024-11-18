@@ -6,10 +6,43 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Home Page.unity
+    guid: 4179a9e7947784d44a2a03c36c6a7aee
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Nutrition Overview.unity
     guid: 686bf40f8e8161246a1ec347f1084d2a
+  - enabled: 1
+    path: Assets/Scenes/Daily Nutrition.unity
+    guid: 959373447e5c90d4fbd292e48a1ea96f
+  - enabled: 1
+    path: Assets/Scenes/Nutrition Label.unity
+    guid: cafc6d910f4b30a4f882fc8c8f0e47ac
+  - enabled: 1
+    path: Assets/Scenes/Nutrition Goals.unity
+    guid: 56c46f1fb6cc3e34fad0ac214a34034a
+  - enabled: 1
+    path: Assets/Scenes/Add Nutrition Goal.unity
+    guid: fd1ad2795cdf3de4f916ac540695d536
+  - enabled: 1
+    path: Assets/Scenes/Calendar.unity
+    guid: bcdeecf9757eefa4b86472af4d6cfc91
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 02254570109aa174b8038179523c4830
+  - enabled: 1
+    path: Assets/Scenes/Food Selection Info Menu/Food Selection Info Menu.unity
+    guid: 25562cb7aff7b314eab76b4d918da04e
+  - enabled: 1
+    path: Assets/Scenes/Search Test Scene.unity
+    guid: d3fb7934df55e3f4da658dc332d9a889
+  - enabled: 1
+    path: Assets/Scenes/UnitValueEntry.unity
+    guid: 5bdf9eebba94abb4682986125637f8ee
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: e0e86dd6d6a482542a8c69200a5d35e3, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c8fa306846378dc459dd753072e7f438, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: f821305203be1dd44b4a5b2419997042, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8a165a21b180a0845856653ea1e390ad, type: 2}

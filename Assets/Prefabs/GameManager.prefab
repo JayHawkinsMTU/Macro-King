@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2914577569380693244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4663911306701178894}
+  - component: {fileID: 5103497424514562540}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4663911306701178894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914577569380693244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 159.64865, y: 621.6363, z: -0.060552992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5103497424514562540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914577569380693244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453ac799715cf9d49a3d102312220dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainUser: {fileID: 11400000, guid: 963f81e08c3aa574091371b79a07ecce, type: 2}
+  mainFoodNutrientsDictionary: {fileID: 11400000, guid: 82b889c4fbe22d0499e2fbec231df0a8, type: 2}
+  mainSearchFoodResults: {fileID: 11400000, guid: 53246dc42089f2a46aa99514dffea86b, type: 2}
+  mainUnitManager: {fileID: 11400000, guid: 825d6d158452f3740aae578a2f67f338, type: 2}
+  mainPRList: {fileID: 11400000, guid: d195f8808d97d664eabc9c31561ddc3c, type: 2}
+  mainExerciseList: {fileID: 11400000, guid: 715b61c36f421dc4dbfa008a8abb4d24, type: 2}
+  mainDietList: {fileID: 11400000, guid: 1e0f3e18d7a7dfe4fa1d8091bbecb9f7, type: 2}
+  mainCalUnit: {fileID: 11400000, guid: 787b96dd9dbc5bf419627c6d62b89cd4, type: 2}
+  mainEnergyNutrient: {fileID: 11400000, guid: d7d85aa0458801a4899b7b424b86751c, type: 2}
+  mainProtienNutrient: {fileID: 11400000, guid: 29808d50d9b120947b0e8158ae9923e8, type: 2}
+  mainFatNutrient: {fileID: 11400000, guid: a07c1d1db8643d646a91f038ac14a2d4, type: 2}
+  mainCarbsNutrient: {fileID: 11400000, guid: b0f23b9ea95152a4195783ded55b3793, type: 2}
+  mainCurrentFoodItem: {fileID: 0}
