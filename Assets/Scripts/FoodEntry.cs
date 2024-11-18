@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class FoodEntry
 {
     public FoodItem food = new(); // SO food item that has been consumed

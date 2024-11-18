@@ -17,11 +17,13 @@ public class AddNutritionGoalButton : MonoBehaviour
         goal.value = float.Parse(textInput.text);
         NutritionGoal.instance.AddGoal();
         changeSceneButton.ChangeScene();
+        NutritionGoal.instance = null;
     }
 
     public void RemoveGoal()
     {
         NutritionGoal.instance.RemoveGoal();
         changeSceneButton.ChangeScene();
+        NutritionGoal.instance = null;
     }
 }

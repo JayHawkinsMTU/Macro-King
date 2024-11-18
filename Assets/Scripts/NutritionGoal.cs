@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
 public class NutritionGoal
 {
     public static NutritionGoal instance;
@@ -41,7 +43,7 @@ public class NutritionGoal
     Default goal basically means eat something today.
     */
     public Macro macro = Macro.CALORIES;
-    public Condition condition = Condition.GREATER_THAN;
+    public Condition condition = Condition.CLOSE_TO;
     public float value = 0;
     // The percantage difference for CLOSE_TO condition. Default 5%
     public float leeway = .05f;

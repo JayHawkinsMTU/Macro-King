@@ -46,6 +46,8 @@ public class NewExerciseEntry : MonoBehaviour
         /*
         Search for an existing exercise for the sake of not making duplicate exercises 
         */
+        /*
+        Commented out because user doesn't contain a definition for Exercises and Exercise class appears to be incomplete. - Jay
         List<Exercise> exercises = User.instance.Exercises; //create the list of exercises from user
         bool found = false;
         int exerciseIndex = -1;
@@ -71,7 +73,7 @@ public class NewExerciseEntry : MonoBehaviour
         User.LoadUser();
         User.instance.PRs.Add(PR);
         User.SaveUser();
-
+        */
 
         /*
         Overhaul of SO

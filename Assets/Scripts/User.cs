@@ -7,7 +7,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName ="New User", menuName ="User")]
 [Serializable]
-public class User : ScriptableObject
+public class User // No longer inherits from ScriptableObject as it prevents loading. - Jay
 {
     // For some reason { get; set } messes with serialization, so I had to remove it from
     // All attributes to save properly. -Jay
@@ -52,7 +52,8 @@ public class User : ScriptableObject
     // Save user data to disk
     public static void SaveUser()
     {
-        string path = Path.Combine(Application.persistentDataPath, string.Concat(instance.name, ".json"));
+        string path = Path.Combine(Application.persistentDataPath, string.Concat(instance.Name, ".json"));
+        Debug.Log(path);
         try
         {
             Directory.CreateDirectory(Path.GetDirectoryName(path));

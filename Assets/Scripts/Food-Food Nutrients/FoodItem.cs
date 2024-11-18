@@ -9,6 +9,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Food Item", menuName = "Food/Food Item")]
+[Serializable]
 public class FoodItem : ScriptableObject
 {
     // Key = FoodNutrientID, Value is a Unit Quantity
