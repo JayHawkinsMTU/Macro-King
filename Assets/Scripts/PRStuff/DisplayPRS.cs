@@ -9,7 +9,7 @@ This class will be used to display the prs on the pr page for the fitness sectio
 */
 public class DisplayPRS : MonoBehaviour
 {
-    public int i;
+    public int n;
     public RectTransform content;
     public RectTransform prDisplay;
     public float minimumContentHeight = 300;
@@ -24,10 +24,16 @@ public class DisplayPRS : MonoBehaviour
         content.sizeDelta = new Vector2(content.rect.width, contentVertHeight);
         for(int i = 0; i < n; i++) 
         {
+            if(GameManager.PRList.GetList()[i] != null)
+            {
             RectTransform rect = Instantiate(prDisplay, content.transform);
-            PRGoalFormat pgf = rect.GetComponent<PRGoalFormat>();
+            PRGoalFormat pgf = rect.GetComponent<PRGoalFormat>(); //this is returning null but I do not know why it is doing so
+            if(pgf != null) 
+            {
             pgf.pr = GameManager.PRList.GetList()[i];
             rect.anchoredPosition = new Vector2(0, i * -(rect.rect.height + verticalPad));
+            }
+            }
         }
     }
     

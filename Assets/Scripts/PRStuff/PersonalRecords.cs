@@ -30,6 +30,7 @@ public class PersonalRecords : PRBase
         this.reps = reps;
         this.time = time;
         this.distance = distance;
+        exerciseName = exercise.getName();
     }
 
 }
