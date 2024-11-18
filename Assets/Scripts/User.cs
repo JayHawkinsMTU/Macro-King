@@ -20,11 +20,11 @@ public class User // No longer inherits from ScriptableObject as it prevents loa
     [SerializeField] public List<FoodItem> FavoriteFoods = new();
     [SerializeField] public List<NutritionGoal> NutritionGoals = new();
     [SerializeField] public List<PersonalRecords> PRs = new();
+    [SerializeField] public List<Exercise> Exercises = new();
     /// <summary>
     /// A mapping from day to data for that day. Should only use date, not time in key.
     /// </summary>
     public Dictionary<DateTime, DailyNutrition> nutritionCalendar = new();
-    [SerializeField] public PRHolder PRlist;
 
     public void AddFavoriteFood(FoodItem food)
     {
