@@ -44,6 +44,10 @@ public class User : ScriptableObject
         }
         return instance.nutritionCalendar[day];
     }
+    public void addPR(PersonalRecords pr)
+    {
+        PRs.Add(pr);
+    }
 
     // Save user data to disk
     public static void SaveUser()

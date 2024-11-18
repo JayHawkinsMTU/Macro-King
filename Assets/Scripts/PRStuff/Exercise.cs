@@ -6,7 +6,7 @@ using UnityEngine;
 /*
 Create new exercise TYPE, f.e. Push up, Bench Press, etc.
 */
-public class Exercise : ExerciseBase
+public class Exercise : MonoBehaviour
 {
     private string name;
     public void newExercise(string s)
