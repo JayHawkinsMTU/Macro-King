@@ -4,6 +4,10 @@ using UnityEngine;
 
 /*
 Constructor to make a new workout
+
+TODO:
+Implement time to be a better construct of hours:minutes:seconds rather than current date
+Maybe ask the user for a comma seperated list and store in a hashmap
 */
 public class PersonalRecords : PRBase
 {
@@ -28,8 +32,9 @@ public class PersonalRecords : PRBase
         this.Exercise = exercise;
         this.type = type;
         this.reps = reps;
-        this.time = time;
+        this.time = time; 
         this.distance = distance;
+        // Exercise.newExercise(exercise.ToString()); going to keep this as a reference but I don't think that this step is necessary
         exerciseName = exercise.getName();
     }
 

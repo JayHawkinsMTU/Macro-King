@@ -4,7 +4,9 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
-
+/*
+This class will format an entry for the add personal record scene
+*/
 
 public class PRGoalFormat: MonoBehaviour
 {
