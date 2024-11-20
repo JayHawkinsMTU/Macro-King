@@ -33,7 +33,7 @@ public class PRGoalFormat: MonoBehaviour
             prTitle.text = $"{eName}";
             if(type == 1) 
             {
-                prDetails.text = $"{distance} miles, {time} long,";
+                prDetails.text = $"{distance} miles, {time} long";
             }
             else if(type == 0)
             {

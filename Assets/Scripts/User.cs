@@ -44,10 +44,7 @@ public class User // No longer inherits from ScriptableObject as it prevents loa
         }
         return instance.nutritionCalendar[day];
     }
-    public void addPR(PersonalRecords pr)
-    {
-        PRs.Add(pr);
-    }
+
 
     // Save user data to disk
     public static void SaveUser()

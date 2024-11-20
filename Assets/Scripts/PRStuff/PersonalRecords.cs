@@ -9,7 +9,8 @@ TODO:
 Implement time to be a better construct of hours:minutes:seconds rather than current date
 Maybe ask the user for a comma seperated list and store in a hashmap
 */
-public class PersonalRecords : MonoBehaviour
+[Serializable]
+public class PersonalRecords 
 {
     [SerializeField] int weight;
     [SerializeField] Exercise exercise;

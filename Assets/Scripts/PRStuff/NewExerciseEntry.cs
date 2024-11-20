@@ -38,7 +38,7 @@ public class NewExerciseEntry : MonoBehaviour
         DateTime time = new DateTime(0, 0);
         double seconds = Convert.ToDouble(inputTime.text);
         time.AddSeconds(seconds);
-        float distance = (float) Convert.ToDouble(inputTime.text);
+        float distance = (float) Convert.ToDouble(inputDistance.text);
         int type = Int32.Parse(inputType.text);
         int reps = Int32.Parse(inputReps.text);
         //implement a way to search through the exercises to see if one has already been created
@@ -48,6 +48,7 @@ public class NewExerciseEntry : MonoBehaviour
         */
         
         // Commented out because user doesn't contain a definition for Exercises and Exercise class appears to be incomplete. - Jay
+        User.LoadUser();
         List<Exercise> exercises = User.instance.Exercises; //create the list of exercises from user
         bool found = false;
         int exerciseIndex = -1;
@@ -70,9 +71,15 @@ public class NewExerciseEntry : MonoBehaviour
         exercise.newExercise(inputExercise.text);
         PR.NewExercise(weight, exercise, time, distance, type, reps);
         }
-        User.LoadUser();
         User.instance.PRs.Add(PR);
+        Debug.Log("PR was Added!");
+        List<PersonalRecords> prs = User.instance.PRs;
+        for(int i = 0; i < prs.Count; i++)
+        {
+            Debug.Log(prs[i].exerciseName + ", ");
+        }
         User.SaveUser();
+
         
 
         /*

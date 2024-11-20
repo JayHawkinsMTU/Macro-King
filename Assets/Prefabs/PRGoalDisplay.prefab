@@ -126,6 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa6353fa2576cc4e9dc4ed7daafb612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal:
+    macro: 0
+    condition: 2
+    value: 0
+    leeway: 0.05
   changeSceneButton: {fileID: 0}
   goalTitle: {fileID: 493309543066227353}
   goalProgress: {fileID: 1075021269676793587}
@@ -257,7 +262,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -355.71777, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -391,7 +396,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -609.37726, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
