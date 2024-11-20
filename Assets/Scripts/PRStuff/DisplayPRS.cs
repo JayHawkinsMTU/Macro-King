@@ -18,19 +18,19 @@ public class DisplayPRS : MonoBehaviour
     void Awake()
     {
         User.LoadUser();
-        int n = User.instance.PRs.Count();
+        int n = User.LoadUser().PRs.Count();
         minimumContentHeight = content.rect.height;
         float contentVertHeight = Mathf.Clamp(n * (prDisplay.rect.height + verticalPad), minimumContentHeight, float.MaxValue);
         content.sizeDelta = new Vector2(content.rect.width, contentVertHeight);
         for(int i = 0; i < n; i++) 
         {
-            if(User.instance.PRs[i] != null)
+            if(User.LoadUser().PRs[i] != null)
             {
             RectTransform rect = Instantiate(prDisplay, content.transform);
             PRGoalFormat pgf = rect.GetComponent<PRGoalFormat>(); //this is returning null but I do not know why it is doing so
             if(pgf != null) 
             {
-            pgf.pr = User.instance.PRs[i];
+            pgf.pr = User.LoadUser().PRs[i];
             rect.anchoredPosition = new Vector2(0, i * -(rect.rect.height + verticalPad));
             }
             }

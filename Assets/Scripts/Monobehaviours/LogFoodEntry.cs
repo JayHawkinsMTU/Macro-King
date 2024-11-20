@@ -19,8 +19,8 @@ public class LogFoodEntry : MonoBehaviour
         UnitValue unitVal = unitValEntry.Get();
         DateTime dateSelected = DailyNutrition.selectedDate;
         FoodEntry foodEntry = new(foodItem, unitVal, dateSelected);
-        User.instance.Nutrition.Add(foodEntry);
-        User.instance.nutritionCalendar[dateSelected].foodEntries.Add(foodEntry);
+        User.LoadUser().Nutrition.Add(foodEntry);
+        User.LoadUser().nutritionCalendar[dateSelected].foodEntries.Add(foodEntry);
         // Return to scene
         SceneManager.LoadScene("Daily Nutrition");
     }
