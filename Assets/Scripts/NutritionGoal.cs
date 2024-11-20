@@ -93,11 +93,12 @@ public class NutritionGoal
     
     public void RemoveGoal()
     {
-        if(!User.LoadUser().NutritionGoals.Contains(this))
+        User user = User.LoadUser();
+        if(!user.NutritionGoals.Contains(this))
         {
             Debug.LogError("This goal does not exist in the list!");
             return;
         }
-        User.LoadUser().NutritionGoals.Remove(this);
+        user.NutritionGoals.Remove(this);
     }
 }

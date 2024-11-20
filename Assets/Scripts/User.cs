@@ -49,6 +49,8 @@ public class User // No longer inherits from ScriptableObject as it prevents loa
     // Save user data to disk
     public static void SaveUser()
     {
+        // If instance has not been initialized, user was never loaded and therefore not modified.
+        if(instance == null) return;
         string path = Path.Combine(Application.persistentDataPath, string.Concat(instance.Name, ".json"));
         Debug.Log(path);
         try

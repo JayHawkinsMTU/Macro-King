@@ -27,19 +27,19 @@ public class calChangeScene : MonoBehaviour
     public void SetDate(DateTime date)
     {
         this.date = date;
-        User.LoadUser();
+        User user = User.LoadUser();
         GetComponentInChildren<TMP_Text>().text = date.Day.ToString();
         if(date == DateTime.Today)
         {
             img.color = current;
             return;
         }
-        if(!User.LoadUser().nutritionCalendar.ContainsKey(date))
+        if(!user.nutritionCalendar.ContainsKey(date))
         {
             img.color = noData;
             return;
         }
-        DailyNutrition day = User.LoadUser().nutritionCalendar[date];
+        DailyNutrition day = user.nutritionCalendar[date];
         if(day.goalsAccomplished)
         {
             img.color = accomplished;
@@ -51,10 +51,11 @@ public class calChangeScene : MonoBehaviour
     public void ChangeScene()
     {
         TMP_Text display = GetComponentInChildren<TMP_Text>(); //Gets the text object from the clicked button
+        User user = User.LoadUser();
         // Add new day to user calendar data
-        if(!User.LoadUser().nutritionCalendar.ContainsKey(date))
+        if(!user.nutritionCalendar.ContainsKey(date))
         {
-            User.LoadUser().nutritionCalendar.Add(date, new DailyNutrition());
+            user.nutritionCalendar.Add(date, new DailyNutrition());
         }
         if (display != null && display.text != "")
         {

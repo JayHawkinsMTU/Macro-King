@@ -10,7 +10,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Food Item", menuName = "Food/Food Item")]
 [Serializable]
-public class FoodItem : ScriptableObject
+public class FoodItem //: ScriptableObject
 {
     // Key = FoodNutrientID, Value is a Unit Quantity
     [SerializeReference] private Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
@@ -47,7 +47,8 @@ public class FoodItem : ScriptableObject
     public static FoodItem CreateFoodItem(JToken foodData, MonoBehaviour mono = null, bool saveAssets = true)
     {
         // Create new food item
-        FoodItem newFood = CreateInstance<FoodItem>();
+        //FoodItem newFood = CreateInstance<FoodItem>();
+        FoodItem newFood = new(); // Trying to phase out SOs. lmk if this is giving any issues. -Jay
         newFood.foodNutrientQuantities = new Dictionary<int, UnitValue>();
         
         newFood.foodNutrientQuantities.Add(
