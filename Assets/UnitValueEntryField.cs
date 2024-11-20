@@ -22,7 +22,7 @@ public class UnitValueEntryField : MonoBehaviour
     }
     public iUnit GetUnit()
     {
-        iUnit u = UnitManager.UnitParse(dropDownEntry.itemText.text);
+        iUnit u = UnitManager.UnitParse(dropDownEntry.options[dropDownEntry.value].text);
         return u;
     }
 

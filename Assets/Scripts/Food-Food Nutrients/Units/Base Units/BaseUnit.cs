@@ -113,6 +113,20 @@ public class BaseUnit : ScriptableObject, iUnit
                 return false;
             }
         }
+
+        foreach (KeyValuePair<iUnit, int> unit_multiplicity in baseUnitsOf2)
+        {
+            if (!baseUnitsOf1.ContainsKey(unit_multiplicity.Key))
+            {
+                return false;
+            }
+            int mult1 = unit_multiplicity.Value;
+            int mult2 = baseUnitsOf1[unit_multiplicity.Key];
+            if (mult1 != mult2)
+            {
+                return false;
+            }
+        }
         return true;
     }
 }

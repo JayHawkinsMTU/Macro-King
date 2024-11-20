@@ -22,7 +22,7 @@ public class UnitValue
     public override string ToString()
     {
         string Unit = (unit == null) ? "-" : unit.Name();
-        return $"{value:.1} {Unit}";
+        return $"{value} {Unit}";
     }
     public static UnitValue ConvertTo(UnitValue u, iUnit newU)
     {
