@@ -7,8 +7,10 @@ public class openMenu : MonoBehaviour
 {
     public GameObject canvas;
     public CanvasGroup canvasGroup;
+
     public void showMenu()
     {
+        DirectoryPageHandler.onNutrition = true;
         canvas.SetActive(true);
         setOpacity(0.5F);
     }

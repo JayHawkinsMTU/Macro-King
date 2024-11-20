@@ -8,12 +8,19 @@ public class FoodEntryDisplay : MonoBehaviour
     public FoodEntry entry;
     public TMP_Text title;
     public TMP_Text quantity;
-    void Awake()
+    void Start()
     {
-        if(entry == null) return;
-        string foodName = entry.item.FoodName;
-        string qty = entry.quantity.ToString("0.##");
+        if(entry == null) 
+        {
+            return;
+        }
+        string foodName = entry.food.FoodName;
+        string qty = entry.qty.ToString();
+
+        Debug.Log(qty);
         title.text = foodName;
-        quantity.text = $"Qty: {qty} {FoodEntry.unitsToString[entry.unit]}";
+        quantity.text = qty;
+
+        Debug.Log($"Test 2, {new UnitValue(1,UnitManager.UnitParse("g"))}");
     }
 }

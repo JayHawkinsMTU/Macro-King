@@ -6,8 +6,10 @@ using UnityEngine;
 public class BaseUnit : ScriptableObject, iUnit
 {
     [SerializeField] string name;
+    [SerializeField] string printName = "";
     [SerializeField] bool useUnitPowerinName;
     [SerializeField] UnitPower unitPower;
+
 
     [Tooltip("Only enter if smaller units exist example kg is base, but g exists")]
     [SerializeField] private bool useUnitFurtherDown = false;
@@ -26,6 +28,10 @@ public class BaseUnit : ScriptableObject, iUnit
 
     public override string ToString()
     {
+        if (printName != "")
+        {
+            return printName;
+        }
         return name;
     }
 
@@ -83,5 +89,30 @@ public class BaseUnit : ScriptableObject, iUnit
     public static BaseUnit NullUnit
     {
         get => null;
+    }
+
+    public virtual float ConversionToBase()
+    {
+        return 1;
+    }
+
+    public bool isOfType(iUnit u)
+    {
+        Dictionary<iUnit, int> baseUnitsOf1 = BaseUnits();
+        Dictionary<iUnit, int> baseUnitsOf2 = u.BaseUnits();
+
+        foreach (KeyValuePair<iUnit,int> unit_multiplicity in baseUnitsOf1)
+        {
+            if (!baseUnitsOf2.ContainsKey(unit_multiplicity.Key)){
+                return false;
+            }
+            int mult1 = unit_multiplicity.Value;
+            int mult2 = baseUnitsOf2[unit_multiplicity.Key];
+            if( mult1 != mult2)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

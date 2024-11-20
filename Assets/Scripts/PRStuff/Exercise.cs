@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "New Exercise", menuName = "Exercise")]
-public class Exercise : ExerciseBase
+
+/*
+Create new exercise TYPE, f.e. Push up, Bench Press, etc.
+*/
+public class Exercise : MonoBehaviour
 {
     private string name;
     public void newExercise(string s)

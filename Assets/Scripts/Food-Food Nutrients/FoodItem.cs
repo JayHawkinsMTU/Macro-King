@@ -9,12 +9,13 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Food Item", menuName = "Food/Food Item")]
+[Serializable]
 public class FoodItem : ScriptableObject
 {
     // Key = FoodNutrientID, Value is a Unit Quantity
     [SerializeReference] private Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
     [SerializeField] int foodID = -1;
-    [SerializeField] string foodName = "New Food Item";
+    [SerializeField] public string foodName = "New Food Item";
     UnitValue servingSize;
     private List<Allergen> allergens = new List<Allergen>();
     private List<string> ingredients = new List<string>();
@@ -96,8 +97,8 @@ public class FoodItem : ScriptableObject
             string directoryPath = "Assets/Scripts/Food-Food Nutrients/FoodItems";
             string assetPath = $"{directoryPath}/{DirectoryUtils.SanitizeToValidName(newFood.foodName + "_" + newFood.foodID)}.asset";
             if (!Directory.Exists(directoryPath)) { Directory.CreateDirectory(directoryPath); }
-            AssetDatabase.CreateAsset(newFood, assetPath);
-            AssetDatabase.SaveAssetIfDirty(newFood);
+            //AssetDatabase.CreateAsset(newFood, assetPath);
+            //AssetDatabase.SaveAssetIfDirty(newFood);
         }
 
         return newFood;
@@ -123,5 +124,4 @@ public class FoodItem : ScriptableObject
     {
         Debug.Log(ToString());
     }
-
 }

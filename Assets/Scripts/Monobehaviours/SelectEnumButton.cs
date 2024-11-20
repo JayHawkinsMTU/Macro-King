@@ -20,9 +20,8 @@ public class SelectEnumButton : MonoBehaviour
     {
         // Deselect previously selected button
         Deselect();
-        // Mark this button as selected and change enum data
+        // Mark this button as selected
         SetSelected();
-        SetEnum();
     }
     public virtual void SetSelected()
     {

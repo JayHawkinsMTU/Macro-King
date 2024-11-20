@@ -20,4 +20,4 @@ MonoBehaviour:
   baseUnits:
   - {fileID: 11400000, guid: d585fddc1e9d2ba4f87c5a172b62a96c, type: 2}
   multiplicities: 01000000
-  conversionToBase: 0
+  conversionToBase: 0.001

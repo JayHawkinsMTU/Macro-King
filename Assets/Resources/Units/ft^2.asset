@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb71476a88e8802429f9db6c919bbe09, type: 3}
+  m_Name: ft^2
+  m_EditorClassIdentifier: 
+  name: ft^2
+  useUnitPowerinName: 0
+  unitPower: {fileID: 0}
+  useUnitFurtherDown: 0
+  smallestUnit: {fileID: 0}
+  baseUnits:
+  - {fileID: 11400000, guid: 3d6501e2a10f12747a1a7426a7e4a85e, type: 2}
+  multiplicities: 02000000
+  conversionToBase: 1

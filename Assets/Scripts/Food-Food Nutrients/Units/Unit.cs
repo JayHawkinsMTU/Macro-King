@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New Unit", menuName ="Food/Unit/Unit")]
+[CreateAssetMenu(fileName = "New Unit", menuName = "Food/Unit/Unit")]
 public class Unit : BaseUnit
 {
     [SerializeField] List<BaseUnit> baseUnits;
     [SerializeField] List<int> multiplicities;
-    [SerializeField] double conversionToBase;
+    [SerializeField] protected float conversionToBase;
     public override Dictionary<iUnit, int> BaseUnits()
     {
         if (dict != null)
@@ -52,4 +52,46 @@ public class Unit : BaseUnit
         return false;
     }
 
+    public override float ConversionToBase()
+    {
+        float ctb = conversionToBase;
+        if (isBaseUnit())
+        {
+            return ctb;
+        }
+        else
+        {
+            for (int i = 0; i < baseUnits.Count; i++)
+            {
+                iUnit currentUnit = baseUnits[i];
+                int multiplicity = multiplicities[i];
+                for (int j = 0; j < Mathf.Abs(multiplicity); j++)
+                {
+                    if (multiplicity > 0)
+                    {
+                        ctb *= currentUnit.ConversionToBase();
+                    }
+                    else if (multiplicity == 0)
+                    {
+                        // ctb *=1
+                    }
+                    else // multiplicity < 1
+                    {
+                        ctb /= currentUnit.ConversionToBase();
+                    }
+                }
+            }
+            return ctb;
+        }
+    }
+
+    [ContextMenu("Convert To Base")]
+    public void ConversionToBaseTest()
+    {
+        string s = $"Converting {this} to base Units: \n";
+        float v = ConversionToBase();
+        s += $"{this} Conversion factor = {v}\n";
+        s += $"1 {this}  : {v} {DictString()}";
+        Debug.Log(s);
+    }
 }

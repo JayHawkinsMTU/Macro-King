@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectConditionButton : SelectEnumButton
 {
     public static SelectConditionButton selected;
-    public NutritionGoal.Condition cond;
+    public NutritionGoal.Condition cond = NutritionGoal.Condition.CLOSE_TO;
     public override void SetSelected()
     {
         backdrop.color = selectedColor;

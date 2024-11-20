@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: kcal
   m_EditorClassIdentifier: 
   name: kcal
+  printName: cal
   useUnitPowerinName: 0
   unitPower: {fileID: 0}
   useUnitFurtherDown: 0
@@ -20,4 +21,4 @@ MonoBehaviour:
   baseUnits:
   - {fileID: 11400000, guid: 833438e9c44f4bc4f8421236f148a761, type: 2}
   multiplicities: 01000000
-  conversionToBase: 1000
+  conversionToBase: 4184

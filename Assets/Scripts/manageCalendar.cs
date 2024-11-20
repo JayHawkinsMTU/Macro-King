@@ -7,62 +7,71 @@ using JetBrains.Annotations;
 
 public class manageCalendar : MonoBehaviour
 {
-
     public static DateTime today;
     public TMP_Text monthText;
     public int curYear;
     public int curMonth;
-    public populateCalendar calendar;
+    public populateCalendar calendar; //Script to actually add the days to the calendar
 
 
     private void Start()
     {
-        today = DateTime.Today;
-        curYear = today.Year;
-        curMonth = today.Month;
-
+        today = DateTime.Today; //Starts the calendar at today's data
+        CalendarDate.curYear = today.Year;
+        CalendarDate.curMonth = today.Month;
+        monthText.text = $"{new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1):MMM yyyy}"; //Prints the current month and year
         getDays();
     }
 
     public void getDays()
     {
-        DateTime fDay = new DateTime(curYear, curMonth, 1);
-        int monthSize = DateTime.DaysInMonth(curYear, curMonth);
-        int startDayOfWeek = (int) fDay.DayOfWeek;
+        DateTime fDay = new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1); //First day of the month
+        int monthSize = DateTime.DaysInMonth(CalendarDate.curYear, CalendarDate.curMonth); //Gets the number of days in the month
+        int startDayOfWeek = (int) fDay.DayOfWeek; //Gets the day of the week the month starts on
 
-        calendar.printDates(startDayOfWeek, monthSize);
+        calendar.PrintDates(startDayOfWeek, monthSize);
     }
 
+    //Method to increase month when forwards arrow is clicked
     public void goForward()
     {
-        if(curMonth == 12)
+        if(CalendarDate.curMonth == 12) //Rolls over to next year if the current month is December
         {
-            curMonth = 1;
-            curYear++;
+            CalendarDate.curMonth = 1;
+            CalendarDate.curYear++;
         }
         else
         {
-            curMonth++;
+            CalendarDate.curMonth++;
         }
 
-        monthText.text = $"{curMonth} - {curYear}";
+        monthText.text = $"{new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1):MMM yyyy}";
         getDays();
     }
 
+    //Method to decrease month when backwards arrow is clicked
     public void goBackward()
     {
-        if (curMonth == 1)
+        if (CalendarDate.curMonth == 1) //Rolls over to previous year if the current month is January
         {
-            curMonth = 12;
-            curYear--;
+            CalendarDate.curMonth = 12; 
+            CalendarDate.curYear--;
         }
         else
         {
-            curMonth--;
+            CalendarDate.curMonth--;
         }
 
-        monthText.text = $"{curMonth} - {curYear}";
+        monthText.text = $"{new DateTime(CalendarDate.curYear, CalendarDate.curMonth, 1):MMM yyyy}";
         getDays();
     }
 
+    //Static class to hold the current year and month so they can be passed to date display
+    public static class CalendarDate
+    {
+        public static int curYear;
+        public static int curMonth;
+    }
 }
+
+

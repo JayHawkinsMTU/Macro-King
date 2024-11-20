@@ -32,11 +32,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 02254570109aa174b8038179523c4830
-    path: Assets/Scenes/Search Test Scene.unity
-    guid: 4890c5a3c5c7cf545b209161c360d536
   - enabled: 1
     path: Assets/Scenes/Food Selection Info Menu/Food Selection Info Menu.unity
     guid: 25562cb7aff7b314eab76b4d918da04e
+  - enabled: 1
+    path: Assets/Scenes/Search Test Scene.unity
+    guid: d3fb7934df55e3f4da658dc332d9a889
+  - enabled: 1
+    path: Assets/Scenes/UnitValueEntry.unity
+    guid: 5bdf9eebba94abb4682986125637f8ee
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: e0e86dd6d6a482542a8c69200a5d35e3, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c8fa306846378dc459dd753072e7f438, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: f821305203be1dd44b4a5b2419997042, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8a165a21b180a0845856653ea1e390ad, type: 2}

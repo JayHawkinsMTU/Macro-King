@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PRList:
   - {fileID: 11400000, guid: 56c309a84218bd84285053bf84eae7aa, type: 2}
+  - {fileID: 11400000, guid: 00bdd61fc4a78b44a895faadf68f8348, type: 2}
+  - {fileID: 0}

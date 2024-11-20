@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b354ee137d742bf4db9f3013fe5cb098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  quantity: {fileID: 0}
+  title: {fileID: 493309543066227353}
+  quantity: {fileID: 8126117581061169563}
 --- !u!1 &7629178064925889683
 GameObject:
   m_ObjectHideFlags: 0

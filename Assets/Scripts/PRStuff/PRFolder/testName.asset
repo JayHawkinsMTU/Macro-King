@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb197c660998ed4da19d7f5802c0132, type: 3}
   m_Name: testName
   m_EditorClassIdentifier: 
-  weight: 300
-  exercise: {fileID: 11400000, guid: a16d7726ebdb9d8448206bc7649675db, type: 2}
-  reps: 0
-  type: 0
-  distance: 0
+  weight: 0
+  exercise: {fileID: 11400000, guid: f8b6fcd9b3f3d734f841bf3c8e2a2dbe, type: 2}
+  reps: 4
+  type: 1
+  distance: 60
   exerciseName: testName
