@@ -66,6 +66,7 @@ public class UnitManager : ScriptableObject
             // TODO: add condition to check if the units are the same type
             if (unitType.isOfType(u))
             {
+
                 unitsoftype.Add(u);
             }
         }

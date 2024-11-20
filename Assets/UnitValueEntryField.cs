@@ -17,16 +17,23 @@ public class UnitValueEntryField : MonoBehaviour
     }
     public UnitValue Get()
     {
-        Debug.Log(dropDownEntry.itemText.text);
-        iUnit u = UnitManager.UnitParse(dropDownEntry.itemText.text);
-        float v = float.Parse(valueEntryBar.text);
-        UnitValue uv = new UnitValue(v, u);
+        UnitValue uv = new UnitValue(GetValue(), GetUnit());
         return uv;
     }
+    public iUnit GetUnit()
+    {
+        iUnit u = UnitManager.UnitParse(dropDownEntry.options[dropDownEntry.value].text);
+        return u;
+    }
 
+    public float GetValue()
+    {
+        float v = float.Parse(valueEntryBar.text);
+        return v;
+    }
     public void OnUnitChange()
     {
-
+        SetDropdownOptions();
     }
 
     public void OnValueChange()
@@ -48,4 +55,24 @@ public class UnitValueEntryField : MonoBehaviour
         }
         dropDownEntry.AddOptions(options);
     }
+
+#if UNITY_EDITOR
+    [ContextMenu("GetUnit()")]
+    public void printGetUnit()
+    {
+        Debug.Log(GetUnit());
+    }
+
+    [ContextMenu("GetValue()")]
+    public void printGetValue()
+    {
+        Debug.Log(GetValue());
+    }
+
+    [ContextMenu("GetUnitValue()")]
+    public void printGetUnitValue()
+    {
+        Debug.Log(Get());
+    }
+#endif 
 }
