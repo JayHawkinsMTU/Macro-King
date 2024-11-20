@@ -46,9 +46,9 @@ public class FoodSelectionInfoMenuInitializer : MonoBehaviour
         // Update food name margins and text
         float parentWidth = foodNameText.transform.parent.GetComponent<RectTransform>().rect.width; // Get parent's (Canvas') width
         Vector4 margins = foodNameText.margin;  // Get current margins
-        margins.z = -parentWidth/2;         // Modify right margin
+        margins.x = -parentWidth / 2 + 140;     // Modify left margin
+        margins.z = -parentWidth / 2 + 140;     // Modify right margin
         foodNameText.margin = margins;          // Set modified margins back
-
         foodNameText.text = foodItem.FoodName;
         //--------------------------------------------------------------------------------------
     }

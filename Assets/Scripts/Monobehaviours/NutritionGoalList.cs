@@ -20,7 +20,7 @@ public class NutritionGoalList : MonoBehaviour
         // Automatically adjust minimum based no what's in the editor
         minContentHeight = content.rect.height;
         // Number of elements to display
-        int n = User.instance.NutritionGoals.Count;
+        int n = User.LoadUser().NutritionGoals.Count;
         // Desired height of "content" object in scroll view
         float contentHeight = Mathf.Clamp(n * (goalDisplay.rect.height + verticalPadding), minContentHeight, float.MaxValue);
         content.sizeDelta = new Vector2(content.rect.width, contentHeight);
@@ -29,7 +29,7 @@ public class NutritionGoalList : MonoBehaviour
         {
             RectTransform rect = Instantiate(goalDisplay, content.transform);
             NutritionGoalDisplay ngd = rect.GetComponent<NutritionGoalDisplay>();
-            ngd.goal = User.instance.NutritionGoals[i];
+            ngd.goal = User.LoadUser().NutritionGoals[i];
             rect.anchoredPosition = new Vector2(0, i * -(rect.rect.height + verticalPadding));
         }
 

@@ -48,8 +48,7 @@ public class NewExerciseEntry : MonoBehaviour
         */
         
         // Commented out because user doesn't contain a definition for Exercises and Exercise class appears to be incomplete. - Jay
-        User.LoadUser();
-        List<Exercise> exercises = User.instance.Exercises; //create the list of exercises from user
+        List<Exercise> exercises = User.LoadUser().Exercises; //create the list of exercises from user
         bool found = false;
         int exerciseIndex = -1;
         for(int i = 0; i < exercises.Count; i++)
@@ -71,13 +70,8 @@ public class NewExerciseEntry : MonoBehaviour
         exercise.newExercise(inputExercise.text);
         PR.NewExercise(weight, exercise, time, distance, type, reps);
         }
-        User.instance.PRs.Add(PR);
-        Debug.Log("PR was Added!");
-        List<PersonalRecords> prs = User.instance.PRs;
-        for(int i = 0; i < prs.Count; i++)
-        {
-            Debug.Log(prs[i].exerciseName + ", ");
-        }
+        User.LoadUser();
+        User.LoadUser().PRs.Add(PR);
         User.SaveUser();
 
         

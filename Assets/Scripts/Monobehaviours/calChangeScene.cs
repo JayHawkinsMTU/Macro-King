@@ -34,12 +34,12 @@ public class calChangeScene : MonoBehaviour
             img.color = current;
             return;
         }
-        if(!User.instance.nutritionCalendar.ContainsKey(date))
+        if(!User.LoadUser().nutritionCalendar.ContainsKey(date))
         {
             img.color = noData;
             return;
         }
-        DailyNutrition day = User.instance.nutritionCalendar[date];
+        DailyNutrition day = User.LoadUser().nutritionCalendar[date];
         if(day.goalsAccomplished)
         {
             img.color = accomplished;
@@ -52,9 +52,9 @@ public class calChangeScene : MonoBehaviour
     {
         TMP_Text display = GetComponentInChildren<TMP_Text>(); //Gets the text object from the clicked button
         // Add new day to user calendar data
-        if(!User.instance.nutritionCalendar.ContainsKey(date))
+        if(!User.LoadUser().nutritionCalendar.ContainsKey(date))
         {
-            User.instance.nutritionCalendar.Add(date, new DailyNutrition());
+            User.LoadUser().nutritionCalendar.Add(date, new DailyNutrition());
         }
         if (display != null && display.text != "")
         {

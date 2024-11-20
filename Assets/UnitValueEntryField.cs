@@ -17,6 +17,7 @@ public class UnitValueEntryField : MonoBehaviour
     }
     public UnitValue Get()
     {
+        Debug.Log(dropDownEntry.itemText.text);
         iUnit u = UnitManager.UnitParse(dropDownEntry.itemText.text);
         float v = float.Parse(valueEntryBar.text);
         UnitValue uv = new UnitValue(v, u);
