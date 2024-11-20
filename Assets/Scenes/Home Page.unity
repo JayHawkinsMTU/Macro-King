@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845623166507090384, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: sceneName
+      value: Personal Record Logging
+      objectReference: {fileID: 0}
     - target: {fileID: 6100162639422368088, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_text
       value: FITNESS
