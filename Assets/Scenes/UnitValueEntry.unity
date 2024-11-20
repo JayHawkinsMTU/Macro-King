@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valueEntryBar: {fileID: 932787558}
   dropDownEntry: {fileID: 89308429}
+  unitType: {fileID: 11400000, guid: d585fddc1e9d2ba4f87c5a172b62a96c, type: 2}
 --- !u!1 &89308426
 GameObject:
   m_ObjectHideFlags: 0
