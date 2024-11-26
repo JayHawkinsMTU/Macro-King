@@ -12,12 +12,11 @@ public class openMenu : MonoBehaviour
     {
         DirectoryPageHandler.onNutrition = true;
         canvas.SetActive(true);
-        setOpacity(0.5F);
+        setOpacity();
     }
 
-    public void setOpacity(float alpha)
+    public void setOpacity()
     {
-        canvasGroup.alpha = alpha;
-
+        canvasGroup.alpha = 0.2F;
     }
 }
