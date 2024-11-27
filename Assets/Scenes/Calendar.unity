@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248248784687515980, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_PreferredWidth
-      value: 150
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_Name
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 86.15
+  m_fontSize: 75.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 1000
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 4
   m_LayoutPriority: 1
 --- !u!114 &556357364
 MonoBehaviour:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 100
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &897434032
 MonoBehaviour:
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 100
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &1285156908
 MonoBehaviour:
@@ -2241,7 +2241,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 40
+  m_Spacing: 100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -2335,7 +2335,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 50
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &1331931872
 MonoBehaviour:

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 102.5
+  m_fontSize: 96.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 100
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &402109060
 MonoBehaviour:
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195402179815441999, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000061035156
+      value: 6.530426
       objectReference: {fileID: 0}
     - target: {fileID: 7732587645067958171, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -941,9 +941,9 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: 0
   m_PreferredWidth: -1
-  m_PreferredHeight: 100
+  m_PreferredHeight: 50
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &443547144
 MonoBehaviour:
@@ -1001,7 +1001,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 40
+  m_Spacing: 100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1091,8 +1091,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075829346}
   m_HandleRect: {fileID: 2075829345}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.5642857
+  m_Value: 1.0000001
+  m_Size: 0.5482993
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1192,9 +1192,9 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: 0
   m_PreferredWidth: -1
-  m_PreferredHeight: 1400
+  m_PreferredHeight: 1000
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 4
   m_LayoutPriority: 1
 --- !u!114 &616207808
 MonoBehaviour:
@@ -1673,6 +1673,10 @@ PrefabInstance:
     - target: {fileID: 2003600141830969793, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248248784687515980, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+      propertyPath: m_PreferredWidth
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_Name
@@ -2291,7 +2295,7 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: 100
   m_FlexibleWidth: -1
-  m_FlexibleHeight: 0
+  m_FlexibleHeight: 1
   m_LayoutPriority: 1
 --- !u!114 &1526919498
 MonoBehaviour:
@@ -2345,6 +2349,7 @@ GameObject:
   - component: {fileID: 1645721847}
   - component: {fileID: 1645721851}
   - component: {fileID: 1645721850}
+  - component: {fileID: 1645721852}
   m_Layer: 5
   m_Name: Add Item
   m_TagString: Untagged
@@ -2504,6 +2509,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Search Test Scene
+--- !u!114 &1645721852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645721845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 0
+  m_MinHeight: 0
+  m_PreferredWidth: 100
+  m_PreferredHeight: 100
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: 1
+  m_LayoutPriority: 1
 --- !u!1001 &1791144115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2687,6 +2712,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4694647235001149650, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1791144120}
+    - targetCorrespondingSourceObject: {fileID: 4694647235001149650, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1791144121}
   m_SourcePrefab: {fileID: 100100000, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
 --- !u!224 &1791144116 stripped
 RectTransform:
@@ -2707,6 +2735,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 348164531}
   canvasGroup: {fileID: 760246703}
+--- !u!114 &1791144121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103605296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 0
+  m_MinHeight: 0
+  m_PreferredWidth: 100
+  m_PreferredHeight: 100
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: 1
+  m_LayoutPriority: 1
 --- !u!1 &1923435832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3388774290972430793, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}

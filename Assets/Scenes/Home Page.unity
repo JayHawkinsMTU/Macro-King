@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
+    - target: {fileID: 1798861841039757104, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5845623166507090384, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: sceneName
       value: Personal Record Logging
@@ -649,7 +653,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 0
-  m_PreferredWidth: -1
+  m_PreferredWidth: 880
   m_PreferredHeight: 250
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
@@ -911,7 +915,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 0
-  m_PreferredWidth: -1
+  m_PreferredWidth: 880
   m_PreferredHeight: 250
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
@@ -2012,7 +2016,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
     - target: {fileID: 1798861841039757104, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_PreserveAspect
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1798861841039757104, guid: 6c8b120a6f73741459eaf283c9eaf06b, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
