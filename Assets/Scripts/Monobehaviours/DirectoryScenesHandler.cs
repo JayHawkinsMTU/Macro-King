@@ -14,7 +14,7 @@ public class DirectoryScenesHandler : MonoBehaviour
 
     public void changeScene()
     {
-        
+        ChangeSceneButton.sceneToReturn = SceneManager.GetActiveScene().name;
         if (DirectoryPageHandler.onNutrition)
         {
             SceneManager.LoadScene(nutritionSceneName);

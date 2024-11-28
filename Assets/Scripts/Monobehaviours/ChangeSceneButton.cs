@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 public class ChangeSceneButton : MonoBehaviour
 {
     [SerializeField] string sceneName;
+    public static string sceneToReturn;
     
     public void ChangeScene()
     {
-        SceneManager.LoadScene(sceneName);
+        sceneToReturn = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName); 
+    }
+
+    public void ReturnToScene()
+    {
+        SceneManager.LoadScene(sceneToReturn);
     }
 }

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96.35
+  m_fontSize: 92
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195402179815441999, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.530426
+      value: -0.00015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7732587645067958171, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1091,8 +1091,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075829346}
   m_HandleRect: {fileID: 2075829345}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.5482993
+  m_Value: 1
+  m_Size: 0.5722991
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1673,6 +1673,10 @@ PrefabInstance:
     - target: {fileID: 2003600141830969793, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250946942663023411, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToScene
       objectReference: {fileID: 0}
     - target: {fileID: 4248248784687515980, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
       propertyPath: m_PreferredWidth
