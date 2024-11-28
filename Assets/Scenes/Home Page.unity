@@ -1829,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1838,7 +1838,7 @@ PrefabInstance:
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1574767619}
+      objectReference: {fileID: 1574767621}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1849,7 +1849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: hideMenu
+      value: changeScene
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1857,7 +1857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: closeMenu, Assembly-CSharp
+      value: DirectoryScenesHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7233873564222981569, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1876,6 +1876,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6851015136794329048, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1574767621}
     - targetCorrespondingSourceObject: {fileID: 1503827295057547976, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1574767618}
@@ -1914,6 +1917,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2da0df909bbcd42aa2d5cb2c007dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1574767620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6851015136794329048, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
+  m_PrefabInstance: {fileID: 1574767615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1574767621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574767620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nutritionSceneName: Home Page
+  fitnessSceneName: Home Page
 --- !u!1001 &1599026920
 PrefabInstance:
   m_ObjectHideFlags: 0

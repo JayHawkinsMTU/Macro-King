@@ -10,12 +10,12 @@ public class closeMenu : MonoBehaviour
     public void hideMenu()
     {
         canvas.SetActive(false);
-        setOpacity(0.5F);
+        setOpacity();
     }
 
-    public void setOpacity(float alpha)
+    public void setOpacity()
     {
-        canvasGroup.alpha = alpha;
+        canvasGroup.alpha = 1.0f;
 
     }
 }

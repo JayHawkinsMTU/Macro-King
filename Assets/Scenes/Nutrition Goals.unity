@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 412574773}
   - component: {fileID: 412574779}
   - component: {fileID: 412574778}
+  - component: {fileID: 412574780}
   m_Layer: 5
   m_Name: Nutrition Goals Page
   m_TagString: Untagged
@@ -632,6 +633,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1574988886}
   canvasGroup: {fileID: 412574778}
+--- !u!114 &412574780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412574772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b2769b0197cc49b616057e52bd6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backBtn: {fileID: 693116545}
 --- !u!1001 &435601510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,6 +861,11 @@ PrefabInstance:
 --- !u!224 &693116544 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2003600141830969793, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+  m_PrefabInstance: {fileID: 693116543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &693116545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
   m_PrefabInstance: {fileID: 693116543}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &703522474

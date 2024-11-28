@@ -15,6 +15,17 @@ public class DirectoryScenesHandler : MonoBehaviour
     public void changeScene()
     {
         ChangeSceneButton.sceneToReturn = SceneManager.GetActiveScene().name;
+        Debug.Log("Scene to return to set to: " + ChangeSceneButton.sceneToReturn);
+        if (ChangeSceneButton.sceneToReturn == nutritionSceneName || ChangeSceneButton.sceneToReturn == fitnessSceneName)
+        {
+            ChangeSceneButton.showBackBtn = false;
+        }
+        else
+        {
+            ChangeSceneButton.showBackBtn = true;
+        }        
+
+
         if (DirectoryPageHandler.onNutrition)
         {
             SceneManager.LoadScene(nutritionSceneName);

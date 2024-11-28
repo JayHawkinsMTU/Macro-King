@@ -232,6 +232,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2003600141830969793, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
   m_PrefabInstance: {fileID: 96573511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &96573513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+  m_PrefabInstance: {fileID: 96573511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &110262410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3268,7 @@ GameObject:
   - component: {fileID: 2051929649}
   - component: {fileID: 2051929651}
   - component: {fileID: 2051929650}
+  - component: {fileID: 2051929652}
   m_Layer: 5
   m_Name: CalendarPage
   m_TagString: Untagged
@@ -3424,6 +3430,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2051929652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051929643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b2769b0197cc49b616057e52bd6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backBtn: {fileID: 96573513}
 --- !u!1 &2076120739
 GameObject:
   m_ObjectHideFlags: 0

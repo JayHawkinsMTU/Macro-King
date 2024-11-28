@@ -5478,6 +5478,7 @@ GameObject:
   - component: {fileID: 1546774851}
   - component: {fileID: 1546774850}
   - component: {fileID: 1546774849}
+  - component: {fileID: 1546774856}
   m_Layer: 5
   m_Name: Add Goals Page
   m_TagString: Untagged
@@ -5622,6 +5623,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1546774856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546774848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b2769b0197cc49b616057e52bd6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backBtn: {fileID: 2955461705252195411}
 --- !u!1 &1548918025
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,6 +7828,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+--- !u!1 &2955461705252195411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+  m_PrefabInstance: {fileID: 2955461705252195410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7888111583803173870
 PrefabInstance:
   m_ObjectHideFlags: 0

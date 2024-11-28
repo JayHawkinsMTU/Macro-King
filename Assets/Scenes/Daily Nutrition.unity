@@ -1332,6 +1332,7 @@ GameObject:
   - component: {fileID: 760246703}
   - component: {fileID: 760246705}
   - component: {fileID: 760246704}
+  - component: {fileID: 760246710}
   m_Layer: 5
   m_Name: Daily Nutrition Page
   m_TagString: Untagged
@@ -1477,6 +1478,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &760246710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760246702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4b2769b0197cc49b616057e52bd6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backBtn: {fileID: 1140584356}
 --- !u!1 &992459391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1708,11 @@ PrefabInstance:
 --- !u!224 &1140584355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2003600141830969793, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
+  m_PrefabInstance: {fileID: 1140584354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1140584356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4917552220397737762, guid: 0884b9b7e8b31114ebf767fe44cc5012, type: 3}
   m_PrefabInstance: {fileID: 1140584354}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1194332194
