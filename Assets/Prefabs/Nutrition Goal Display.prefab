@@ -127,9 +127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa6353fa2576cc4e9dc4ed7daafb612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal:
+    macro: 0
+    condition: 2
+    value: 0
+    leeway: 0.05
   changeSceneButton: {fileID: 7244305526219703385}
   goalTitle: {fileID: 493309543066227353}
   goalProgress: {fileID: 1075021269676793587}
+  backdrop: {fileID: 6293384674780081019}
 --- !u!1 &7629178064925889683
 GameObject:
   m_ObjectHideFlags: 0
