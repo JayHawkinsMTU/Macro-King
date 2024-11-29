@@ -7,6 +7,7 @@ public class openMenu : MonoBehaviour
 {
     public GameObject canvas;
     public CanvasGroup canvasGroup;
+    public GameObject canvas2;
 
     public void showMenu()
     {
@@ -15,8 +16,15 @@ public class openMenu : MonoBehaviour
         setOpacity();
     }
 
+    public void showSecondMenu()
+    {
+        canvas2.SetActive(true);
+        setOpacity();
+    }
+
     public void setOpacity()
     {
         canvasGroup.alpha = 0.2F;
+        canvasGroup.interactable = false;
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df270af03f27434ba9c46869f970164, type: 3}
   m_Name: FoodResultsPerPage
   m_EditorClassIdentifier: 
-  value: 20
+  value: 13
   prevValue: 0
   OnChange: {fileID: 0}

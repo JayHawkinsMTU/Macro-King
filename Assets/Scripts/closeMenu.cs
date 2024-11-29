@@ -16,6 +16,7 @@ public class closeMenu : MonoBehaviour
     public void setOpacity()
     {
         canvasGroup.alpha = 1.0f;
+        canvasGroup.interactable = true;
 
     }
 }
