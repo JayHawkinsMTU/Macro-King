@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 4.4631524
+  m_AspectRatio: 4.675
 --- !u!114 &729137830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 173.8
+  m_fontSize: 182
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5153,6 +5153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 486955793}
   canvasGroup: {fileID: 1692422282}
+  canvas2: {fileID: 0}
 --- !u!1 &1834716940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,6 +5314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 830200598}
   canvasGroup: {fileID: 1834716946}
+  canvas2: {fileID: 0}
 --- !u!114 &1834716948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6236,9 +6238,41 @@ PrefabInstance:
       value: Menu Button
       objectReference: {fileID: 0}
     - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1834716947}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7886514744015235882}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: show
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706390696257529234, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7963179317228737581, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6475,6 +6509,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nutritionSceneName: Settings
   fitnessSceneName: Settings
+--- !u!95 &7886514744015235882 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6560234139767064060, guid: d5349a07f6f1067418cfa366de466d06, type: 3}
+  m_PrefabInstance: {fileID: 7886514744015235879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
