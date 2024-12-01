@@ -20,16 +20,14 @@ public class DirectoryPageHandler : MonoBehaviour
         pageName2.text = "Goals";
         pageName3.text = "Today";
         onNutrition = true;
-        Debug.Log("onNutrition is currently, on changing to nutrition menu: " + onNutrition);
 
     }
 
     public void changeToFitness()
     {
-        pageName.text = "Fitness Placeholder";
+        pageName.text = "Personal Records";
         pageName2.text = "Fitness Placeholder 2";
         pageName3.text = "Fitness Placeholder 3";
         onNutrition = false;
-        Debug.Log("onNutrition is currently, on changing to fitness menu: " + onNutrition);
     }    
 }
