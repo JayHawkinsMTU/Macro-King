@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Personal Record Logging.unity
     guid: 3556275b614951c49abc11f36e40fc61
+  - enabled: 1
+    path: Assets/Scenes/Search Food.unity
+    guid: 4890c5a3c5c7cf545b209161c360d536
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: e0e86dd6d6a482542a8c69200a5d35e3, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c8fa306846378dc459dd753072e7f438, type: 2}
