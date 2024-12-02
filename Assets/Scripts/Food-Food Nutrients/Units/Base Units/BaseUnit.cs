@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(fileName ="New Base Unit", menuName ="Food/Unit/Base Unit")]
 public class BaseUnit : ScriptableObject, iUnit

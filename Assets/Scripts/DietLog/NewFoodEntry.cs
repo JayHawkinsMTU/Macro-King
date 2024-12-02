@@ -15,8 +15,8 @@ public class NewFoodEntry : MonoBehaviour
     
     public void ValidateInput() 
     {
-    FoodEntry food = new FoodEntry();
-    GameManager.DietList.addFoodItem(food);
+        FoodEntry food = new FoodEntry();
+        GameManager.DietList.addFoodItem(food);
     }
 
 }

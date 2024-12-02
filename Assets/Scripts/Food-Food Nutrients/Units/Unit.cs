@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Unit", menuName = "Food/Unit/Unit")]
-[Serializable]
 public class Unit : BaseUnit
 {
     [SerializeField] List<BaseUnit> baseUnits;
