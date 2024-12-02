@@ -87,6 +87,9 @@ public class GameManager : MonoBehaviour
         if (carbsNutrient == null || forceUpdate) { carbsNutrient = mainCarbsNutrient; }
         if (_currentFoodItem == null || forceUpdate){_currentFoodItem = mainCurrentFoodItem;}
         if (CalUnit == null || forceUpdate) { CalUnit = mainCalUnit; }
+
+        if (DietList == null || forceUpdate) { DietList = mainDietList; }
+
     }
 
     void OnApplicationQuit()
