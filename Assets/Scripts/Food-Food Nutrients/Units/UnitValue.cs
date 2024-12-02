@@ -5,7 +5,9 @@ public class UnitValue
 {
     private iUnit unit;
     private float value;
+
     static UnitValue nullUnitValue;
+
     public float Value { get => value; }
     public iUnit Unit { get => Unit; }
     public UnitValue(float value, iUnit unit)

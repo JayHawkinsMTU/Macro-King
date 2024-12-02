@@ -12,8 +12,8 @@ using UnityEngine;
 [Serializable]
 public class FoodItem //: ScriptableObject
 {
-    // Key = FoodNutrientID, Value is a Unit Quantity
     [SerializeReference] private Dictionary<int, UnitValue> foodNutrientQuantities = new Dictionary<int, UnitValue>();
+
     [SerializeField] int foodID = -1;
     [SerializeField] public string foodName = "New Food Item";
     UnitValue servingSize;
@@ -35,7 +35,6 @@ public class FoodItem //: ScriptableObject
     public Dictionary<int, UnitValue> FoodNutrientQuantities { get => foodNutrientQuantities; }
     #endregion
     #endregion
-
     private UnitValue SafeGetValue(int NutrientID)
     {
         if (foodNutrientQuantities.ContainsKey(NutrientID))

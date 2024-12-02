@@ -6,10 +6,15 @@ using UnityEngine;
 public class Allergen : ScriptableObject
 {
     [SerializeField] string allergen;
-    //[SerializeField] public List<FoodNutrients> nutrientsAssociatedWithAllergen;
+    [SerializeField] public Dictionary<FoodNutrients, bool> nutrientsAssociatedWithAllergen = new();
     public string AllergenName { get => allergen; }
     public override string ToString()
     {
         return allergen;
+    }
+
+    public void SubscribeFoodToAllergen(FoodItem fooditem)
+    {
+
     }
 }
