@@ -35,9 +35,7 @@ public class NewExerciseEntry : MonoBehaviour
     public void ValidateInput()
     {   //convert all data to its respective type
         int weight = Int32.Parse(inputWeight.text);
-        DateTime time = new DateTime(0, 0);
-        double seconds = Convert.ToDouble(inputTime.text);
-        time.AddSeconds(seconds);
+        int time = Int32.Parse(inputTime.text);
         float distance = (float) Convert.ToDouble(inputDistance.text);
         int type = Int32.Parse(inputType.text);
         int reps = Int32.Parse(inputReps.text);

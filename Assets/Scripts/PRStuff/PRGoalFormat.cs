@@ -27,17 +27,27 @@ public class PRGoalFormat: MonoBehaviour
             string eName = pr.exerciseName;
             //convert the details of the pr into strings
             string weight = pr.Weight.ToString();
-            string time = pr.Time.ToString();
             string distance = pr.Distance.ToString();
             string reps = pr.Reps.ToString();
+            int s = pr.getTime() % 60;
+            int m = pr.getTime() / 60;
+            int h = m / 60;
+            if(m == 60)
+            {
+                m = 0;
+            }
+            string seconds = s.ToString();
+            string minutes = m.ToString();
+            string hours = h.ToString();
+            
             prTitle.text = $"{eName}";
             if(type == 1) 
             {
-                prDetails.text = $"{distance} miles, {time} long";
+                prDetails.text = $"{distance} miles, {hours}:{minutes}:{seconds} long";
             }
             else if(type == 0)
             {
-                prDetails.text = $"{weight} lbs, {reps} reps, {time}, long";
+                prDetails.text = $"{weight} lbs, {reps} reps, {hours}:{minutes}:{seconds}, long";
             }
             else
             {
