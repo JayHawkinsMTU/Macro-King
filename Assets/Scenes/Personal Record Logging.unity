@@ -944,6 +944,22 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 493309543066227353, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 493309543066227353, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 493309543066227353, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 493309543066227353, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 822249069756410249, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -967,6 +983,22 @@ PrefabInstance:
     - target: {fileID: 822249069756410249, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075021269676793587, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075021269676793587, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075021269676793587, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075021269676793587, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2718205784535617270, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1015,6 +1047,14 @@ PrefabInstance:
     - target: {fileID: 5391373879278543069, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5391373879278543069, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5391373879278543069, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8329764300755489303, guid: 29b0af2255747fc43af2bf6919903317, type: 3}
       propertyPath: m_Pivot.x
@@ -3306,6 +3346,7 @@ MonoBehaviour:
     weight: 0
     reps: 0
     type: 0
+    time: 0
     distance: 0
     exerciseName: unchanged
   prTitle: {fileID: 1985546574}
@@ -13913,7 +13954,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
+  m_fontSize: 73.7
   m_fontSizeBase: 160
   m_fontWeight: 400
   m_enableAutoSizing: 1

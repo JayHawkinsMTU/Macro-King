@@ -6,7 +6,7 @@ using UnityEngine;
 Constructor to make a new workout
 
 TODO:
-Implement time to be a better construct of hours:minutes:seconds rather than current date
+Implement time to be a better construct of hours:minutes:seconds rather than current date DONE
 Maybe ask the user for a comma seperated list and store in a hashmap
 */
 [Serializable]
