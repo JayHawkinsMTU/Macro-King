@@ -5373,6 +5373,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b330ccdbd5eb8174c917fd5382d3a36c, type: 3}
+    - target: {fileID: 1579741120767461975, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834716949}
+    - target: {fileID: 1579741120767461975, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
     - target: {fileID: 4265594179245719346, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       propertyPath: m_PreferredWidth
       value: 200
