@@ -5,10 +5,8 @@ using TMPro;
 using UnityEngine.UI;
 
 public class DarkModeHandler : MonoBehaviour
-{
-    public static bool isDark;
+{  
     public GameObject canvas;
-
     public Camera mainCam;
     private TMP_Text[] textObjs;
     private GameObject[] images;
@@ -28,11 +26,10 @@ public class DarkModeHandler : MonoBehaviour
         ColorUtility.TryParseHtmlString("#1B3247", out darkBg);        
         ColorUtility.TryParseHtmlString("#20374C", out darkCam);        
         ColorUtility.TryParseHtmlString("#7FA9CB", out lightCam);
-        updateVisuals();
-        
+        updateVisuals(PlayerPrefs.GetInt("isDark", 0) == 1);
     }
 
-    public void updateVisuals()
+    public void updateVisuals(bool isDark)
     {
         if (isDark)
         {

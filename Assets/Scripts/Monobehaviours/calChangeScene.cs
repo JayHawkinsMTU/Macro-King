@@ -64,6 +64,8 @@ public class calChangeScene : MonoBehaviour
         }
         else
         {
+            openMenu open = FindObjectOfType<openMenu>();
+            open.showSecondMenu();
             Debug.Log("Non-Existing date was selected."); //I'll replace this with a popup or something later
         }
     }

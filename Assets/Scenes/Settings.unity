@@ -428,7 +428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f41b8163249f05647995844c6f1e90fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52d0ff2c30afcf042824a73efb533ca6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52d0ff2c30afcf042824a73efb533ca6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f41b8163249f05647995844c6f1e90fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -641,20 +641,8 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1834716951}
-        m_TargetAssemblyTypeName: DarkModeToggle, Assembly-CSharp
-        m_MethodName: switchMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_IsOn: 0
+      m_Calls: []
+  m_IsOn: 1
 --- !u!1 &782846106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703347e6027bfb041b71fb5a2150d4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  darkModeToggle: {fileID: 774969238}
 --- !u!1001 &1835751871
 PrefabInstance:
   m_ObjectHideFlags: 0
