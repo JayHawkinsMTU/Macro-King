@@ -22,6 +22,7 @@ public class DarkModeHandler : MonoBehaviour
         }
     }
 
+    /*
     void Update()
     {
         TMP_Text[] textObjs = FindObjectsOfType<TMP_Text>();
@@ -54,6 +55,7 @@ public class DarkModeHandler : MonoBehaviour
             }
         }
     }
+    */
 
     public void switchMode()
     {
