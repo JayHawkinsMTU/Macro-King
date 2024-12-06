@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 117696712}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 309109844}
   - component: {fileID: 309109846}
   - component: {fileID: 309109847}
+  - component: {fileID: 309109848}
   m_Layer: 5
   m_Name: Food Selection Info Page
   m_TagString: Untagged
@@ -944,6 +945,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodNameText: {fileID: 241614602}
+--- !u!114 &309109848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309109838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e63129caebf344b5153197f307f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 309109838}
+  mainCam: {fileID: 1134492656}
 --- !u!1 &342711129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1934,7 @@ GameObject:
   - component: {fileID: 871713231}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2185,6 +2200,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33a56543da54294a8205e505bd88492, type: 3}
+--- !u!20 &1134492656 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5683331923648431803, guid: d33a56543da54294a8205e505bd88492, type: 3}
+  m_PrefabInstance: {fileID: 1134492655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1154942156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,7 +3416,7 @@ GameObject:
   - component: {fileID: 1546651214}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: bg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3576,6 +3596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Footer
       objectReference: {fileID: 0}
+    - target: {fileID: 1892406979503104387, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
+      propertyPath: m_TagString
+      value: bg
+      objectReference: {fileID: 0}
     - target: {fileID: 2498190830487543996, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3719,6 +3743,10 @@ PrefabInstance:
     - target: {fileID: 8270374629038018769, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580689325128307460, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
+      propertyPath: m_TagString
+      value: dark
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7397570191583283998, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}

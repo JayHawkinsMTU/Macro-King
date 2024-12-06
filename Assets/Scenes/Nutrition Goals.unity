@@ -297,6 +297,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33a56543da54294a8205e505bd88492, type: 3}
+--- !u!20 &87878474 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5683331923648431803, guid: d33a56543da54294a8205e505bd88492, type: 3}
+  m_PrefabInstance: {fileID: 87878473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &240533921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,6 +361,10 @@ PrefabInstance:
     - target: {fileID: 1892406979503104387, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_Name
       value: Footer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892406979503104387, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
+      propertyPath: m_TagString
+      value: bg
       objectReference: {fileID: 0}
     - target: {fileID: 2498190830487543996, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_IsActive
@@ -675,7 +684,7 @@ GameObject:
   - component: {fileID: 357741831}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -832,8 +841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Add Nutrition Goal
-  animator: {fileID: 0}
-  anim: {fileID: 0}
+  animator: {fileID: 412574781}
+  anim: {fileID: 7400000, guid: 26ac921e2cc8d1e448c8c72562832e16, type: 2}
 --- !u!1 &396283466
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +928,7 @@ GameObject:
   - component: {fileID: 412574778}
   - component: {fileID: 412574780}
   - component: {fileID: 412574781}
+  - component: {fileID: 412574782}
   m_Layer: 5
   m_Name: Nutrition Goals Page
   m_TagString: Untagged
@@ -1097,6 +1107,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &412574782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412574772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e63129caebf344b5153197f307f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 412574772}
+  mainCam: {fileID: 87878474}
 --- !u!1001 &435601510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1438,7 +1462,7 @@ GameObject:
   - component: {fileID: 1033107727}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1627,7 +1651,7 @@ GameObject:
   - component: {fileID: 1286689137}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: bg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2097,7 +2121,7 @@ GameObject:
   - component: {fileID: 1829259549}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2189,7 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

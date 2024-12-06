@@ -1203,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: open
       objectReference: {fileID: 0}
+    - target: {fileID: 7725641347110059803, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_TagString
+      value: dark
+      objectReference: {fileID: 0}
     - target: {fileID: 7963179317228737581, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1678,7 +1682,7 @@ GameObject:
   - component: {fileID: 897434034}
   m_Layer: 5
   m_Name: Footer
-  m_TagString: Untagged
+  m_TagString: bg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2232,7 +2236,7 @@ GameObject:
   - component: {fileID: 1285156907}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: bg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3408,6 +3412,7 @@ GameObject:
   - component: {fileID: 2051929651}
   - component: {fileID: 2051929650}
   - component: {fileID: 2051929653}
+  - component: {fileID: 2051929654}
   m_Layer: 5
   m_Name: CalendarPage
   m_TagString: Untagged
@@ -3591,6 +3596,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2051929654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051929643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e63129caebf344b5153197f307f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2051929643}
+  mainCam: {fileID: 295369206}
 --- !u!1 &2076120739
 GameObject:
   m_ObjectHideFlags: 0

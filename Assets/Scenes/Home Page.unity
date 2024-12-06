@@ -1239,6 +1239,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 7725641347110059803, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
+      propertyPath: m_TagString
+      value: dark
+      objectReference: {fileID: 0}
     - target: {fileID: 7963179317228737581, guid: 0b17c070ac862d84ab237b8a54b54cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1354,6 +1358,7 @@ GameObject:
   - component: {fileID: 1324925144}
   - component: {fileID: 1324925146}
   - component: {fileID: 1324925147}
+  - component: {fileID: 1324925148}
   m_Layer: 5
   m_Name: Home Page
   m_TagString: Untagged
@@ -1520,6 +1525,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1324925148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324925139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e63129caebf344b5153197f307f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1324925139}
+  mainCam: {fileID: 6887185968613886239}
 --- !u!1 &1550739069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,6 +2790,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33a56543da54294a8205e505bd88492, type: 3}
+--- !u!20 &6887185968613886239 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5683331923648431803, guid: d33a56543da54294a8205e505bd88492, type: 3}
+  m_PrefabInstance: {fileID: 6887185968613886238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

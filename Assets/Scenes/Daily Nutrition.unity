@@ -313,6 +313,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d33a56543da54294a8205e505bd88492, type: 3}
+--- !u!20 &263449636 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5683331923648431803, guid: d33a56543da54294a8205e505bd88492, type: 3}
+  m_PrefabInstance: {fileID: 263449635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &343682593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5001893477705613875, guid: 667298b22b1aa3348b46c89496f59de2, type: 3}
@@ -588,7 +593,7 @@ GameObject:
   - component: {fileID: 398934607}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -844,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195402179815441999, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.5305786
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 7454414555175577478, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_Color.a
@@ -984,7 +989,7 @@ GameObject:
   - component: {fileID: 443547143}
   m_Layer: 5
   m_Name: Header
-  m_TagString: Untagged
+  m_TagString: bg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,7 +1088,7 @@ GameObject:
   - component: {fileID: 445242770}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1119,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 9c6d2de84f56ffa419ddda2fc0d0e2ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1324,8 +1329,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075829346}
   m_HandleRect: {fileID: 2075829345}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.5482993
+  m_Value: 1
+  m_Size: 0.5722991
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1576,6 +1581,7 @@ GameObject:
   - component: {fileID: 760246705}
   - component: {fileID: 760246704}
   - component: {fileID: 760246711}
+  - component: {fileID: 760246712}
   m_Layer: 5
   m_Name: Daily Nutrition Page
   m_TagString: Untagged
@@ -1743,6 +1749,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &760246712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760246702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504e63129caebf344b5153197f307f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 760246702}
+  mainCam: {fileID: 263449636}
 --- !u!1 &992459391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,7 +2404,7 @@ GameObject:
   - component: {fileID: 1791707525}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2987,6 +3007,10 @@ PrefabInstance:
     - target: {fileID: 1892406979503104387, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_Name
       value: Footer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892406979503104387, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
+      propertyPath: m_TagString
+      value: bg
       objectReference: {fileID: 0}
     - target: {fileID: 2498190830487543996, guid: 1f755246c4f81814dae249cdfefeed94, type: 3}
       propertyPath: m_IsActive
