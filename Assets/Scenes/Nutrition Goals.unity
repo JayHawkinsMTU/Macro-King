@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 557800901882443276, guid: 667298b22b1aa3348b46c89496f59de2, type: 3}
       propertyPath: m_fontSize
-      value: 110.95
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 557800901882443276, guid: 667298b22b1aa3348b46c89496f59de2, type: 3}
       propertyPath: m_fontSizeMax
-      value: 220
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 557800901882443276, guid: 667298b22b1aa3348b46c89496f59de2, type: 3}
       propertyPath: m_VerticalAlignment
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 357741829}
   - component: {fileID: 357741828}
   - component: {fileID: 357741827}
-  - component: {fileID: 357741826}
+  - component: {fileID: 357741831}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -689,7 +689,7 @@ RectTransform:
   m_GameObject: {fileID: 357741824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 240533923}
@@ -699,19 +699,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &357741826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357741824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d6b4f3ca0cfab42bb9b59dce8acb06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Search Food
 --- !u!114 &357741827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,18 +757,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412574781}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: add
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 357741827}
         m_TargetAssemblyTypeName: NewFoodEntry, Assembly-CSharp
         m_MethodName: ValidateInput
@@ -794,16 +769,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 357741826}
-        m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
+      - m_Target: {fileID: 357741831}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: add
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &357741829
@@ -844,6 +819,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357741824}
   m_CullTransparentMesh: 1
+--- !u!114 &357741831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357741824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Add Nutrition Goal
+  animator: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &396283466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1452,7 @@ RectTransform:
   m_GameObject: {fileID: 1033107725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 240533924}
@@ -1882,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7454414555175577478, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7732587645067958171, guid: 29124bd6c06aa034da90ec5b347702ca, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2100,7 +2094,7 @@ GameObject:
   - component: {fileID: 1829259548}
   - component: {fileID: 1829259547}
   - component: {fileID: 1829259546}
-  - component: {fileID: 1829259545}
+  - component: {fileID: 1829259549}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -2117,7 +2111,7 @@ RectTransform:
   m_GameObject: {fileID: 1829259543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 240533925}
@@ -2127,19 +2121,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1829259545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829259543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2d6b4f3ca0cfab42bb9b59dce8acb06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Nutrition Overview
 --- !u!114 &1829259546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,9 +2165,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412574781}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
+      - m_Target: {fileID: 1829259549}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
+        m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2194,18 +2175,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: back
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1829259545}
-        m_TargetAssemblyTypeName: ChangeSceneButton, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1829259547
@@ -2246,6 +2215,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829259543}
   m_CullTransparentMesh: 1
+--- !u!114 &1829259549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829259543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Nutrition Overview
+  animator: {fileID: 412574781}
+  anim: {fileID: 7400000, guid: 9c97cb8e32c7fda4b92236a33c7ff92c, type: 2}
 --- !u!1001 &1846705112
 PrefabInstance:
   m_ObjectHideFlags: 0
