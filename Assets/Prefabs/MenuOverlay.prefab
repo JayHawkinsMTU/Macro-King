@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 3096075667461870617}
   - component: {fileID: 1109676230069132933}
   - component: {fileID: 8489881618865010598}
-  - component: {fileID: 8247534472110879525}
+  - component: {fileID: 7227199371272574721}
   m_Layer: 5
   m_Name: Page 6
   m_TagString: Untagged
@@ -640,15 +640,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8247534472110879525}
-        m_TargetAssemblyTypeName: DirectoryScenesHandler, Assembly-CSharp
+      - m_Target: {fileID: 7227199371272574721}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 0
           m_StringArgument: pr
           m_BoolArgument: 0
         m_CallState: 2
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &8247534472110879525
+--- !u!114 &7227199371272574721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503827295057547976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Personal Record Logging
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 6637355914830883872}
   - component: {fileID: 4394339003973149063}
   - component: {fileID: 275636743468833374}
-  - component: {fileID: 556345599537801865}
+  - component: {fileID: 438327877143471492}
   m_Layer: 5
   m_Name: Page 4
   m_TagString: Untagged
@@ -810,8 +810,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 556345599537801865}
-        m_TargetAssemblyTypeName: DirectoryScenesHandler, Assembly-CSharp
+      - m_Target: {fileID: 438327877143471492}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &556345599537801865
+--- !u!114 &438327877143471492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1536150772458417637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Add Nutrition Goal
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 2285986711501318348}
   - component: {fileID: 3117690256103409053}
   - component: {fileID: 6842805235345608385}
-  - component: {fileID: 2367772582571981267}
+  - component: {fileID: 7953166195726672461}
   m_Layer: 5
   m_Name: Page 3
   m_TagString: Untagged
@@ -1076,8 +1076,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2367772582571981267}
-        m_TargetAssemblyTypeName: DirectoryScenesHandler, Assembly-CSharp
+      - m_Target: {fileID: 7953166195726672461}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &2367772582571981267
+--- !u!114 &7953166195726672461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2434190743709917435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Nutrition Goals
@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 5124983582894862878}
   - component: {fileID: 8722581716364082496}
   - component: {fileID: 7160067986667523410}
-  - component: {fileID: 4082279669314731229}
+  - component: {fileID: 5770805449829021758}
   m_Layer: 5
   m_Name: Page 5
   m_TagString: Untagged
@@ -1839,8 +1839,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4082279669314731229}
-        m_TargetAssemblyTypeName: DirectoryScenesHandler, Assembly-CSharp
+      - m_Target: {fileID: 5770805449829021758}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &4082279669314731229
+--- !u!114 &5770805449829021758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3977652312618432723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Daily Nutrition
@@ -2856,7 +2856,7 @@ GameObject:
   - component: {fileID: 9039391091488115217}
   - component: {fileID: 615947394646952839}
   - component: {fileID: 3831981295265648729}
-  - component: {fileID: 5234213816793295306}
+  - component: {fileID: 2556176985273441244}
   m_Layer: 5
   m_Name: Page 2
   m_TagString: Untagged
@@ -2966,15 +2966,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5234213816793295306}
-        m_TargetAssemblyTypeName: DirectoryScenesHandler, Assembly-CSharp
+      - m_Target: {fileID: 2556176985273441244}
+        m_TargetAssemblyTypeName: ChangeSceneAnimHandler, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: calendar
           m_BoolArgument: 0
         m_CallState: 2
@@ -2998,7 +2998,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
---- !u!114 &5234213816793295306
+--- !u!114 &2556176985273441244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7011066855775482768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c314a8b460603449fd0f12cc12b246, type: 3}
+  m_Script: {fileID: 11500000, guid: eafbe76f61086ec48a9f30c155118bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Calendar
@@ -3232,7 +3232,7 @@ RectTransform:
   m_GameObject: {fileID: 8012480294984741152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4026306983699743107}

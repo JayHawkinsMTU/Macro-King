@@ -19,6 +19,14 @@ public class ChangeSceneAnimHandler : MonoBehaviour
     {
         float length = anim.length;
         yield return new WaitForSeconds(length - 0.07f);
-        SceneManager.LoadScene(sceneName);
+        if(sceneName == SceneManager.GetActiveScene().name)
+        {
+            closeMenu closer = FindObjectOfType<closeMenu>();
+            closer.hideMenu();
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }    
     }
 }

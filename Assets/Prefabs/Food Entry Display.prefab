@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4766490646830477417}
   m_Layer: 5
   m_Name: Food Entry Display
-  m_TagString: Untagged
+  m_TagString: FoodEntryDaily
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b354ee137d742bf4db9f3013fe5cb098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entry:
+    foodID: 0
+    foodName: 
   title: {fileID: 493309543066227353}
   quantity: {fileID: 8126117581061169563}
 --- !u!1 &7629178064925889683

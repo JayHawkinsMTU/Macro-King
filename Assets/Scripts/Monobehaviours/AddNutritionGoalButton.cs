@@ -10,20 +10,20 @@ using TMPro;
 public class AddNutritionGoalButton : MonoBehaviour
 {
     public TMP_InputField textInput;
-    public ChangeSceneButton changeSceneButton;
+    //public ChangeSceneButton changeSceneButton;
     public void AddGoal()
     {
         NutritionGoal goal = NutritionGoal.instance;
         goal.value = float.Parse(textInput.text);
         NutritionGoal.instance.AddGoal();
-        changeSceneButton.ChangeScene();
+        //changeSceneButton.ChangeScene();
         NutritionGoal.instance = null;
     }
 
     public void RemoveGoal()
     {
         NutritionGoal.instance.RemoveGoal();
-        changeSceneButton.ChangeScene();
+        //changeSceneButton.ChangeScene();
         NutritionGoal.instance = null;
     }
 }

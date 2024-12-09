@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6149251122696532599}
   m_Layer: 5
   m_Name: Nutrition Label Entry
-  m_TagString: Untagged
+  m_TagString: NutritionLabel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

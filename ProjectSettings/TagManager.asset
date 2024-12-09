@@ -7,6 +7,12 @@ TagManager:
   - dark
   - bg
   - smallImg
+  - CalendarDay
+  - NutritionGoal
+  - FoodEntry
+  - NutritionLabel
+  - PRGoal
+  - FoodEntryDaily
   layers:
   - Default
   - TransparentFX

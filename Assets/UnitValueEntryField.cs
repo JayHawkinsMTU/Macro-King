@@ -43,9 +43,17 @@ public class UnitValueEntryField : MonoBehaviour
 
     public void SetDropdownOptions()
     {
-        if(unitType == null) { return; }
-        dropDownEntry.ClearOptions();
+        if (unitType == null)
+        {
+            return;
+        }
 
+        if (dropDownEntry == null)
+        {
+            return;
+        }
+
+        dropDownEntry.ClearOptions();
 
         List<iUnit> options_units = GameManager.unitManager.GetUnitsOfType(unitType);
         List<string> options = new();
@@ -55,6 +63,7 @@ public class UnitValueEntryField : MonoBehaviour
         }
         dropDownEntry.AddOptions(options);
     }
+
 
 #if UNITY_EDITOR
     [ContextMenu("GetUnit()")]
@@ -76,3 +85,4 @@ public class UnitValueEntryField : MonoBehaviour
     }
 #endif 
 }
+

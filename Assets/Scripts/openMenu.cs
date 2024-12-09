@@ -11,7 +11,6 @@ public class openMenu : MonoBehaviour
 
     public void showMenu()
     {
-        DirectoryPageHandler.onNutrition = true;
         canvas.SetActive(true);
         setOpacity();
     }

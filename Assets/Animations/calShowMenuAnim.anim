@@ -49,7 +49,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Footer/Menu Button/Image
+    path: Footer/Menu Button/Button Opener
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -60,7 +60,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3657708433
+      path: 3383537904
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -125,7 +125,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Footer/Menu Button/Image
+    path: Footer/Menu Button/Button Opener
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -164,7 +164,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Footer/Menu Button/Image
+    path: Footer/Menu Button/Button Opener
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -203,7 +203,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Footer/Menu Button/Image
+    path: Footer/Menu Button/Button Opener
     classID: 224
     script: {fileID: 0}
     flags: 0

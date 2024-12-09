@@ -15,14 +15,21 @@ public class LogFoodEntry : MonoBehaviour
     // Add entry to both nutrition list containing all nutrition and to dailynutrition for that day.
     public void LogEntry()
     {
-        FoodItem foodItem = GameManager.CurrentFoodItem;
-        UnitValue unitVal = unitValEntry.Get();
-        DateTime dateSelected = DailyNutrition.selectedDate;
-        FoodEntry foodEntry = new(foodItem, unitVal, dateSelected);
-        User user = User.LoadUser();
-        user.Nutrition.Add(foodEntry);
-        user.nutritionCalendar[dateSelected].foodEntries.Add(foodEntry);
-        // Return to scene
-        SceneManager.LoadScene("Daily Nutrition");
+        try
+        {
+            FoodItem foodItem = GameManager.CurrentFoodItem;
+            UnitValue unitVal = unitValEntry.Get();
+            DateTime dateSelected = DailyNutrition.selectedDate;
+            FoodEntry foodEntry = new(foodItem, unitVal, dateSelected);
+            User user = User.LoadUser();
+            user.Nutrition.Add(foodEntry);
+            user.nutritionCalendar[dateSelected].foodEntries.Add(foodEntry);
+            // Return to scene
+            SceneManager.LoadScene("Daily Nutrition");
+        }
+        catch (FormatException e)
+        {
+            Debug.LogError($"System.FormatException: {e.Message}");
+        }
     }
 }
