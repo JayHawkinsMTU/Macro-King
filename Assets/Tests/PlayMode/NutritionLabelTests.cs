@@ -26,7 +26,7 @@ public class NutritionLabelTests
     }
 
     [UnityTest]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
 
@@ -47,7 +47,7 @@ public class NutritionLabelTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 

@@ -42,7 +42,7 @@ public class DirectoryTests
     }
     
     [UnityTest, Order(1)]
-    public IEnumerator OpenCloseTests()
+    public IEnumerator OpenCloseFunction_Test()
     {
         menuOpenerButton.GetComponent<Button>().onClick.Invoke();
         yield return new WaitForSeconds(0.5f); 
@@ -82,7 +82,7 @@ public class DirectoryTests
         menuOverlayAnimator = menuOverlay.GetComponent<Animator>();
         var button = GameObject.Find(buttonName).GetComponent<Button>();
         button.onClick.Invoke();
-        yield return null;  // Ensure to wait for the animation to start
+        yield return null;  
         Assert.IsTrue(menuOverlayAnimator.GetCurrentAnimatorStateInfo(0).length > 0, "Animation did not play on " + buttonName);
         yield return new WaitForSeconds(1.0f);
         Assert.AreEqual(expectedSceneName, SceneManager.GetActiveScene().name, "Did not change to " + expectedSceneName + " scene.");
@@ -103,14 +103,15 @@ public class DirectoryTests
         }
     }
     
+
     [UnityTest, Order(2)]
-    public IEnumerator HomePageNavigationTests()
+    public IEnumerator HomePageNavigationFunction_Test()
     {
         yield return NavigateThroughPages("Home Page", "Menu Opener");
     }
 
     [UnityTest, Order(3)]
-    public IEnumerator CalendarNavigationTests()
+    public IEnumerator CalendarNavigationFunction_Test()
     {
         SceneManager.LoadScene("Calendar");
         yield return new WaitForSeconds(0.5f);
@@ -118,7 +119,7 @@ public class DirectoryTests
     }
 
     [UnityTest, Order(4)]
-    public IEnumerator NutritionGoalsNavigationTests()
+    public IEnumerator NutritionGoalsNavigationFunction_Test()
     {
         SceneManager.LoadScene("Nutrition Goals");
         yield return new WaitForSeconds(0.5f);
@@ -126,7 +127,7 @@ public class DirectoryTests
     }
 
     [UnityTest, Order(5)]
-    public IEnumerator AddNutritionGoalNavigationTests()
+    public IEnumerator AddNutritionGoalNavigationFunction_Test()
     {
         SceneManager.LoadScene("Add Nutrition Goal");
         yield return new WaitForSeconds(1.0f);
@@ -134,7 +135,7 @@ public class DirectoryTests
     }
     
     [UnityTest, Order(6)]
-    public IEnumerator DailyNutritionNavigationTests()
+    public IEnumerator DailyNutritionNavigationFunction_Test()
     {
         SceneManager.LoadScene("Daily Nutrition");
         yield return new WaitForSeconds(0.5f);
@@ -142,7 +143,7 @@ public class DirectoryTests
     }
 
     [UnityTest, Order(7)]
-    public IEnumerator PersonalRecordLoggingNavigationTests()
+    public IEnumerator PersonalRecordLoggingNavigationFunction_Test()
     {
         SceneManager.LoadScene("Personal Record Logging");
         yield return new WaitForSeconds(0.5f);
@@ -150,7 +151,7 @@ public class DirectoryTests
     }
 
     [UnityTest, Order(8)]
-    public IEnumerator SettingsNavigationTests()
+    public IEnumerator SettingsNavigationFunction_Test()
     {
         SceneManager.LoadScene("Settings");
         yield return new WaitForSeconds(0.5f);

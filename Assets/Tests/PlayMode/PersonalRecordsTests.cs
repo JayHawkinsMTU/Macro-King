@@ -32,7 +32,7 @@ public class PersonalRecordTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -45,7 +45,7 @@ public class PersonalRecordTests
     }
 
     [UnityTest]
-    public IEnumerator EditButton_PlaysAnimation()
+    public IEnumerator EditButtonFunction_Test()
     {
         var button = editButton.GetComponent<Button>();
 
@@ -55,7 +55,7 @@ public class PersonalRecordTests
     }
 
     [UnityTest]
-    public IEnumerator AddButton_PlaysAnimation()
+    public IEnumerator AddButtonFunction_Test()
     {
         var button = addButton.GetComponent<Button>();
 
@@ -79,7 +79,7 @@ public class PersonalRecordTests
     }
 
     [UnityTest]
-    public IEnumerator AddPRTest()
+    public IEnumerator AddPRFunction_Test()
     {
         var button = addButton.GetComponent<Button>();
 

@@ -30,7 +30,7 @@ public class NutritionOverviewTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -43,7 +43,7 @@ public class NutritionOverviewTests
     }
 
     [UnityTest]
-    public IEnumerator GoalsButton_ChangesScene()
+    public IEnumerator GoalsButtonChangesScene_Test()
     {
         var button = goalsButton.GetComponent<Button>();
 
@@ -64,7 +64,7 @@ public class NutritionOverviewTests
     }
 
     [UnityTest]
-    public IEnumerator CalendarButton_ChangesScene()
+    public IEnumerator CalendarButtonChangesScene_Test()
     {
         var button = calendarButton.GetComponent<Button>();
 
@@ -85,7 +85,7 @@ public class NutritionOverviewTests
     }
 
     [UnityTest]
-    public IEnumerator TodayButton_ChangesScene()
+    public IEnumerator TodayButtonChangesScene_Teste()
     {
         var button = todayButton.GetComponent<Button>();
 

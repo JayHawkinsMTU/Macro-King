@@ -33,7 +33,7 @@ public class DailyNutritionTests
     }
 
     [UnityTest]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Back Button component not found");
@@ -55,7 +55,7 @@ public class DailyNutritionTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Menu Button component not found");
@@ -69,7 +69,7 @@ public class DailyNutritionTests
     }
 
     [UnityTest]
-    public IEnumerator AddButton_ChangesScene()
+    public IEnumerator AddButtonChangesScene_Test()
     {
         var button = addButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Add Button component not found");
@@ -89,17 +89,4 @@ public class DailyNutritionTests
         yield return new WaitForSeconds(1.0f);
         Assert.IsTrue(sceneChanged, "Scene change to 'Search Food' failed.");
     }
-
-    /*
-    [UnityTest]
-    public IEnumerator GoalDisplay_Test()
-    {
-        var goalItem = GameObject.FindGameObjectWithTag("NutritionGoal");
-        Assert.IsNotNull(goalItem, "Nutrition Goal not found");
-
-        var goalText = goalItem.GetComponentInChildren<TMP_Text>();
-        Assert.IsNotNull(goalText, "Goal text not found");
-        Assert.AreEqual("Calories=1cals", goalText.text, "Goal text is incorrect");
-        yield return null;
-    }*/
 }

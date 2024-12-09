@@ -30,7 +30,7 @@ public class FoodSelectionInfoTests
     }
 
     [UnityTest]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
 
@@ -51,7 +51,7 @@ public class FoodSelectionInfoTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -64,7 +64,7 @@ public class FoodSelectionInfoTests
     }
 
     [UnityTest]
-    public IEnumerator AddButton_ChangesScene()
+    public IEnumerator AddButtonChangesScene_Test()
     {
         var button = addButton.GetComponent<Button>();
 
@@ -85,7 +85,7 @@ public class FoodSelectionInfoTests
     }
 
     [UnityTest]
-    public IEnumerator CheckNutritionLabelsAndFoodName()
+    public IEnumerator FoodNameAndLabelFunction_Test()
     {
         var asyncLoad = SceneManager.LoadSceneAsync("Search Food");
         while (!asyncLoad.isDone)

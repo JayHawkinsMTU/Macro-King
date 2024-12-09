@@ -30,7 +30,7 @@ public class NutritionGoalsTests
     }
 
     [UnityTest, Order(2)]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
 
@@ -51,7 +51,7 @@ public class NutritionGoalsTests
     }
 
     [UnityTest, Order(1)]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -64,7 +64,7 @@ public class NutritionGoalsTests
     }
 
     [UnityTest, Order(3)]
-    public IEnumerator AddButton_ChangesScene()
+    public IEnumerator AddButtonChangesScene_Test()
     {
         var button = addButton.GetComponent<Button>();
 
@@ -100,7 +100,7 @@ public class NutritionGoalsTests
     }
 
     [UnityTest, Order(4)]
-    public IEnumerator EditGoal_Test()
+    public IEnumerator EditGoalButtonFunctionAndAnimation_Test()
     {
         var asyncLoad = SceneManager.LoadSceneAsync("Nutrition Goals");
         while (!asyncLoad.isDone)
@@ -165,7 +165,7 @@ public class NutritionGoalsTests
     }
 
     [UnityTest, Order(5)]
-    public IEnumerator DeleteGoal_Test()
+    public IEnumerator DeleteGoalButtonFunctionAndAnimation_Test()
     {
         var asyncLoad = SceneManager.LoadSceneAsync("Nutrition Goals");
         while (!asyncLoad.isDone)

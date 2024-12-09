@@ -32,7 +32,7 @@ public class SettingsTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -46,7 +46,7 @@ public class SettingsTests
     }
 
     [UnityTest]
-    public IEnumerator Setting2Toggle_Works()
+    public IEnumerator Setting2Toggle_Test()
     {
         bool initialState = setting2Toggle.isOn;
         setting2Toggle.isOn = !initialState;
@@ -56,7 +56,7 @@ public class SettingsTests
     }
 
     [UnityTest]
-    public IEnumerator Setting1Toggle_ChangesMode()
+    public IEnumerator Setting1Toggle_Test()
     {
         bool initialState = setting1Toggle.isOn;
         setting1Toggle.isOn = !initialState;
@@ -116,7 +116,7 @@ public class SettingsTests
     }
 
     [UnityTest]
-    public IEnumerator ValidateModesInAllScenes()
+    public IEnumerator AllScenesChangeMode_Test()
     {
         string[] scenesToTest = {
         "Home Page",

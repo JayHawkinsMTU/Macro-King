@@ -33,7 +33,7 @@ public class UnitValueEntryTests
     }
 
     [UnityTest, Order(2)]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -46,7 +46,7 @@ public class UnitValueEntryTests
     }
 
     [UnityTest, Order(1)]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
 
@@ -68,7 +68,7 @@ public class UnitValueEntryTests
     }
 
     [UnityTest, Order(3)]
-    public IEnumerator AddButton_PlaysAnimation_InvalidInput()
+    public IEnumerator AddButtonFunction_Test()
     {
         var button = addButton.GetComponent<Button>();
         LogAssert.Expect(LogType.Error, "System.FormatException: Input string was not in a correct format.");
@@ -92,14 +92,14 @@ public class UnitValueEntryTests
     }
     
     [UnityTest, Order(4)]
-    public IEnumerator UnitEntryTest()
+    public IEnumerator UnitEntryFunction_Test()
     {
         SceneManager.LoadScene("Calendar");
         yield return new WaitForSeconds(0.5f);
 
         var calendarDays = GameObject.FindGameObjectsWithTag("CalendarDay");
-        var calendarDay = System.Array.Find(calendarDays, day => day.GetComponentInChildren<TMP_Text>().text == "8");
-        Assert.IsNotNull(calendarDay, "CalendarDay object with value '8' not found.");
+        var calendarDay = System.Array.Find(calendarDays, day => day.GetComponentInChildren<TMP_Text>().text == "9");
+        Assert.IsNotNull(calendarDay, "CalendarDay object with value '9' not found.");
         calendarDay.GetComponent<Button>().onClick.Invoke();
 
         yield return new WaitForSeconds(1.0f);

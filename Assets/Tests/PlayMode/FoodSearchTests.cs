@@ -36,7 +36,7 @@ public class SearchFoodTests
     }
 
     [UnityTest]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
 
@@ -57,7 +57,7 @@ public class SearchFoodTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
         button.onClick.Invoke();
@@ -69,7 +69,7 @@ public class SearchFoodTests
     }
 
     [UnityTest]
-    public IEnumerator SearchButton_CreatesFoodEntries()
+    public IEnumerator SearchButtonFunction_Test()
     {
         searchBar.text = "beef wellington";
         var searchButton = GameObject.Find("Search Button/Image").GetComponent<Button>();
@@ -83,7 +83,7 @@ public class SearchFoodTests
     }
 
     [UnityTest]
-    public IEnumerator PageNavigation_Tests()
+    public IEnumerator PageNavigationFunction_Test()
     {
         searchBar.text = "beef wellington";
         var searchButton = GameObject.Find("Search Button/Image").GetComponent<Button>();

@@ -45,7 +45,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator BackButton_ChangesMonth()
+    public IEnumerator BackButtonFunction_Test()
     {
         var button = backButton.GetComponent<Button>();
         string initialMonth = monthDisplay.GetComponent<TMP_Text>().text;
@@ -59,7 +59,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator ForwardButton_ChangesMonth()
+    public IEnumerator ForwardButtonFunction_Test()
     {
         var button = forwardButton.GetComponent<Button>();
         string initialMonth = monthDisplay.GetComponent<TMP_Text>().text;
@@ -73,7 +73,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
 
@@ -86,7 +86,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator InvalidDay_ShowsInvalidPopup()
+    public IEnumerator InvalidDayPopupFunction_Test()
     {
         var invalidDayButton = FindDayButton("");
         var button = invalidDayButton.GetComponent<Button>();
@@ -100,7 +100,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator CurrentDay_ChangesScene()
+    public IEnumerator CurrentDayChangesScene_Test()
     {
         var validDayButton = FindDayButton("9"); 
         var button = validDayButton.GetComponent<Button>();
@@ -121,7 +121,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator CurrentDay_ShowsCorrectDate()
+    public IEnumerator CurrentDayFunction_Test()
     {
         var validDayButton = FindDayButton("9"); 
         var button = validDayButton.GetComponent<Button>();
@@ -147,7 +147,7 @@ public class CalendarSceneTests
 
 
     [UnityTest]
-    public IEnumerator ValidDay_ChangesScene()
+    public IEnumerator ValidDayChangesScene_Test()
     {
         var validDayButton = FindDayButton("17");
         var button = validDayButton.GetComponent<Button>();
@@ -167,7 +167,7 @@ public class CalendarSceneTests
     }
 
     [UnityTest]
-    public IEnumerator ValidDay_ShowsCorrectDate()
+    public IEnumerator ValidDayFunction_Test()
     {
         var validDayButton = FindDayButton("17"); 
         var button = validDayButton.GetComponent<Button>();

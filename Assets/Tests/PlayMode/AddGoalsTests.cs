@@ -44,7 +44,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(1)]
-    public IEnumerator CaloriesButton_PlaysAnimation()
+    public IEnumerator CaloriesButtonFunction_Test()
     {
         var button = caloriesButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Calories Button component not found");
@@ -55,7 +55,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(2)]
-    public IEnumerator ProteinButton_PlaysAnimation()
+    public IEnumerator ProteinButtonFunction_Test()
     {
         var button = proteinButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Protein Button component not found");
@@ -66,7 +66,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(3)]
-    public IEnumerator CarbsButton_PlaysAnimation()
+    public IEnumerator CarbsButtonFunction_Test()
     {
         var button = carbsButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Carbs Button component not found");
@@ -77,7 +77,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(4)]
-    public IEnumerator FatButton_PlaysAnimation()
+    public IEnumerator FatButtonFunction_Test()
     {
         var button = fatButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Fat Button component not found");
@@ -88,7 +88,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(5)]
-    public IEnumerator ConditionLessButton_PlaysAnimation()
+    public IEnumerator ConditionLessButtonFunction_Test()
     {
         var button = conditionLessButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Condition Less Button component not found");
@@ -99,7 +99,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(6)]
-    public IEnumerator ConditionEqualButton_PlaysAnimation()
+    public IEnumerator ConditionEqualButtonFunction_Test()
     {
         var button = conditionEqualButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Condition Equal Button component not found");
@@ -110,7 +110,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(7)]
-    public IEnumerator ConditionMoreButton_PlaysAnimation()
+    public IEnumerator ConditionMoreButtonFunction_Test()
     {
         var button = conditionMoreButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Condition More Button component not found");
@@ -122,7 +122,7 @@ public class AddGoalsTests
 
     
     [UnityTest, Order(9)]
-    public IEnumerator BackButton_ChangesScene()
+    public IEnumerator BackButtonChangesScene_Test()
     {
         var button = backButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Back Button component not found");
@@ -144,7 +144,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(8)]
-    public IEnumerator MenuButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = menuButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Menu Button component not found");
@@ -158,7 +158,7 @@ public class AddGoalsTests
     }
 
     [UnityTest, Order(10)]
-    public IEnumerator AddButton_ChangesScene()
+    public IEnumerator AddButtonChangesScene_Test()
     {
         var button = addButton.GetComponent<Button>();
         Assert.IsNotNull(button, "Add Button component not found");

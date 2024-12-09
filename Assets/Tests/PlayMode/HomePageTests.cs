@@ -30,7 +30,7 @@ public class HomePageTests
     }
 
     [UnityTest]
-    public IEnumerator NutritionButton_ChangesScene()
+    public IEnumerator NutritionButtonChangesScene_Test()
     {
         var button = nutritionButton.GetComponent<Button>();
         bool sceneChanged = false;
@@ -49,7 +49,7 @@ public class HomePageTests
     }
 
     [UnityTest]
-    public IEnumerator FitnessButton_ChangesScene()
+    public IEnumerator FitnessButtonChangesScene_Test()
     {
         var button = fitnessButton.GetComponent<Button>();
         bool sceneChanged = false;
@@ -68,7 +68,7 @@ public class HomePageTests
     }
 
     [UnityTest]
-    public IEnumerator DirectoryButton_OpensMenu()
+    public IEnumerator MenuButtonOpensAndAnimation_Test()
     {
         var button = dirButton.GetComponent<Button>();
         button.onClick.Invoke();
